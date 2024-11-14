@@ -5,7 +5,6 @@
   <!-- Hero Section -->
     <?php if ($hero = $page->hero_section()->toStructure()->first()): ?>
         <?php if ($image = $hero->background_image()->toFile()): ?>
-            <?php var_dump($image->url()); ?> <!-- Debug pour voir l'URL -->
             <section class="hero" style="background-image: url('<?= $image->url() ?>');">
                 <div class="hero-content">
                     <h1><?= $hero->title() ?></h1>
