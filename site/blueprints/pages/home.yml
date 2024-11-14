@@ -1,0 +1,76 @@
+title: Home
+fields:
+  hero_section:
+    label: Hero Section
+    type: structure
+    fields:
+      title:
+        label: Title
+        type: text
+      subtitle:
+        label: Subtitle
+        type: text
+      background_image:
+        label: Background Image
+        type: files
+        multiple: false
+  services_section:
+    label: Services Section
+    type: structure
+    fields:
+      service:
+        label: Service
+        type: structure
+        fields:
+          title:
+            label: Title
+            type: text
+          description:
+            label: Description
+            type: textarea
+          icon:
+            label: Icon
+            type: files
+  testimonials_section:
+    label: Testimonials Section
+    type: structure
+    fields:
+      testimonial:
+        label: Testimonial
+        type: structure
+        fields:
+          name:
+            label: Name
+            type: text
+          position:
+            label: Position
+            type: text
+          company:
+            label: Company
+            type: text
+          photo:
+            label: Photo
+            type: files
+          quote:
+            label: Quote
+            type: textarea
+  case_studies_section:
+    label: Case Studies Section
+    type: structure
+    fields:
+      case_study:
+        label: Case Study
+        type: structure
+        fields:
+          title:
+            label: Title
+            type: text
+          excerpt:
+            label: Excerpt
+            type: textarea
+          link:
+            label: Link
+            type: url
+          image:
+            label: Image
+            type: files

@@ -1,0 +1,51 @@
+Title: Home
+
+----
+
+Hero-section:
+
+- 
+  title: YTFHGRDV
+  subtitle: vrvrvr
+  background_image:
+    - file://yQDhwoykxHjd1M6C
+
+----
+
+Services-section:
+
+- 
+  service:
+    - 
+      title: nhbgvfcdx
+      description: hbgvfcdx
+      icon: [ ]
+
+----
+
+Testimonials-section:
+
+- 
+  testimonial:
+    - 
+      name: hbgvfc
+      position: vgfcdx
+      company: hbgvfcd
+      photo: [ ]
+      quote: rrr
+
+----
+
+Case-studies-section:
+
+- 
+  case_study:
+    - 
+      title: gf
+      excerpt: gvfcd
+      link: ""
+      image: [ ]
+
+----
+
+Uuid: wVi2zItawJ4kDcQt

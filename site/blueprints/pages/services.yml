@@ -1,0 +1,15 @@
+title: Services
+fields:
+  text:
+    label: Service Description
+    type: textarea
+  service_items:
+    label: Service Items
+    type: structure
+    fields:
+      title:
+        label: Title
+        type: text
+      description:
+        label: Description
+        type: textarea

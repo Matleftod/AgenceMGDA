@@ -1,0 +1,11 @@
+title: Case Study
+fields:
+  title:
+    label: Project Title
+    type: text
+  client:
+    label: Client
+    type: text
+  description:
+    label: Description
+    type: textarea

@@ -1,0 +1,17 @@
+/* Footer Styles */
+.site-footer {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
