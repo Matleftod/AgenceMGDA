@@ -19,17 +19,19 @@
 
 <header class="site-header">
     <div class="container">
-        <h1 class="logo">
-            <a href="<?= $site->url() ?>"><?= $site->title() ?></a>
-        </h1>
+        <div class="logo">
+            <a href="<?= $site->url() ?>">
+                <img src="<?= url('assets/images/logoMGDA.png') ?>" alt="<?= $site->title() ?> logo">
+            </a>
+        </div>
         
         <!-- Navigation -->
         <nav class="main-nav">
             <ul>
-                <li><a href="<?= $site->url() ?>">Home</a></li>
-                <li><a href="<?= $site->url() ?>/services">Services</a></li>
-                <li><a href="<?= $site->url() ?>/case-studies">Case Studies</a></li>
-                <li><a href="<?= $site->url() ?>/contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
