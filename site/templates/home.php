@@ -3,14 +3,21 @@
 <main class="home">
 
   <!-- Hero Section -->
-  <?php if ($hero = $page->hero_section()->toStructure()->first()): ?>    
-    <section class="hero" style="background-image: url('<?= $hero->background_image()->toFile()->url() ?>');">
-      <div class="hero-content">
-        <h1><?= $hero->title() ?></h1>
-        <p><?= $hero->subtitle() ?></p>
-      </div>
-    </section>
-  <?php endif ?>
+    <?php if ($hero = $page->hero_section()->toStructure()->first()): ?>
+        <?php if ($image = $hero->background_image()->toFile()): ?>
+            <?php var_dump($image->url()); ?> <!-- Debug pour voir l'URL -->
+            <section class="hero" style="background-image: url('<?= $image->url() ?>');">
+                <div class="hero-content">
+                    <h1><?= $hero->title() ?></h1>
+                    <p><?= $hero->subtitle() ?></p>
+                </div>
+            </section>
+        <?php else: ?>
+            <p>No background image found.</p>
+        <?php endif; ?>
+    <?php else: ?>
+        <p>Hero section is empty or not configured correctly.</p>
+    <?php endif; ?>
 
   <!-- Services Section -->
   <?php if ($services = $page->services_section()->toStructure()): ?>
