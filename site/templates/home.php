@@ -15,26 +15,33 @@
       <div class="hero-image">
           <img src="<?= url('assets/images/undraw_building_websites_i78t.svg') ?>" alt="Illustration">
       </div>
-      <div class="circle-small"></div> <!-- Cercle supplémentaire en bas à gauche -->
   </section>
 
+
   <!-- Services Section -->
-  <?php if ($services = $page->services_section()->toStructure()): ?>
+  <?php if ($services_section = $page->services_section()->toStructure()): ?>
     <section class="services">
       <h2>Our Services</h2>
+      <p class="services-intro">Lorem ipsum dolor sit amet, consectetur sadipscing elit, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
       <div class="services-list">
-        <?php foreach ($services as $service): ?>
-          <div class="service-item">
-            <?php if ($icon = $service->icon()->toFile()): ?>
-              <img src="<?= $icon->url() ?>" alt="<?= $service->title() ?>">
-            <?php endif ?>
-            <h3><?= $service->title() ?></h3>
-            <p><?= $service->description() ?></p>
-          </div>
+        <?php foreach ($services_section as $section): ?>
+          <?php if ($services = $section->service()->toStructure()): ?>
+            <?php foreach ($services as $service): ?>
+              <div class="service-item">
+                <?php if ($icon = $service->icon()->toFile()): ?>
+                  <img src="<?= $icon->url() ?>" alt="<?= $service->title() ?>" class="service-icon">
+                <?php endif ?>
+                <h3 class="service-title"><?= $service->title() ?></h3>
+                <p class="service-description"><?= $service->description() ?></p>
+                <a href="#" class="service-link">Read More ⟶</a>
+              </div>
+            <?php endforeach ?>
+          <?php endif ?>
         <?php endforeach ?>
       </div>
     </section>
   <?php endif ?>
+
 
   <!-- Testimonials Section -->
   <?php if ($testimonials = $page->testimonials_section()->toStructure()): ?>

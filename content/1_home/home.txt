@@ -2,23 +2,17 @@ Title: Home
 
 ----
 
-Hero-section:
-
-- 
-  title: YTFHGRDV
-  subtitle: vrvrvr
-  background_image:
-    - file://yQDhwoykxHjd1M6C
-
-----
-
 Services-section:
 
 - 
   service:
     - 
-      title: nhbgvfcdx
-      description: hbgvfcdx
+      title: Titre 1
+      description: Description 1
+      icon: [ ]
+    - 
+      title: Titre 2
+      description: Description 2
       icon: [ ]
 
 ----
@@ -45,6 +39,10 @@ Case-studies-section:
       excerpt: gvfcd
       link: ""
       image: [ ]
+
+----
+
+Hero-section: 
 
 ----
 

@@ -1,17 +1,34 @@
 /* Hero Section */
 .hero {
-    position: relative; /* Nécessaire pour positionner les cercles en absolu */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: calc(100vh - 67px);
-    padding: 0 2rem;
+    padding: 0 2rem 0 7rem;
     background-color: #f8f9fa;
-    overflow: hidden; /* Empêche les cercles de dépasser */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/images/CercleVert.png");
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: -115px 465px;
+    opacity: 0.4; /* Contrôle l’opacité de l’image de fond */
+    z-index: -1; /* Place derrière le contenu */
 }
 
 .hero-content {
     max-width: 50%;
+    z-index: 1;
 }
 
 .hero-content h1 {
@@ -37,6 +54,7 @@
     gap: 1rem;
 }
 
+/* Boutons */
 .btn-primary {
     background-color: #60E1CB;
     color: #fff;
@@ -72,6 +90,7 @@
 .hero-image {
     display: flex;
     justify-content: flex-end;
+    z-index: 1;
 }
 
 .hero-image img {
@@ -79,87 +98,104 @@
     height: auto;
 }
 
-/* Cercles de décoration pour la section hero */
-.hero::before, .hero::after {
-    content: '';
+.hero-image::before {
+    content: "";
     position: absolute;
-    border-radius: 50%;
-    background-color: transparent; /* Pas de remplissage */
-    border: 3px solid #60E1CB; /* Couleur et épaisseur du contour */
-    opacity: 0.2; /* Transparence du contour */
-}
-
-.hero::before {
-    width: 400px;
-    height: 400px;
-    bottom: -100px;
-    left: -100px;
-}
-
-.hero::after {
-    width: 600px;
-    height: 600px;
-    bottom: -250px;
-    left: 50px;
-}
-
-/* Cercle supplémentaire pour ajouter plus de profondeur */
-.circle-small {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 3px solid #60E1CB;
-    opacity: 0.1;
-    bottom: -30px;
-    left: 150px;
-    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/images/CercleGris.png");
+    background-repeat: no-repeat;
+    background-size: 17%;
+    background-position: 98% 0%;
+    opacity: 0.4;
+    z-index: -1;
 }
 
 /****************** Services Section **********************/
 .services {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
+    padding: 60px 20px;
+    background-color: #eafaf8;
     text-align: center;
 }
 
 .services h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.services-intro {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
 }
 
 .services-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
 .service-item {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 30px 20px;
     width: calc(33.333% - 20px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
 }
 
-.service-item img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.service-item h3 {
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.service-title {
     font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
     margin: 0 0 10px;
 }
 
-.service-item p {
-    font-size: 1rem;
+.service-description {
+    font-size: 0.9rem;
     color: #666;
+    margin-bottom: 20px;
+}
+
+.service-link {
+    font-size: 0.9rem;
+    color: #60E1CB;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* Petite bordure en haut de chaque carte */
+.service-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #60E1CB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* Testimonials Section */
