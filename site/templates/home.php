@@ -4,7 +4,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-      <div class="hero-content">
+      <div class="hero-content animate-slide-down">
           <h1>We help you create <br> your <span class="highlight">website</span></h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit quis leo non.</p>
           <div class="hero-buttons">
@@ -12,7 +12,7 @@
               <a href="#" class="btn-secondary">Contact Us</a>
           </div>
       </div>
-      <div class="hero-image">
+      <div class="hero-image animate-fade-in">
           <img src="<?= url('assets/images/undraw_building_websites_i78t.svg') ?>" alt="Illustration">
       </div>
   </section>

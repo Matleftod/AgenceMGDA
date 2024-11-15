@@ -334,3 +334,48 @@
     text-decoration: underline;
     font-size: 1rem;
 }
+
+/* Animation Fade-In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation Slide-Down with Bounce */
+@keyframes slideDownBounce {
+    0% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Applique l'animation */
+.animate-slide-down {
+    opacity: 0;
+    animation: slideDownBounce 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+
+/* Apply the Animations */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.4s;
+}

@@ -15,6 +15,7 @@
     align-items: center;
     z-index: 1000;
     color: black;
+    padding-top: 15px;
 }
 
 /* Header transparent initialement */
