@@ -7,9 +7,13 @@ Services-section:
 - 
   service:
     - 
-      title: Titre 1
-      description: Description 1
-      icon: [ ]
+      title: Kirby Site
+      description: |
+        Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam
+        nonumy eirmod tempor invidunt ut
+      icon:
+        - file://163SY0T0HudcA8lC
     - 
       title: Titre 2
       description: Description 2
@@ -33,28 +37,11 @@ Services-section:
 
 ----
 
-Testimonials-section:
-
-- 
-  testimonial:
-    - 
-      name: hbgvfc
-      position: vgfcdx
-      company: hbgvfcd
-      photo: [ ]
-      quote: rrr
+Testimonials-section: 
 
 ----
 
-Case-studies-section:
-
-- 
-  case_study:
-    - 
-      title: gf
-      excerpt: gvfcd
-      link: ""
-      image: [ ]
+Case-studies-section: 
 
 ----
 

@@ -29,9 +29,11 @@
             <?php if ($services = $section->service()->toStructure()): ?>
               <?php foreach ($services as $service): ?>
                 <div class="service-item">
-                  <?php if ($icon = $service->icon()->toFile()): ?>
-                    <img src="<?= $icon->url() ?>" alt="<?= $service->title() ?>" class="service-icon">
-                  <?php endif ?>
+                  <div class="service-icon-wrapper">
+                    <?php if ($icon = $service->icon()->toFile()): ?>
+                      <img src="<?= $icon->url() ?>" alt="<?= $service->title() ?>" class="service-icon">
+                    <?php endif ?>
+                  </div>
                   <h3 class="service-title"><?= $service->title() ?></h3>
                   <p class="service-description"><?= $service->description() ?></p>
                   <!-- <a href="#" class="service-link">Read More ⟶</a> -->
