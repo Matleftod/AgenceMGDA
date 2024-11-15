@@ -1,12 +1,13 @@
 /* Hero Section */
-/* Hero Section */
 .hero {
+    position: relative; /* Nécessaire pour positionner les cercles en absolu */
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: calc(100vh - 67px);
     padding: 0 2rem;
     background-color: #f8f9fa;
+    overflow: hidden; /* Empêche les cercles de dépasser */
 }
 
 .hero-content {
@@ -22,7 +23,7 @@
 }
 
 .hero-content h1 .highlight {
-    color: #60E1CB; /* Couleur accentuée pour le mot "website" */
+    color: #60E1CB;
 }
 
 .hero-content p {
@@ -78,7 +79,45 @@
     height: auto;
 }
 
-/* Services Section */
+/* Cercles de décoration pour la section hero */
+.hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent; /* Pas de remplissage */
+    border: 3px solid #60E1CB; /* Couleur et épaisseur du contour */
+    opacity: 0.2; /* Transparence du contour */
+}
+
+.hero::before {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+}
+
+.hero::after {
+    width: 600px;
+    height: 600px;
+    bottom: -250px;
+    left: 50px;
+}
+
+/* Cercle supplémentaire pour ajouter plus de profondeur */
+.circle-small {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid #60E1CB;
+    opacity: 0.1;
+    bottom: -30px;
+    left: 150px;
+    z-index: 0;
+}
+
+/****************** Services Section **********************/
 .services {
     padding: 40px 20px;
     background-color: #f4f4f4;
