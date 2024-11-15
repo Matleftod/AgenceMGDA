@@ -1,19 +1,5 @@
 title: Home
 fields:
-  hero_section:
-    label: Hero Section
-    type: structure
-    fields:
-      title:
-        label: Title
-        type: text
-      subtitle:
-        label: Subtitle
-        type: text
-      background_image:
-        label: Background Image
-        type: files
-        multiple: false
   services_section:
     label: Services Section
     type: structure

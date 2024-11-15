@@ -1,20 +1,81 @@
 /* Hero Section */
+/* Hero Section */
 .hero {
-    background-size: cover;
-    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 67px);
+    padding: 0 2rem;
+    background-color: #f8f9fa;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content h1 .highlight {
+    color: #60E1CB; /* Couleur accentuée pour le mot "website" */
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background-color: #60E1CB;
     color: #fff;
-    padding: 80px 20px;
-    text-align: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    line-height: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin: 0;
+.btn-primary:hover {
+    background-color: #68b3b3;
 }
 
-.hero p {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
+.btn-secondary {
+    background-color: transparent;
+    color: #60E1CB;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #60E1CB;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #60E1CB;
+    color: #fff;
+}
+
+/* Hero Image */
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 90%;
+    height: auto;
 }
 
 /* Services Section */

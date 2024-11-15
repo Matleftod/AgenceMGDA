@@ -3,20 +3,19 @@
 <main class="home">
 
   <!-- Hero Section -->
-    <?php if ($hero = $page->hero_section()->toStructure()->first()): ?>
-        <?php if ($image = $hero->background_image()->toFile()): ?>
-            <section class="hero" style="background-image: url('<?= $image->url() ?>');">
-                <div class="hero-content">
-                    <h1><?= $hero->title() ?></h1>
-                    <p><?= $hero->subtitle() ?></p>
-                </div>
-            </section>
-        <?php else: ?>
-            <p>No background image found.</p>
-        <?php endif; ?>
-    <?php else: ?>
-        <p>Hero section is empty or not configured correctly.</p>
-    <?php endif; ?>
+    <section class="hero">
+      <div class="hero-content">
+          <h1>We help you create <br> your <span class="highlight">website</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit quis leo non.</p>
+          <div class="hero-buttons">
+              <a href="#" class="btn-primary">Get Started</a>
+              <a href="#" class="btn-secondary">Contact Us</a>
+          </div>
+      </div>
+      <div class="hero-image">
+          <img src="<?= url('assets/images/undraw_building_websites_i78t.svg') ?>" alt="Illustration">
+      </div>
+  </section>
 
   <!-- Services Section -->
   <?php if ($services = $page->services_section()->toStructure()): ?>

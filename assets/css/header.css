@@ -12,10 +12,11 @@
     background-color: #fff;
     padding: 0.5rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid #eee;
     z-index: 1000;
+    height: 67px;
 }
 
 /* Container */
