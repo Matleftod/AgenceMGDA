@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(100vh - 67px);
+    height: 100vh;
     padding: 0 2rem 0 7rem;
     background-color: #f8f9fa;
     overflow: hidden;
@@ -21,7 +21,7 @@
     background-image: url("/assets/images/CercleVert.png");
     background-repeat: no-repeat;
     background-size: 500px;
-    background-position: -115px 465px;
+    background-position: -115px 505px;
     opacity: 0.4; /* Contrôle l’opacité de l’image de fond */
     z-index: -1; /* Place derrière le contenu */
 }

@@ -48,7 +48,7 @@
 
 
   <!-- Testimonials Section -->
-  <?php if ($testimonials = $page->testimonials_section()->toStructure()): ?>
+  <!-- <?php if ($testimonials = $page->testimonials_section()->toStructure()): ?>
     <section class="testimonials">
       <h2>What Our Clients Say</h2>
       <div class="testimonials-list">
@@ -67,10 +67,10 @@
         <?php endforeach ?>
       </div>
     </section>
-  <?php endif ?>
+  <?php endif ?> -->
 
   <!-- Case Studies Section -->
-  <?php if ($case_studies = $page->case_studies_section()->toStructure()): ?>
+  <!-- <?php if ($case_studies = $page->case_studies_section()->toStructure()): ?>
     <section class="case-studies">
       <h2>Our Work</h2>
       <div class="case-studies-list">
@@ -86,7 +86,7 @@
         <?php endforeach ?>
       </div>
     </section>
-  <?php endif ?>
+  <?php endif ?> -->
 
 </main>
 

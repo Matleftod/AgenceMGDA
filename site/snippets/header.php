@@ -18,7 +18,7 @@
 <body>
 
 <header class="site-header">
-    <div class="container">
+    <div class="head-container transparent">
         <div class="logo">
             <a href="<?= $site->url() ?>">
                 <img src="<?= url('assets/images/logoMGDA.png') ?>" alt="<?= $site->title() ?> logo">
@@ -30,9 +30,9 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href="#contact" class="cta-button">Get a Quote</a>
         </nav>
     </div>
 </header>
