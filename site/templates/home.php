@@ -17,6 +17,29 @@
       </div>
   </section>
 
+  <!-- New About Section -->
+  <section class="about">
+      <div class="about-container">
+          <!-- Media Section -->
+          <div class="about-media">
+              <video autoplay muted loop playsinline>
+                  <source src="<?= url('assets/videos/chill.mp4') ?>" type="video/mp4">
+                  Votre navigateur ne supporte pas les vidéos HTML5.
+              </video>
+          </div>
+
+          <!-- Text Section -->
+          <div class="about-text">
+              <h2>Un service à <span class="highlight">votre image</span></h2>
+              <p>
+                  Spécialisé dans la création de sites internet pour les conciergeries et agences de location de vacances,
+                  nous proposons des solutions adaptées à vos besoins et à votre budget. Que ce soit un site vitrine, une
+                  plateforme de réservation ou une stratégie de référencement, nous construisons le site qui vous
+                  ressemble. Faites-nous confiance pour donner vie à vos projets !
+              </p>
+          </div>
+      </div>
+  </section>
 
   <!-- Services Section -->
   <?php if ($services_section = $page->services_section()->toStructure()): ?>
