@@ -76,6 +76,30 @@
     </section>
   <?php endif ?>
 
+  <section id="contact" class="contact">
+      <div class="contact-container">
+          <h2>Contactez-moi</h2>
+          <p>
+              Pour toute demande ou information, n'hésitez pas à me contacter directement :
+          </p>
+          <div class="contact-details">
+              <div class="contact-item">
+                  <img src="<?= url('assets/images/phone-icon.svg') ?>" alt="Téléphone">
+                  <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+              </div>
+              <div class="contact-item">
+                  <img src="<?= url('assets/images/email-icon.svg') ?>" alt="E-mail">
+                  <a href="mailto:exemple@email.com">exemple@email.com</a>
+              </div>
+          </div>
+          <p class="contact-note">
+              Disponible du lundi au vendredi, de 9h à 18h.
+          </p>
+      </div>
+      <div class="contact-image">
+          <img src="<?= url('assets/images/undraw_phone_call_re_hx6a.svg') ?>" alt="Illustration">
+      </div>
+  </section>
 
   <!-- Testimonials Section -->
   <!-- <?php if ($testimonials = $page->testimonials_section()->toStructure()): ?>
