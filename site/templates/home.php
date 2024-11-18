@@ -3,7 +3,7 @@
 <main class="home">
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="home" class="hero">
       <div class="hero-content animate-slide-down">
           <h1>We help you create <br> your <span class="highlight">website</span></h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit quis leo non.</p>
@@ -20,10 +20,17 @@
 
   <!-- Services Section -->
   <?php if ($services_section = $page->services_section()->toStructure()): ?>
-    <section class="services">
+    <section id="services" class="services">
       <div class="services-container">
-        <h2>Our Services</h2>
-        <p class="services-intro">Lorem ipsum dolor sit amet, consectetur sadipscing elit, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+        <div class="services-title">
+          <div class="service-title-div">
+            <h2>Our Services</h2>
+            <p class="services-intro">Lorem ipsum dolor sit amet, consectetur sadipscing elit, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+          </div>
+          <div class="services-image">
+            <img src="<?= url('assets/images/undraw_startup_life_re_8ow9.svg') ?>" alt="Illustration">
+          </div>
+        </div>
         <div class="services-list">
           <?php foreach ($services_section as $section): ?>
             <?php if ($services = $section->service()->toStructure()): ?>

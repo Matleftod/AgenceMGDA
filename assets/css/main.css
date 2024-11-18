@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,4 +10,29 @@ body {
 
 a {
     color: #000;
+}
+
+/* Appliqué dans les navigateurs compatibles WebKit */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #60E1CB;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4cb9a4;
+}
+
+/* Appliqué dans Firefox */
+* {
+    scrollbar-width: thin; /* Réduit la taille de la barre */
+    scrollbar-color: #60E1CB transparent; /* Couleur de la barre et fond */
 }
