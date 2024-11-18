@@ -1,17 +1,71 @@
-/* Footer Styles */
+/* Footer */
 .site-footer {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 1rem 0;
+    background-color: #262626;
+    color: #fff;
+    padding: 2rem 1rem;
     text-align: center;
+    font-size: 0.9rem;
 }
 
-.social-links a {
-    color: #333;
+.site-footer a {
+    color: white;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Logo and Contact Info */
+.footer-logo-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-contact p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Social Links */
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-social a img:hover {
+    opacity: 0.7;
+}
+
+/* Legal Links */
+.footer-legal p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-legal a {
+    color: #60E1CB;
     text-decoration: none;
-    margin: 0 0.5rem;
+    transition: color 0.3s;
 }
 
-.social-links a:hover {
-    text-decoration: underline;
+.footer-legal a:hover {
+    color: #fff;
 }
