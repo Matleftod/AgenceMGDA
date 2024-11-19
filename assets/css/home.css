@@ -110,6 +110,7 @@
     flex: 1;
     position: relative;
     text-align: center;
+    align-content: center;
 }
 
 .about-media video{
@@ -129,6 +130,7 @@
 .about-text h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    margin-top: 0rem;
     color: #fff;
     display: flex; /* Assure une bonne mise en ligne des éléments */
     flex-wrap: wrap; /* Permet au contenu de se répartir sur plusieurs lignes */
@@ -325,7 +327,6 @@
 
 .eco-text {
     flex: 1;
-    padding: 1rem;
 }
 
 .eco-title {
@@ -369,18 +370,6 @@
     transform: scale(1.1);
 }
 
-/* Gérer les écrans plus petits */
-@media (max-width: 768px) {
-    .eco-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .eco-image {
-        margin-bottom: 1.5rem;
-    }
-}
-
 /**************************************** Contact Section ********************************************/
 
 .contact {
@@ -394,6 +383,7 @@
 
 .contact-image {
     max-width: 50%;
+    align-content: center;
 }
 
 .contact-image img{
@@ -598,4 +588,56 @@
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
     animation-delay: 0.4s;
+}
+
+/************************************************************************************************/
+/**************************************** Responsive ********************************************/
+/************************************************************************************************/
+
+@media (max-width: 900px) {
+
+    /**************************************** Hero Section ********************************************/
+    
+    .hero {
+        padding: 2rem;
+        height: auto;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        margin-top: 5rem;
+        max-width: 700px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        max-width: 60%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+
+    /**************************************** Eco Section ********************************************/
+    .eco-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .eco-image {
+        margin-bottom: 1.5rem;
+    }
 }

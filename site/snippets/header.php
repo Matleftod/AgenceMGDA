@@ -25,8 +25,15 @@
             </a>
         </div>
         
+        <!-- Burger menu -->
+        <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <!-- Navigation -->
-        <nav class="main-nav">
+        <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">À propos de nous</a></li>
