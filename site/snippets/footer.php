@@ -7,7 +7,7 @@
             </div>
             <div class="footer-contact">
                 <p>356 Route de Toulouse, 33130 Bègles</p>
-                <p>+33 1 23 45 67 89 | <a href="mailto:exemple@email.com">exemple@email.com</a></p>
+                <p>+33 6 76 76 30 55 | <a href="mailto:agencemgda@gmail.com">agencemgda@gmail.com</a></p>
             </div>
         </div>
         
@@ -24,8 +24,7 @@
             <p>&copy; <?= date('Y') ?> <?= $site->title() ?> - Tous droits réservés</p>
             <p>
                 <a href="/mentions-legales">Mentions légales</a> -
-                <a href="/cookies">Gestion des cookies</a> -
-                <a href="/certificat">Certificat formation</a>
+                <a href="/cookies">Gestion des cookies</a>
             </p>
         </div>
     </div>

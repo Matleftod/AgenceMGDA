@@ -28,7 +28,7 @@
 
 .hero-content {
     max-width: 50%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -41,6 +41,7 @@
 
 .hero-content h1 .highlight {
     color: #60E1CB;
+    font-style: italic;
 }
 
 .hero-content p {
@@ -52,38 +53,6 @@
 .hero-buttons {
     display: flex;
     gap: 1rem;
-}
-
-/* Boutons */
-.btn-primary {
-    background-color: #60E1CB;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    line-height: 22px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #68b3b3;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #60E1CB;
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border: 2px solid #60E1CB;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-secondary:hover {
-    background-color: #60E1CB;
-    color: #fff;
 }
 
 /* Hero Image */
@@ -206,6 +175,10 @@
 
 .services-title img{
     max-width: 175px;
+}
+
+.services-image {
+    align-content: center;
 }
 
 .services h2 {

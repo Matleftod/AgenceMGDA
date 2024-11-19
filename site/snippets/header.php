@@ -28,11 +28,11 @@
         <!-- Navigation -->
         <nav class="main-nav">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos de nous</a></li>
+                <li><a href="#services">Nos Services</a></li>
             </ul>
-            <a href="#contact" class="cta-button">Get a Quote</a>
+            <a href="#" class="btn-primary"><span>Nous Contacter</span></a>
         </nav>
     </div>
 </header>

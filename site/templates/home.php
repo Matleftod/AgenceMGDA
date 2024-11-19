@@ -5,11 +5,14 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
       <div class="hero-content animate-slide-down">
-          <h1>We help you create <br> your <span class="highlight">website</span></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit quis leo non.</p>
+          <h1>Votre succès digital<br> à la <span class="highlight">française</span></h1>
+          <p>Chez MGDA, on crée des sites web modernes, uniques et qui vous ressemblent vraiment. 
+            Que vous soyez une conciergerie, une agence de location ou une petite entreprise, 
+            on est là pour donner vie à vos idées avec un site qui claque, efficace et sur-mesure.</p>
           <div class="hero-buttons">
-              <a href="#" class="btn-primary">Get Started</a>
-              <a href="#" class="btn-secondary">Contact Us</a>
+              <a href="#" class="btn-primary"><span>C'est parti !</span></a>
+              <a href="#" class="btn-secondary"><span>Nos services</span></a>
+
           </div>
       </div>
       <div class="hero-image animate-fade-in">
@@ -18,7 +21,7 @@
   </section>
 
   <!-- New About Section -->
-  <section class="about">
+  <section id="about" class="about">
       <div class="about-container">
           <!-- Media Section -->
           <div class="about-media">
@@ -30,13 +33,16 @@
 
           <!-- Text Section -->
           <div class="about-text">
-              <h2>Un service à <span class="highlight">votre image</span></h2>
+              <h2>Un site qui <span class="highlight">vous ressemble</span></h2>
               <p>
-                  Spécialisé dans la création de sites internet pour les conciergeries et agences de location de vacances,
-                  nous proposons des solutions adaptées à vos besoins et à votre budget. Que ce soit un site vitrine, une
-                  plateforme de réservation ou une stratégie de référencement, nous construisons le site qui vous
-                  ressemble. Faites-nous confiance pour donner vie à vos projets !
+                  Chez MGDA, on est là pour les pros qui veulent du concret. 
+                  Spécialistes en création de sites pour les conciergeries et agences de location de vacances, on imagine des solutions simples, efficaces et adaptées à vos attentes (et votre budget). 
+                  Site vitrine ? Plateforme de réservation ? Référencement qui fait le job ? Vous avez l’idée, on s’occupe du reste. 
+                  Ensemble, on construit un site qui reflète votre style et fait parler de vous.
               </p>
+              <h4>
+                Alors, on démarre ?
+              </h4>
           </div>
       </div>
   </section>
@@ -47,8 +53,8 @@
       <div class="services-container">
         <div class="services-title">
           <div class="service-title-div">
-            <h2>Our Services</h2>
-            <p class="services-intro">Lorem ipsum dolor sit amet, consectetur sadipscing elit, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+            <h2>Nos Services</h2>
+            <p>Que vous ayez besoin d’un site vitrine, d’une plateforme de réservation ou d’une stratégie de visibilité, on a tout ce qu’il faut pour booster votre présence en ligne.</p>
           </div>
           <div class="services-image">
             <img src="<?= url('assets/images/undraw_startup_life_re_8ow9.svg') ?>" alt="Illustration">
@@ -78,18 +84,18 @@
 
   <section id="contact" class="contact">
       <div class="contact-container">
-          <h2>Contactez-moi</h2>
+          <h2>Contactez-nous</h2>
           <p>
-              Pour toute demande ou information, n'hésitez pas à me contacter directement :
+              Pour toute demande ou information, n'hésitez pas à nous contacter directement :
           </p>
           <div class="contact-details">
               <div class="contact-item">
                   <img src="<?= url('assets/images/phone-icon.svg') ?>" alt="Téléphone">
-                  <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                  <a href="tel:+33123456789">+33 6 76 76 30 55</a>
               </div>
               <div class="contact-item">
                   <img src="<?= url('assets/images/email-icon.svg') ?>" alt="E-mail">
-                  <a href="mailto:exemple@email.com">exemple@email.com</a>
+                  <a href="mailto:exemple@email.com">agencemgda@gmail.com</a>
               </div>
           </div>
           <p class="contact-note">

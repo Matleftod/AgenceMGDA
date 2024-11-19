@@ -1,15 +1,170 @@
+/* Font-face pour Poppins */
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400; /* Regular Italic */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700; /* Bold Italic */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-LightItalic.ttf') format('truetype');
+    font-weight: 300; /* Light Italic */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600; /* SemiBold Italic */
+    font-style: italic;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Titres principaux */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5rem; /* Espace au-dessus */
+    margin-bottom: 1rem; /* Espace en-dessous */
+    line-height: 1.3; /* Espacement entre les lignes */
+    color: #333; /* Couleur des titres */
+}
+
+/* Paragraphe */
+p {
+    margin-top: 0.5rem; /* Espace au-dessus */
+    margin-bottom: 1.5rem; /* Espace en-dessous */
+    line-height: 1.6; /* Espacement entre les lignes */
+    font-size: 1rem; /* Taille de la police */
+    color: #555; /* Couleur du texte */
+}
+
 a {
     color: #000;
+}
+
+/* Boutons */
+.btn-primary {
+    position: relative;
+    overflow: hidden; /* Pour éviter que l'effet dépasse les bords */
+    background-color: #60E1CB;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: color 0.3s;
+    z-index: 1; /* S'assurer que le texte reste au-dessus */
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #68b3b3;
+    z-index: 0; /* Derrière le texte */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover::before {
+    left: 0; /* L'effet glisse de gauche à droite */
+}
+
+.btn-primary:hover {
+    color: #fff; /* Garde le texte blanc */
+}
+
+/* Texte au-dessus */
+.btn-primary span {
+    position: relative;
+    z-index: 1; /* Pour que le texte reste au-dessus de l'effet */
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #60E1CB;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #60E1CB;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.btn-secondary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #60E1CB;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover::before {
+    left: 0;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+}
+
+.btn-secondary span {
+    position: relative;
+    z-index: 1;
 }
 
 /* Appliqué dans les navigateurs compatibles WebKit */

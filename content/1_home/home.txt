@@ -7,33 +7,60 @@ Services-section:
 - 
   service:
     - 
-      title: Kirby Site
-      description: |
-        Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut
+      title: Un site vitrine qui vous ressemble
+      description: >
+        Présentez vos services avec un design
+        clair et moderne. Idéal pour afficher
+        vos prestations et vos valeurs, tout en
+        instaurant la confiance.
       icon:
-        - file://163SY0T0HudcA8lC
+        - file://HVEz5xRPoYE9Sl44
     - 
-      title: Titre 2
-      description: Description 2
-      icon: [ ]
+      title: Contact simplifié, devis rapides
+      description: >
+        Offrez à vos visiteurs un moyen simple
+        de vous contacter ou de demander un
+        devis en quelques clics. Idéal pour
+        convertir les curieux en clients.
+      icon:
+        - file://DwfwtTYtjoEWl8fe
     - 
-      title: 'Titre '
-      description: Description 2
-      icon: [ ]
+      title: Galerie d’images et avis clients
+      description: >
+        Mettez en valeur vos prestations avec
+        une galerie attrayante et des
+        témoignages authentiques. Idéal pour
+        séduire vos visiteurs.
+      icon:
+        - file://vcUjUXvSp4QDEZRH
     - 
-      title: 'Titre '
-      description: Description 2
-      icon: [ ]
+      title: Localisez vos services
+      description: >
+        Ajoutez une carte interactive pour
+        guider vos clients vers vos biens ou
+        services, avec des détails précis et
+        attrayants.
+      icon:
+        - file://AQrWr4UQ9l5kBU5A
     - 
-      title: 'Titre '
-      description: Description 2
-      icon: [ ]
+      title: Réservation en ligne simplifiée
+      description: >
+        Permettez à vos clients de réserver
+        vos services ou locations directement
+        depuis votre site. Un atout
+        incontournable pour les conciergeries et
+        agences de location
+      icon:
+        - file://dbfQgZ8KNQl9LPUf
     - 
-      title: 'Titre '
-      description: Description 2
-      icon: [ ]
+      title: Un espace client dédié
+      description: >
+        Offrez à vos clients un espace
+        personnalisé pour consulter leur
+        historique, modifier leurs informations
+        ou laisser des avis.
+      icon:
+        - file://GIgl4tdovgf6Rm38
 
 ----
 
