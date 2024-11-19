@@ -32,7 +32,7 @@
                 <li><a href="#about">À propos de nous</a></li>
                 <li><a href="#services">Nos Services</a></li>
             </ul>
-            <a href="#" class="btn-primary"><span>Nous Contacter</span></a>
+            <a href="#contact" class="btn-primary"><span>Nous Contacter</span></a>
         </nav>
     </div>
 </header>

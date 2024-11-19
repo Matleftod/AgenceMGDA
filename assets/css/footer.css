@@ -1,10 +1,21 @@
 /* Footer */
 .site-footer {
+    position: relative;
     background-color: #262626;
     color: #fff;
     padding: 2rem 1rem;
     text-align: center;
     font-size: 0.9rem;
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #60E1CB;
 }
 
 .site-footer a {
@@ -18,6 +29,10 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+}
+
+.footer-container p {
+    color: #fff;
 }
 
 /* Logo and Contact Info */

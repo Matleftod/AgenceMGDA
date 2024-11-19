@@ -167,6 +167,29 @@ a {
     z-index: 1;
 }
 
+.btn-tertiary {
+    display: inline-block;
+    background-color: transparent; /* Fond transparent pour le contraste */
+    color: #60E1CB; /* Couleur principale */
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    border: 2px solid #60E1CB; /* Bordure principale */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-tertiary:hover {
+    background-color: #60E1CB; /* Fond rempli au survol */
+    color: #fff; /* Texte blanc pour un bon contraste */
+    border: 2px solid #60E1CB;
+    transform: translateY(-3px); /* Légère élévation pour effet de survol */
+}
+
+.btn-tertiary:focus {
+    outline: 3px solid rgba(96, 225, 203, 0.5); /* Focus accessible */
+}
+
 /* Appliqué dans les navigateurs compatibles WebKit */
 ::-webkit-scrollbar {
     width: 8px;

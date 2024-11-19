@@ -39,7 +39,7 @@
     line-height: 1.2;
 }
 
-.hero-content h1 .highlight {
+.highlight {
     color: #60E1CB;
     font-style: italic;
 }
@@ -122,17 +122,21 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #fff;
+    display: flex; /* Assure une bonne mise en ligne des éléments */
+    flex-wrap: wrap; /* Permet au contenu de se répartir sur plusieurs lignes */
+    align-items: center;
 }
 
 .about-text .highlight {
-    color: #60E1CB;
-    font-family: 'Brush Script MT', cursive;
+    display: inline-flex; /* Garde le texte et l'icône groupés */
+    align-items: center; /* Centre verticalement l'icône par rapport au texte */
+    margin-left: 6px;
 }
 
-.about-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ccc;
+.about-text img {
+    max-width: 30px;
+    margin-left: 5px; /* Espacement entre le texte et l'icône */
+    margin-bottom: 15px;
 }
 
 /**************************************** Services Section ********************************************/
