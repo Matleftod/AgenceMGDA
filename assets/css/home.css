@@ -26,6 +26,13 @@
     z-index: -1; /* Place derrière le contenu */
 }
 
+.hero-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .hero-content {
     max-width: 50%;
     z-index: 2;
@@ -94,6 +101,7 @@
 
 .about-container {
     display: flex;
+    margin: 0 auto;
     gap: 2rem;
     max-width: 1200px;
 }
@@ -131,6 +139,10 @@
     display: inline-flex; /* Garde le texte et l'icône groupés */
     align-items: center; /* Centre verticalement l'icône par rapport au texte */
     margin-left: 6px;
+}
+
+.about-text p {
+    color: white;
 }
 
 .about-text img {
@@ -171,7 +183,7 @@
 }
 
 .service-title-div {
-    max-width: 30%;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,7 +205,8 @@
 }
 
 .services-container {
-    max-width: 1100px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .services-intro {
@@ -277,7 +290,6 @@
     text-decoration: underline;
 }
 
-/* Petite bordure en haut de chaque carte */
 .service-item::before {
     content: "";
     position: absolute;
@@ -290,7 +302,86 @@
     border-top-right-radius: 10px;
 }
 
-/**************************************** Services Section ********************************************/
+/**************************************** Eco Section ********************************************/
+
+.eco-design {
+    background-color: #f9fdfc;
+    padding: 4rem 2rem;
+}
+
+.eco-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eco-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.eco-text {
+    flex: 1;
+    padding: 1rem;
+}
+
+.eco-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #60E1CB;
+    margin-bottom: 1rem;
+}
+
+.eco-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.eco-description strong {
+    color: #60E1CB;
+    font-weight: bold;
+}
+
+.eco-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+.eco-image img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.logo-kirby {
+    max-width: 200px;
+}
+
+.eco-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Gérer les écrans plus petits */
+@media (max-width: 768px) {
+    .eco-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .eco-image {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/**************************************** Contact Section ********************************************/
 
 .contact {
     display: flex;
@@ -310,6 +401,13 @@
 }
 
 .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-div {
     max-width: 50%;
     max-width: 800px;
     margin: 0 auto;
