@@ -316,7 +316,7 @@
     margin: 0 auto;
 }
 
-.eco-section {
+.eco-section1 ,.eco-section2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -626,18 +626,84 @@
         max-width: 60%;
     }
 
+    /**************************************** About Section ********************************************/
+
+    .about {
+        padding: 3rem;
+    }
+    
+    .about-container {
+        flex-direction: column-reverse;
+        max-width: 700px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text h2 {
+        text-align: center;
+        display: block;
+    }
+
+    /**************************************** Service Section ********************************************/
+
+    .services-container {
+        max-width: 700px;
+    }
+
+    .services {
+        padding: 3rem;
+    }
+
+    .service-item {
+        width: calc(50% - 30px); /* 2 colonnes */
+    }
+
+    /**************************************** eco Section ********************************************/
+
+    .eco-container {
+        max-width: 700px;
+    }
+
+    .eco-design {
+        padding: 3rem;
+    }
+
+    /**************************************** Contact Section ********************************************/
+
+    .contact-container {
+        max-width: 700px;
+    }
+
+    .contact-image {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
 
 
     /**************************************** Eco Section ********************************************/
-    .eco-section {
+    .eco-section1 {
         flex-direction: column;
         text-align: center;
     }
 
+    .eco-section2 {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
     .eco-image {
         margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 590px) {
+    /**************************************** Service Section ********************************************/
+    .service-item {
+        width: 100%; /* 1 colonne */
     }
 }

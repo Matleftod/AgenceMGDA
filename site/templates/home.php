@@ -91,7 +91,7 @@
 <section class="eco-design">
     <div class="eco-container">
         <!-- Première section : Éco-conception -->
-        <div class="eco-section">
+        <div class="eco-section1">
             <div class="eco-text">
                 <h2 class="eco-title">L'éco-conception au cœur de nos sites web</h2>
                 <p class="eco-description">
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Deuxième section : Kirby -->
-        <div class="eco-section">
+        <div class="eco-section2">
             <div class="eco-image">
                 <img src="<?= url('assets/images/logo_of_kirby_cms.png') ?>" alt="Logo Kirby" class="logo-kirby">
             </div>
