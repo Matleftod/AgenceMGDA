@@ -683,7 +683,15 @@
 
 @media (max-width: 768px) {
 
+    /**************************************** Service Section ********************************************/
+    .services-title {
+        flex-direction: column;
+    }
 
+    .service-title-div {
+        max-width: 100%;
+    }
+    
     /**************************************** Eco Section ********************************************/
     .eco-section1 {
         flex-direction: column;
@@ -702,6 +710,10 @@
 }
 
 @media (max-width: 590px) {
+
+    html {
+        font-size: 80%; /* 1rem = 10px */
+    }
     /**************************************** Service Section ********************************************/
     .service-item {
         width: 100%; /* 1 colonne */
