@@ -3,6 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon pour navigateurs -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Icônes pour appareils Apple -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Icônes pour Android et PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Icônes spécifiques -->
+    <link rel="icon" sizes="96x96" href="assets/favicon-96x96.png" type="image/png">
+
     <title><?= $site->title() ?> | <?= $page->title() ?></title>
     
     <!-- Main CSS -->
