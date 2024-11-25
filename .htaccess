@@ -1,0 +1,20 @@
+# Kirby .htaccess
+
+# Enable URL rewriting
+RewriteEngine on
+RewriteBase /
+
+# Redirect to HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Block directory listing
+Options -Indexes
+
+# Kirby's Panel
+RewriteRule ^panel/(.*) kirby/panel/$1 [L]
+
+# All other requests go to Kirby's index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
