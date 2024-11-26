@@ -1,0 +1,6 @@
+title: Politique de Cookies
+preset: page
+fields:
+  text:
+    label: Contenu de la politique de cookies
+    type: textarea

@@ -231,3 +231,49 @@ a {
     margin: 1rem 0;
     line-height: 1.6;
 }
+
+
+/* Style pour la section de politique de cookies */
+.cookies-policy {
+    max-width: 800px;
+    margin: 100px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.error-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.error-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.error-page .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #60E1CB;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.error-page .btn:hover {
+    background-color: #46cfb8;
+}
