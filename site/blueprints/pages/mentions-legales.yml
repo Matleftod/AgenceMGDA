@@ -1,0 +1,6 @@
+title: Mentions Légales
+preset: page
+fields:
+  text:
+    label: Contenu des mentions légales
+    type: textarea

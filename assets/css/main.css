@@ -214,3 +214,20 @@ a {
     scrollbar-width: thin; /* Réduit la taille de la barre */
     scrollbar-color: #60E1CB transparent; /* Couleur de la barre et fond */
 }
+
+
+.mentions-legales {
+    padding: 5rem 2rem 2rem 2rem;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.mentions-legales h1,
+.mentions-legales h2 {
+    color: #222;  
+}
+
+.mentions-legales p {
+    margin: 1rem 0;
+    line-height: 1.6;
+}
