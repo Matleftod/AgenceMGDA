@@ -131,7 +131,7 @@
           <div class="contact-details">
               <div class="contact-item">
                   <img src="<?= url('assets/images/phone-icon.svg') ?>" alt="Téléphone">
-                  <a href="tel:+33123456789">+33 6 76 76 30 55</a>
+                  <a href="tel:+33676763055">+33 6 76 76 30 55</a>
               </div>
               <div class="contact-item">
                   <img src="<?= url('assets/images/email-icon.svg') ?>" alt="E-mail">

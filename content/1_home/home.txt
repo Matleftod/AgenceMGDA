@@ -43,22 +43,19 @@ Services-section:
       icon:
         - file://AQrWr4UQ9l5kBU5A
     - 
-      title: Réservation en ligne simplifiée
+      title: Blog intégré
       description: >
-        Permettez à vos clients de réserver
-        vos services ou locations directement
-        depuis votre site. Un atout
-        incontournable pour les conciergeries et
-        agences de location
+        Boostez votre visibilité en publiant
+        des articles captivants directement sur
+        votre site. Une solution idéale pour
+        attirer du trafic, engager vos visiteurs
+        et renforcer votre expertise dans votre
+        domaine.
       icon:
         - file://dbfQgZ8KNQl9LPUf
     - 
-      title: Un espace client dédié
-      description: >
-        Offrez à vos clients un espace
-        personnalisé pour consulter leur
-        historique, modifier leurs informations
-        ou laisser des avis.
+      title: Maintenance et support
+      description: "Proposez à vos clients des forfaits de maintenance mensuels pour garantir un site toujours à jour et fonctionnel. Une tranquillité d'esprit essentielle face aux évolutions et aux imprévus techniques."
       icon:
         - file://GIgl4tdovgf6Rm38
 
