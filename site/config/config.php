@@ -4,6 +4,8 @@ return [
         'driver' => 'im',
         'bin' => '/usr/local/bin/convert'
     ],
-    'debug' => false,
-    'panel.slug' => 'admin-panel',
+    'debug' => true,
+    'panel' => [
+        'slug' => 'secret-admin'
+    ],
 ];
