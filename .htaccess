@@ -16,7 +16,6 @@ RedirectMatch 403 ^/panel/
 
 # Exclure favicon.ico et robots.txt des redirections vers index.php
 RewriteCond %{REQUEST_URI} !^/favicon.ico$ [NC]
-RewriteCond %{REQUEST_URI} !^/robots.txt$ [NC]
 
 # All other requests go to Kirby's index.php
 RewriteCond %{REQUEST_FILENAME} !-f
