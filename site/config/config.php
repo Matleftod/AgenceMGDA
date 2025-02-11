@@ -6,6 +6,6 @@ return [
     ],
     'debug' => true,
     'panel' => [
-        'slug' => 'secret-admin'
+        'slug' => 'admin-panel'
     ],
 ];
