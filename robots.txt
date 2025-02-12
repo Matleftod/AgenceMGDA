@@ -8,3 +8,4 @@ Disallow: /secret-admin/
 
 # Empêcher l'indexation de la page cookies (elle ne doit pas apparaître sur Google)
 Disallow: /cookies
+Disallow: /mentions-legales
