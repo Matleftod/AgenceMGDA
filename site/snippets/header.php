@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agence MGDA : Création de sites vitrines écologiques et sur-mesure pour conciergeries et petites entreprises.">
+    <meta name="robots" content="index, follow">
 
     <!-- Favicon principal -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -19,7 +21,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <title><?= $site->title() ?> | <?= $page->title() ?></title>
-    
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="<?= url('assets/css/main.css') ?>">
     

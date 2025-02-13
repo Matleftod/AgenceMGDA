@@ -1,11 +1,5 @@
 User-agent: *
-Disallow: /
-Allow: /$
-
-# Empêcher l'indexation du panel (sécurité)
 Disallow: /panel/
 Disallow: /secret-admin/
-
-# Empêcher l'indexation de la page cookies (elle ne doit pas apparaître sur Google)
 Disallow: /cookies
 Disallow: /mentions-legales
