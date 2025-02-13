@@ -10,8 +10,8 @@
       <p><strong>Éditeur du site :</strong><br>
         Nom de l'entreprise : Agence MGDA<br>
         Téléphone : 06 76 76 30 55<br>
-        Email : agencemgda@gmail.com<br>
-        Numéro SIRET : <br>
+        Email : agence.mgda@gmail.com<br>
+        <!-- Numéro SIRET : <br> -->
       </p>
 
       <h2>2. Hébergeur du site</h2>
@@ -20,7 +20,7 @@
       </p>
 
       <h2>3. Gestion des données personnelles</h2>
-      <p>Les données collectées sur ce site sont traitées conformément au RGPD. Pour toute demande concernant vos données personnelles, contactez-nous par email à agencemgda@gmail.com.</p>
+      <p>Les données collectées sur ce site sont traitées conformément au RGPD. Pour toute demande concernant vos données personnelles, contactez-nous par email à agence.mgda@gmail.com.</p>
 
       <h2>4. Propriété intellectuelle</h2>
       <p>Tout le contenu du site (textes, images, vidéos, logos) est protégé par les lois sur la propriété intellectuelle. Toute reproduction sans autorisation préalable est interdite.</p>

@@ -6,7 +6,7 @@
                 <img src="<?= url('assets/images/logoMGDA.png') ?>" alt="Logo <?= $site->title() ?>">
             </div>
             <div class="footer-contact">
-                <p>+33 6 76 76 30 55 | <a href="mailto:agencemgda@gmail.com">agencemgda@gmail.com</a></p>
+                <p>+33 6 76 76 30 55 | <a href="mailto:agence.mgda@gmail.com">agence.mgda@gmail.com</a></p>
             </div>
         </div>
         

@@ -135,7 +135,7 @@
               </div>
               <div class="contact-item">
                   <img src="<?= url('assets/images/email-icon.svg') ?>" alt="E-mail">
-                  <a href="mailto:exemple@email.com">agence.mgda@gmail.com</a>
+                  <a href="mailto:agence.mgda@gmail.com">agence.mgda@gmail.com</a>
               </div>
           </div>
           <p class="contact-note">
