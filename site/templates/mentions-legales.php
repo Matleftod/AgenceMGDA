@@ -26,7 +26,7 @@
       <p>Tout le contenu du site (textes, images, vidéos, logos) est protégé par les lois sur la propriété intellectuelle. Toute reproduction sans autorisation préalable est interdite.</p>
 
       <h2>5. Cookies</h2>
-      <p>Le site utilise des cookies pour améliorer l’expérience utilisateur. Consultez notre <a href="/politique-de-cookies">politique de cookies</a> pour en savoir plus.</p>
+      <p>Le site utilise des cookies pour améliorer l’expérience utilisateur. Consultez notre <a href="/cookies">politique de cookies</a> pour en savoir plus.</p>
     </div>
   </section>
 </main>
