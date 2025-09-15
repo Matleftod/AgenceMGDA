@@ -23,6 +23,7 @@
             <p>&copy; <?= date('Y') ?> <?= $site->title() ?> - Tous droits réservés</p>
             <p>
                 <a href="/mentions-legales">Mentions légales</a> -
+                <a href="/cgv">Conditions générales de vente</a> -
                 <a href="/cookies">Gestion des cookies</a>
             </p>
         </div>

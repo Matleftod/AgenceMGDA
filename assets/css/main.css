@@ -216,18 +216,21 @@ a {
 }
 
 
-.mentions-legales {
+.mentions-legales, .cgv {
     padding: 5rem 2rem 2rem 2rem;
     background-color: #f9f9f9;
     color: #333;
 }
 
 .mentions-legales h1,
-.mentions-legales h2 {
+.mentions-legales h2,
+.cgv h1,
+.cgv h2 {
     color: #222;  
 }
 
-.mentions-legales p {
+.mentions-legales p,
+.cgv p {
     margin: 1rem 0;
     line-height: 1.6;
 }

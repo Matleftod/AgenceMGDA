@@ -3,3 +3,4 @@ Disallow: /panel/
 Disallow: /secret-admin/
 Disallow: /cookies
 Disallow: /mentions-legales
+Disallow: /cgv

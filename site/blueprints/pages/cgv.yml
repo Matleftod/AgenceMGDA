@@ -1,0 +1,6 @@
+title: Conditions générales de vente
+preset: page
+fields:
+  text:
+    label: Contenu des conditions générales de vente
+    type: textarea
