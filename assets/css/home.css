@@ -332,22 +332,6 @@
     margin-bottom: 2rem;
 }
 
-/* Grid */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
-}
-
-/* Card */
-.portfolio-item {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 /* Vidéos du portfolio */
 .portfolio-item video.portfolio-video{
     display:block;
@@ -371,6 +355,114 @@
     width: 100%;
     aspect-ratio: 16 / 10; /* ratio propre et homogène */
     object-fit: cover;
+}
+
+/* --- Tabs façon "text-hover-effect" --- */
+.portfolio-switch {
+  margin-top: 2rem;
+}
+
+.portfolio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+
+.portfolio-tabs .tab {
+  position: relative;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  background:
+    linear-gradient(90deg, #999 0 49%, #60E1CB 50% 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* rend le gradient visible dans le texte */
+  border: none;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  transition: background-position .35s ease;
+}
+
+.portfolio-tabs .tab:hover,
+.portfolio-tabs .tab:focus-visible {
+  background-position: -100% 0; /* révèle la couleur */
+  outline: none;
+}
+
+.portfolio-tabs .tab.is-active {
+  background-position: -100% 0;
+}
+
+.portfolio-tabs .tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 3px;
+  background-color: #60E1CB;
+  border-radius: 999px;
+}
+
+/* --- Scène vidéo --- */
+.portfolio-stage {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.portfolio-stage .portfolio-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: fill;
+  border-radius: 14px;
+  background: #000;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease, opacity .3s ease;
+}
+
+.portfolio-stage .portfolio-video.is-swapping {
+  opacity: 0; /* petit fondu lors du switch */
+}
+
+.portfolio-caption {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.portfolio-caption .badge {
+  background: rgba(96, 225, 203, 0.18);
+  color: #167a6e;
+  border: 1px solid rgba(96, 225, 203, 0.35);
+  font-weight: 700;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+}
+
+.portfolio-caption .tagline {
+  margin: 0;
+  color: #555;
+  font-size: .95rem;
+}
+
+/* Respecte l’accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-tabs .tab,
+  .portfolio-stage .portfolio-video {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-stage { max-width: 700px; }
 }
 
 /**************************************** Portfolio Responsive ********************************************/

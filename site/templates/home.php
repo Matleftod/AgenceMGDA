@@ -93,65 +93,53 @@
     <div class="portfolio-container">
       <h2>Nos réalisations</h2>
       <p>Découvrez quelques maquettes et inspirations que nous avons créées pour nos clients.</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <?php
-            $poster = url('assets/images/PosterMaq1.png');
-            $mp4 = url('assets/videos/Maquette1mini.mp4');
-          ?>
-          <video class="portfolio-video"
-                autoplay
+      <!-- Switch Forfaits -->
+      <div class="portfolio-switch">
+        <nav class="portfolio-tabs" role="tablist" aria-label="Forfaits">
+          <button class="tab is-active"
+                  role="tab" aria-selected="true" aria-controls="portfolio-stage"
+                  data-plan="Essentiel"
+                  data-mp4="<?= url('assets/videos/Maquette1mini.mp4') ?>"
+                  data-poster="<?= url('assets/images/PosterMaq1.png') ?>"
+                  data-tagline="L’essentiel pour démarrer vite et bien.">
+            Essentiel
+          </button>
+          <button class="tab"
+                  role="tab" aria-selected="false" aria-controls="portfolio-stage"
+                  data-plan="Standard"
+                  data-mp4="<?= url('assets/videos/Maquette2mini.mp4') ?>"
+                  data-poster="<?= url('assets/images/PosterMaq2.png') ?>"
+                  data-tagline="L’équilibre parfait : design + fonctionnalités.">
+            Standard
+          </button>
+          <button class="tab"
+                  role="tab" aria-selected="false" aria-controls="portfolio-stage"
+                  data-plan="Premium"
+                  data-mp4="<?= url('assets/videos/Maquette3mini.mp4') ?>"
+                  data-poster="<?= url('assets/images/PosterMaq3.png') ?>"
+                  data-tagline="Le haut de gamme, sur-mesure et scalable.">
+            Premium
+          </button>
+        </nav>
+
+        <div id="portfolio-stage" class="portfolio-stage">
+          <!-- Vidéo initialisée sur Essentiel -->
+          <video id="portfolioVideo"
+                class="portfolio-video"
                 muted
-                loop
                 playsinline
-                preload="metadata"
-                poster="<?= $poster ?>">
-            <source src="<?= $mp4 ?>" type="video/mp4">
-          </video>
-        </div>
-        <div class="portfolio-item">
-          <?php
-            $poster = url('assets/images/PosterMaq2.png');
-            $mp4 = url('assets/videos/Maquette2mini.mp4');
-          ?>
-          <video class="portfolio-video"
-                autoplay
-                muted
                 loop
-                playsinline
                 preload="metadata"
-                poster="<?= $poster ?>">
-            <source src="<?= $mp4 ?>" type="video/mp4">
+                poster="<?= url('assets/images/PosterMaq1.png') ?>">
+            <source id="portfolioSource" src="<?= url('assets/videos/Maquette1mini.mp4') ?>" type="video/mp4">
           </video>
-        </div>
-        <div class="portfolio-item">
-          <?php
-            $poster = url('assets/images/PosterMaq3.png');
-            $mp4 = url('assets/videos/Maquette3mini.mp4');
-          ?>
-          <video class="portfolio-video"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster="<?= $poster ?>">
-            <source src="<?= $mp4 ?>" type="video/mp4">
-          </video>
+
+          <div class="portfolio-caption">
+            <span class="badge">Essentiel</span>
+            <p class="tagline">L’essentiel pour démarrer vite et bien.</p>
+          </div>
         </div>
       </div>
-
-      <!-- <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="<?= url('assets/images/maquette1.jpg') ?>" alt="Maquette site conciergerie">
-        </div>
-        <div class="portfolio-item">
-          <img src="<?= url('assets/images/maquette2.jpg') ?>" alt="Maquette site agence de location">
-        </div>
-        <div class="portfolio-item">
-          <img src="<?= url('assets/images/maquette3.jpg') ?>" alt="Maquette site vitrine entreprise">
-        </div>
-      </div> -->
     </div>
   </section>
 

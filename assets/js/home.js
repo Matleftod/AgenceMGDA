@@ -34,4 +34,55 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  const tabs = document.querySelectorAll('.portfolio-tabs .tab');
+  const video = document.getElementById('portfolioVideo');
+  const source = document.getElementById('portfolioSource');
+  const badge  = document.querySelector('.portfolio-caption .badge');
+  const tagline = document.querySelector('.portfolio-caption .tagline');
+
+  function switchPlan(btn) {
+    // Maj visuelle onglets
+    tabs.forEach(t => {
+      t.classList.toggle('is-active', t === btn);
+      t.setAttribute('aria-selected', t === btn ? 'true' : 'false');
+    });
+
+    // Swap vidéo (petit fondu)
+    const mp4 = btn.dataset.mp4;
+    const poster = btn.dataset.poster;
+    const plan = btn.dataset.plan || btn.textContent.trim();
+    const line = btn.dataset.tagline || '';
+
+    video.classList.add('is-swapping');
+    // petite attente pour l’effet (sans bloquer trop longtemps)
+    setTimeout(() => {
+      if (poster) video.setAttribute('poster', poster);
+      source.setAttribute('src', mp4);
+      video.load();
+      video.play().catch(() => {});
+      video.classList.remove('is-swapping');
+
+      // Caption
+      badge.textContent = plan;
+      tagline.textContent = line;
+    }, 120);
+  }
+
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => switchPlan(btn));
+    btn.addEventListener('keydown', (e) => {
+      // accessibilité: flèches gauche/droite pour naviguer
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const arr = Array.from(tabs);
+        const i = arr.indexOf(btn);
+        const next = e.key === 'ArrowRight'
+          ? arr[(i + 1) % arr.length]
+          : arr[(i - 1 + arr.length) % arr.length];
+        next.focus();
+        switchPlan(next);
+      }
+    });
+  });
 });
