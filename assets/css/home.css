@@ -348,6 +348,19 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Vidéos du portfolio */
+.portfolio-item video.portfolio-video{
+    display:block;
+    width:100%;
+    aspect-ratio:16/10;     /* ratio homogène */
+    object-fit:fill;
+    border-radius:10px;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .portfolio-item video.portfolio-video{ animation:none !important; }
+}
+
 .portfolio-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);

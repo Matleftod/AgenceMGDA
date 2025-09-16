@@ -95,6 +95,54 @@
       <p>Découvrez quelques maquettes et inspirations que nous avons créées pour nos clients.</p>
       <div class="portfolio-grid">
         <div class="portfolio-item">
+          <?php
+            $poster = url('assets/images/PosterMaq1.png');
+            $mp4 = url('assets/videos/Maquette1mini.mp4');
+          ?>
+          <video class="portfolio-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="<?= $poster ?>">
+            <source src="<?= $mp4 ?>" type="video/mp4">
+          </video>
+        </div>
+        <div class="portfolio-item">
+          <?php
+            $poster = url('assets/images/PosterMaq2.png');
+            $mp4 = url('assets/videos/Maquette2mini.mp4');
+          ?>
+          <video class="portfolio-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="<?= $poster ?>">
+            <source src="<?= $mp4 ?>" type="video/mp4">
+          </video>
+        </div>
+        <div class="portfolio-item">
+          <?php
+            $poster = url('assets/images/PosterMaq3.png');
+            $mp4 = url('assets/videos/Maquette3mini.mp4');
+          ?>
+          <video class="portfolio-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="<?= $poster ?>">
+            <source src="<?= $mp4 ?>" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- <div class="portfolio-grid">
+        <div class="portfolio-item">
           <img src="<?= url('assets/images/maquette1.jpg') ?>" alt="Maquette site conciergerie">
         </div>
         <div class="portfolio-item">
@@ -103,8 +151,7 @@
         <div class="portfolio-item">
           <img src="<?= url('assets/images/maquette3.jpg') ?>" alt="Maquette site vitrine entreprise">
         </div>
-        <!-- Tu peux boucler si tu gères ça depuis le panel Kirby -->
-      </div>
+      </div> -->
     </div>
   </section>
 
