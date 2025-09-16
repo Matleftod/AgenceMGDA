@@ -57,15 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
     video.classList.add('is-swapping');
     // petite attente pour l’effet (sans bloquer trop longtemps)
     setTimeout(() => {
-      if (poster) video.setAttribute('poster', poster);
-      source.setAttribute('src', mp4);
-      video.load();
-      video.play().catch(() => {});
-      video.classList.remove('is-swapping');
+        if (poster) video.setAttribute('poster', poster);
+        source.setAttribute('src', mp4);
+        video.load();
+        video.play().catch(() => {});
+        video.classList.remove('is-swapping');
 
-      // Caption
-      badge.textContent = plan;
-      tagline.textContent = line;
+        // Caption
+        badge.textContent = plan;
+        tagline.textContent = line;
+
+        // Met à jour la couleur de badge selon l’onglet actif
+        badge.className = 'badge'; // reset
+        if (btn.classList.contains('tab-essentiel')) badge.classList.add('badge-essentiel');
+        if (btn.classList.contains('tab-standard'))  badge.classList.add('badge-standard');
+        if (btn.classList.contains('tab-premium'))   badge.classList.add('badge-premium');
     }, 120);
   }
 

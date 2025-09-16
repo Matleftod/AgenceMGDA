@@ -96,7 +96,7 @@
       <!-- Switch Forfaits -->
       <div class="portfolio-switch">
         <nav class="portfolio-tabs" role="tablist" aria-label="Forfaits">
-          <button class="tab is-active"
+          <button class="tab is-active tab-essentiel"
                   role="tab" aria-selected="true" aria-controls="portfolio-stage"
                   data-plan="Essentiel"
                   data-mp4="<?= url('assets/videos/Maquette1mini.mp4') ?>"
@@ -104,7 +104,7 @@
                   data-tagline="L’essentiel pour démarrer vite et bien.">
             Essentiel
           </button>
-          <button class="tab"
+          <button class="tab tab-standard"
                   role="tab" aria-selected="false" aria-controls="portfolio-stage"
                   data-plan="Standard"
                   data-mp4="<?= url('assets/videos/Maquette2mini.mp4') ?>"
@@ -112,7 +112,7 @@
                   data-tagline="L’équilibre parfait : design + fonctionnalités.">
             Standard
           </button>
-          <button class="tab"
+          <button class="tab tab-premium"
                   role="tab" aria-selected="false" aria-controls="portfolio-stage"
                   data-plan="Premium"
                   data-mp4="<?= url('assets/videos/Maquette3mini.mp4') ?>"
@@ -123,24 +123,16 @@
         </nav>
 
         <div id="portfolio-stage" class="portfolio-stage">
-          <!-- Vidéo initialisée sur Essentiel -->
-          <video id="portfolioVideo"
-                class="portfolio-video"
-                muted
-                playsinline
-                loop
-                preload="metadata"
+          <video id="portfolioVideo" class="portfolio-video" muted playsinline loop preload="metadata"
                 poster="<?= url('assets/images/PosterMaq1.png') ?>">
             <source id="portfolioSource" src="<?= url('assets/videos/Maquette1mini.mp4') ?>" type="video/mp4">
           </video>
 
           <div class="portfolio-caption">
-            <span class="badge">Essentiel</span>
+            <span class="badge badge-essentiel">Essentiel</span> <!-- ⬅ badge initial en vert -->
             <p class="tagline">L’essentiel pour démarrer vite et bien.</p>
           </div>
         </div>
-      </div>
-    </div>
   </section>
 
   <!-- Eco-Design Section -->

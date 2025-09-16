@@ -437,14 +437,33 @@
   margin-top: 1rem;
 }
 
-.portfolio-caption .badge {
-  background: rgba(96, 225, 203, 0.18);
-  color: #167a6e;
-  border: 1px solid rgba(96, 225, 203, 0.35);
+/* Badges par forfait */
+.badge {
   font-weight: 700;
   padding: .35rem .6rem;
   border-radius: 999px;
   font-size: .85rem;
+}
+
+/* Essentiel (vert) */
+.badge-essentiel {
+  background: rgba(0, 200, 120, 0.15);
+  color: #057a45;
+  border: 1px solid rgba(0, 200, 120, 0.35);
+}
+
+/* Standard (bleu) */
+.badge-standard {
+  background: rgba(0, 140, 255, 0.15);
+  color: #0056a4;
+  border: 1px solid rgba(0, 140, 255, 0.35);
+}
+
+/* Premium (rouge) */
+.badge-premium {
+  background: rgba(255, 80, 80, 0.15);
+  color: #a11212;
+  border: 1px solid rgba(255, 80, 80, 0.35);
 }
 
 .portfolio-caption .tagline {
