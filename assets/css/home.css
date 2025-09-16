@@ -304,6 +304,72 @@
     border-top-right-radius: 10px;
 }
 
+/**************************************** Portfolio Section ********************************************/
+.portfolio {
+    padding: 7rem 3rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portfolio > .portfolio-container > p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* Card */
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10; /* ratio propre et homogène */
+    object-fit: cover;
+}
+
+/**************************************** Portfolio Responsive ********************************************/
+@media (max-width: 900px) {
+    .portfolio { padding: 3rem; }
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 590px) {
+    .portfolio-grid { grid-template-columns: 1fr; }
+}
+
 /**************************************** Eco Section ********************************************/
 
 .eco-design {
