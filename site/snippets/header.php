@@ -55,6 +55,7 @@
                 <li><a href="/#home">Accueil</a></li>
                 <li><a href="/#about">À propos de nous</a></li>
                 <li><a href="/#services">Nos Services</a></li>
+                <li><a href="/#portfolio">Nos Maquettes</a></li>
             </ul>
             <a href="/#contact" class="btn-primary"><span>Nous Contacter</span></a>
         </nav>

@@ -307,7 +307,7 @@
 /**************************************** Portfolio Section ********************************************/
 .portfolio {
     padding: 7rem 3rem;
-    background-color: #fff;
+    background-color: #f8f9fa;
     display: flex;
     justify-content: center;
 }
@@ -487,26 +487,131 @@
   font-size: .95rem;
 }
 
-/* Respecte l’accessibilité */
+/* Bouton “voir d’autres maquettes” */
+.more-mockups { margin-top: 4rem; }
+
+/* Aligne correctement l’icône ▾ dans le bouton secondaire */
+.more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* Flèche qui pivote */
+.more-btn-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+  transition: transform .3s ease;
+}
+.more-btn[aria-expanded="true"] .more-btn-icon {
+  transform: rotate(180deg);
+}
+
+/* Panneau déroulant */
+.more-panel {
+  overflow: hidden;
+  transition: grid-template-rows .35s ease, opacity .25s ease, margin-top .2s ease;
+  display: grid;
+  grid-template-rows: 0fr; /* fermé */
+  opacity: 0;
+  margin-top: 0;
+}
+.more-panel[data-open="true"] {
+  grid-template-rows: 1fr; /* ouvert */
+  opacity: 1;
+  margin-top: 2rem;
+}
+.more-panel > * { min-height: 0; } /* indispensable pour la technique des rows */
+
+.more-panel[hidden] {
+  display: none !important;
+}
+
+/* Intro */
+.more-intro {
+  text-align: center;
+  color: #666;
+  margin: 0 0 2rem 0;
+}
+
+/* Grille d’images */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;   
+}
+
+.more-card {
+  margin: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.more-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+.more-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/********** Responsive  **********/
+
+/* Desktop par défaut :
+   - more-grid en 3 colonnes
+   - portfolio-stage gère sa largeur via sa règle de base
+*/
+
+/* ≤ 900px : tablette */
+@media (max-width: 900px) {
+  /* Section portfolio (padding + scène vidéo) */
+  .portfolio { padding: 3rem; }
+  .portfolio-stage { max-width: 700px; }
+
+  /* Grille PNG : 2 colonnes, largeur contenue */
+  .more-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;       /* évite un trop grand étalement */
+    margin: 0 auto;
+  }
+
+  /* Les images peuvent s’élargir sur 2 colonnes */
+  .more-card img { max-width: 100%; }
+}
+
+/* ≤ 590px : mobile */
+@media (max-width: 590px) {
+  /* Scène vidéo full-width */
+  .portfolio-stage { max-width: 100%; }
+
+  /* Grille PNG : 1 colonne */
+  .more-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Bouton & tabs plus compacts */
+  .portfolio-tabs { gap: 1rem; }
+  .more-btn { padding: 0.7rem 1.1rem; }
+}
+
+/* Accessibilité : réduction des animations */
 @media (prefers-reduced-motion: reduce) {
+  .more-btn,
+  .more-btn-icon,
+  .more-panel,
+  .more-card,
   .portfolio-tabs .tab,
   .portfolio-stage .portfolio-video {
     transition: none !important;
   }
-}
-
-@media (max-width: 900px) {
-  .portfolio-stage { max-width: 700px; }
-}
-
-/**************************************** Portfolio Responsive ********************************************/
-@media (max-width: 900px) {
-    .portfolio { padding: 3rem; }
-    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 590px) {
-    .portfolio-grid { grid-template-columns: 1fr; }
 }
 
 /**************************************** Eco Section ********************************************/

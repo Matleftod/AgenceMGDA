@@ -91,4 +91,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+  const btn = document.getElementById('moreMockupsBtn');
+  const panel = document.getElementById('moreMockupsPanel');
+
+  if (!btn || !panel) return;
+
+  const setOpen = (open) => {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      panel.hidden = false;
+      // petit délai pour laisser le DOM appliquer hidden=false avant la transition
+      requestAnimationFrame(() => panel.dataset.open = 'true');
+    } else {
+      panel.dataset.open = 'false';
+      // attendre la fin d'anim avant de remettre hidden (meilleure a11y)
+      const onEnd = () => {
+        panel.hidden = true;
+        panel.removeEventListener('transitionend', onEnd);
+      };
+      panel.addEventListener('transitionend', onEnd);
+    }
+  };
+
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    setOpen(!open);
+  });
 });

@@ -133,6 +133,81 @@
             <p class="tagline">L’essentiel pour démarrer vite et bien.</p>
           </div>
         </div>
+
+        <!-- Toggle autres maquettes -->
+        <div class="more-mockups">
+          <button id="moreMockupsBtn"
+            class="btn-secondary more-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="moreMockupsPanel">
+            <span class="more-btn-label">Voir d’autres maquettes</span>
+            <span class="more-btn-icon" aria-hidden="true">▾</span>
+          </button>
+
+          <div id="moreMockupsPanel" class="more-panel" hidden>
+            <p class="more-intro">Des variations visuelles pour vous inspirer.</p>
+
+            <!-- Grille (version statique) -->
+            <div class="more-grid">
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq1.png') ?>"
+                    alt="Maquette de site vitrine moderne en bleu clair."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq2.png') ?>"
+                    alt="Maquette de site vitrine nature en vert et beige."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq3.png') ?>"
+                    alt="Maquette de site vitrine haut de gamme en style sombre."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq4.png') ?>"
+                    alt="Maquette de site vitrine coloré en jaune et beige."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq5.png') ?>"
+                    alt="Maquette de site vitrine dynamique en rose, violet et jaune."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq6.png') ?>"
+                    alt="Maquette de site vitrine moderne en dégradé multicolore."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq7.png') ?>"
+                    alt="Maquette de site vitrine élégant en gris foncé avec villa moderne."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq8.png') ?>"
+                    alt="Maquette de site vitrine chaleureux en beige et brun avec maison de campagne."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq9.png') ?>"
+                    alt="Maquette de site vitrine minimaliste en blanc avec villa contemporaine."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq10.png') ?>"
+                    alt="Maquette de site vitrine en bleu clair avec villa en bord de mer."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+              <figure class="more-card">
+                <img src="<?= url('assets/images/mockups/maq11.png') ?>"
+                    alt="Maquette de site vitrine élégant en beige avec villa moderne et piscine."
+                    width="800" height="500" loading="lazy" decoding="async">
+              </figure>
+            </div>
+          </div>
+        </div>
   </section>
 
   <!-- Eco-Design Section -->
