@@ -91,8 +91,8 @@
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio">
     <div class="portfolio-container">
-      <h2>Nos réalisations</h2>
-      <p>Découvrez quelques maquettes et inspirations que nous avons créées pour nos clients.</p>
+      <h2>Nos maquettes</h2>
+      <p>Quelques exemples visuels pour vous inspirer et vous donner une idée de notre style et de nos possibilités.</p>
       <!-- Switch Forfaits -->
       <div class="portfolio-switch">
         <nav class="portfolio-tabs" role="tablist" aria-label="Forfaits">
@@ -117,7 +117,7 @@
                   data-plan="Premium"
                   data-mp4="<?= url('assets/videos/Maquette3mini.mp4') ?>"
                   data-poster="<?= url('assets/images/PosterMaq3.png') ?>"
-                  data-tagline="Le haut de gamme, sur-mesure et scalable.">
+                  data-tagline="Le haut de gamme, qui reflète parfaitement votre identité.">
             Premium
           </button>
         </nav>
