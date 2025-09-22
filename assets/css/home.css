@@ -449,7 +449,7 @@
   align-items: center;
   gap: .75rem;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 /* Badges par forfait */
@@ -495,6 +495,7 @@
   display: inline-flex;
   align-items: center;
   gap: .5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Flèche qui pivote */
