@@ -17,7 +17,6 @@
           </div>
       </div>
       <div class="hero-image animate-fade-in">
-          <img src="<?= url('assets/images/undraw_building_websites_i78t.svg') ?>" alt="Illustration">
       </div>
     </div>
   </section>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Agence MGDA : Création de sites vitrines écologiques et sur-mesure pour conciergeries et petites entreprises.">
+    <meta name="description" content="Agence MGDA : Nous créons des sites vitrines écologiques et sur-mesure, pensés pour les commerçants, artisans, créatifs et entreprises à taille humaine. Des sites beaux, simples à gérer au quotidien, et conçus pour valoriser pleinement votre savoir-faire.">
     <meta name="robots" content="index, follow">
 
     <!-- Favicon principal -->

@@ -11,21 +11,6 @@
     z-index: 1;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/assets/images/CercleVert.png");
-    background-repeat: no-repeat;
-    background-size: 500px;
-    background-position: -115px 505px;
-    opacity: 0.4; /* Contrôle l’opacité de l’image de fond */
-    z-index: -1; /* Place derrière le contenu */
-}
-
 .hero-container {
     display: flex;
     gap: 2rem;
@@ -67,24 +52,6 @@
     display: flex;
     justify-content: flex-end;
     z-index: 1;
-}
-
-.hero-image img {
-    max-width: 90%;
-    height: auto;
-}
-
-.hero-image::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("/assets/images/CercleGris.png");
-    background-repeat: no-repeat;
-    background-size: 17%;
-    background-position: 98% 0%;
-    opacity: 0.4;
-    z-index: -1;
 }
 
 /**************************************** About Section ********************************************/
