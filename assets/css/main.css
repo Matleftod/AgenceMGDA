@@ -1,3 +1,20 @@
+:root {
+  /* Backgrounds */
+  --bg-1: #1B1B1D;
+  --bg-2: #232325;
+  --bg-3: #2A2A2D;
+
+  /* Text */
+  --text-1: #F0EEEA;
+  --text-2: #C4C3C0;
+  --text-3: #8D8C89;
+
+  /* Accents */
+  --accent-1: #60E1CB;
+  --accent-2: #C6F3E3;
+}
+
+
 /* Font-face pour Poppins */
 @font-face {
     font-family: 'Poppins';
@@ -70,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem; /* Espace au-dessus */
     margin-bottom: 1rem; /* Espace en-dessous */
     line-height: 1.3; /* Espacement entre les lignes */
-    color: #333; /* Couleur des titres */
+    color: var(--text-3); /* Couleur des titres */
 }
 
 /* Paragraphe */
@@ -79,19 +96,19 @@ p {
     margin-bottom: 1.5rem; /* Espace en-dessous */
     line-height: 1.6; /* Espacement entre les lignes */
     font-size: 1rem; /* Taille de la police */
-    color: #555; /* Couleur du texte */
+    color: var(--text-2); /* Couleur du texte */
 }
 
 a {
-    color: #000;
+    color: var(--text-3);
 }
 
 /* Boutons */
 .btn-primary {
     position: relative;
     overflow: hidden; /* Pour éviter que l'effet dépasse les bords */
-    background-color: #60E1CB;
-    color: #fff;
+    background-color: var(--accent-1);
+    color: var(--text-1);
     padding: 0.8rem 1.5rem;
     border-radius: 20px;
     text-decoration: none;
@@ -108,7 +125,7 @@ a {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #68b3b3;
+    background-color: var(--accent-1);
     z-index: 0; /* Derrière le texte */
     transition: all 0.3s ease-in-out;
 }
@@ -118,7 +135,7 @@ a {
 }
 
 .btn-primary:hover {
-    color: #fff; /* Garde le texte blanc */
+    color: var(--text-1); /* Garde le texte blanc */
 }
 
 /* Texte au-dessus */
@@ -132,12 +149,12 @@ a {
     position: relative;
     overflow: hidden;
     background-color: transparent;
-    color: #60E1CB;
+    color: var(--accent-1);
     padding: 0.8rem 1.5rem;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
-    border: 2px solid #60E1CB;
+    border: 2px solid var(--accent-1);
     transition: color 0.3s;
     z-index: 1;
 }
@@ -149,7 +166,7 @@ a {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #60E1CB;
+    background-color: var(--accent-1);
     z-index: 0;
     transition: all 0.3s ease-in-out;
 }
@@ -159,7 +176,7 @@ a {
 }
 
 .btn-secondary:hover {
-    color: #fff;
+    color: var(--text-1);
 }
 
 .btn-secondary span {
@@ -170,19 +187,19 @@ a {
 .btn-tertiary {
     display: inline-block;
     background-color: transparent; /* Fond transparent pour le contraste */
-    color: #60E1CB; /* Couleur principale */
+    color: var(--accent-1); /* Couleur principale */
     padding: 0.8rem 1.5rem;
     border-radius: 20px;
-    border: 2px solid #60E1CB; /* Bordure principale */
+    border: 2px solid var(--accent-1); /* Bordure principale */
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
 
 .btn-tertiary:hover {
-    background-color: #60E1CB; /* Fond rempli au survol */
-    color: #fff; /* Texte blanc pour un bon contraste */
-    border: 2px solid #60E1CB;
+    background-color: var(--accent-1); /* Fond rempli au survol */
+    color: var(--text-1); /* Texte blanc pour un bon contraste */
+    border: 2px solid var(--accent-1);
     transform: translateY(-3px); /* Légère élévation pour effet de survol */
 }
 
@@ -201,7 +218,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #60E1CB;
+    background-color: var(--accent-1);
     border-radius: 10px;
 }
 
@@ -212,21 +229,21 @@ a {
 /* Appliqué dans Firefox */
 * {
     scrollbar-width: thin; /* Réduit la taille de la barre */
-    scrollbar-color: #60E1CB transparent; /* Couleur de la barre et fond */
+    scrollbar-color: var(--accent-1) transparent; /* Couleur de la barre et fond */
 }
 
 
 .mentions-legales, .cgv {
     padding: 5rem 2rem 2rem 2rem;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--bg-1);
+    color: var(--text-3);
 }
 
 .mentions-legales h1,
 .mentions-legales h2,
 .cgv h1,
 .cgv h2 {
-    color: #222;  
+    color: var(--text-3);  
 }
 
 .mentions-legales p,
@@ -240,7 +257,7 @@ a {
 .cookies-policy {
     max-width: 800px;
     margin: 100px auto;
-    background: #fff;
+    background: var(--bg-1);
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -253,8 +270,8 @@ a {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    background-color: #f7f7f7;
-    color: #333;
+    background-color: var(--bg-1);
+    color: var(--text-3);
 }
 
 .error-page h1 {
@@ -270,8 +287,8 @@ a {
 .error-page .btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #60E1CB;
-    color: #fff;
+    background-color: var(--accent-1);
+    color: var(--text-1);
     border-radius: 5px;
     text-decoration: none;
     font-size: 1rem;

@@ -1,7 +1,7 @@
 /* Footer */
 .site-footer {
     position: relative;
-    background-color: #262626;
+    background-color: var(--bg-1);
     color: #fff;
     padding: 2rem 1rem;
     text-align: center;
@@ -15,11 +15,11 @@
     left: 0;
     right: 0;
     height: 5px;
-    background-color: #60E1CB;
+    background-color: var(--accent-1);
 }
 
 .site-footer a {
-    color: white;
+    color: var(--text-1);
 }
 
 .footer-container {
@@ -32,7 +32,7 @@
 }
 
 .footer-container p {
-    color: #fff;
+    color: var(--text-1);
 }
 
 /* Logo and Contact Info */
@@ -76,11 +76,11 @@
 }
 
 .footer-legal a {
-    color: #60E1CB;
+    color: var(--accent-1);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-legal a:hover {
-    color: #fff;
+    color: var(--text-1);
 }
