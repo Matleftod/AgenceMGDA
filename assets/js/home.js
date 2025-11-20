@@ -6,6 +6,17 @@ window.addEventListener("load", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  
+  let index = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    index = (index + 1) % slides.length;
+  }
+
+  setInterval(showSlide, 3000);
+  
   const vids = document.querySelectorAll('.portfolio-video');
 
   const io = new IntersectionObserver((entries) => {

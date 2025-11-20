@@ -5,18 +5,31 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-container">
-      <div class="hero-content animate-slide-down">
-          <h1>Votre succès digital<br> à la <span class="highlight">française</span></h1>
-          <p>Chez MGDA, on crée des sites web modernes, uniques et qui vous ressemblent vraiment. 
-            Que vous soyez une conciergerie, une agence de location ou une petite entreprise, 
-            on est là pour donner vie à vos idées avec un site qui claque, efficace et sur-mesure.</p>
-          <div class="hero-buttons">
-              <a href="#contact" class="btn-primary"><span>C'est parti !</span></a>
-              <a href="#services" class="btn-secondary"><span>Nos services</span></a>
 
-          </div>
+      <!-- Left : Title + CTA -->
+      <div class="hero-left animate-slide-down">
+        <h1>Votre succès digital<br> à la <span class="highlight">française</span></h1>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary"><span>C'est parti !</span></a>
+        </div>
       </div>
-      <div class="hero-image animate-fade-in">
+
+      <!-- Right : Mini-text + stats + CTA -->
+      <div class="hero-right">
+        <p class="stats">+ 35 projets accompagnés<br>+ 12 artisans / créateurs</p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn-secondary"><span>Nos services</span></a>
+        </div>
+      </div>
+
+      <!-- Center : Image with fade diagonal -->
+      <div class="hero-center">
+        <div class="hero-slider">
+          <img src="assets/images/forge.jpg" class="slide active">
+          <img src="assets/images/commerce.jpg" class="slide">
+          <img src="assets/images/creatif.jpg" class="slide">
+          <img src="assets/images/pizza.jpg" class="slide">
+        </div>
       </div>
     </div>
   </section>

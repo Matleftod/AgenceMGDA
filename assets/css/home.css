@@ -2,20 +2,22 @@
 .hero {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     height: 100vh;
-    padding: 0 2rem 0 7rem;
+    padding: 0 0 0 2rem;
     background-color: var(--bg-1);
     overflow: hidden;
     z-index: 1;
 }
 
 .hero-container {
-    display: flex;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    align-items: center;
+    column-gap: 3rem;
+    height: 100%;
+    margin: 0px auto;
 }
 
 .hero-content {
@@ -52,6 +54,47 @@
     display: flex;
     justify-content: flex-end;
     z-index: 1;
+}
+
+.hero-center {
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    height: 88%;
+    overflow: hidden;
+}
+
+/* Slider wrapper */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Chaque image */
+.hero-slider .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.hero-slider .slide.active {
+    opacity: 1;
+}
+
+.hero-right {
+    z-index: 2;
+}
+
+.hero-right .stats {
+    font-size: 1rem;
+    color: var(--text-2);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
 }
 
 /**************************************** About Section ********************************************/
