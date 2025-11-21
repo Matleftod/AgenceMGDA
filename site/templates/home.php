@@ -26,8 +26,11 @@
       <div class="hero-center">
         <div class="hero-slider">
           <img src="assets/images/forge.jpg" class="slide active">
-          <img src="assets/images/commerce.jpg" class="slide">
-          <img src="assets/images/creatif.jpg" class="slide">
+          <img src="assets/images/worker.jpg" class="slide">
+          <img src="assets/images/commerc.jpg" class="slide">
+          <img src="assets/images/artist.jpg" class="slide">
+          <img src="assets/images/mecha.jpg" class="slide">
+          <img src="assets/images/soudure.jpg" class="slide">
           <img src="assets/images/pizza.jpg" class="slide">
         </div>
       </div>

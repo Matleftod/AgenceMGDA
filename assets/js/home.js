@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     index = (index + 1) % slides.length;
   }
 
-  setInterval(showSlide, 3000);
-  
+  setInterval(showSlide, 4000);
+
   const vids = document.querySelectorAll('.portfolio-video');
 
   const io = new IntersectionObserver((entries) => {
