@@ -28,6 +28,7 @@
     <!-- Section-specific CSS -->
     <link rel="stylesheet" href="<?= url('assets/css/header.css') ?>">
     <link rel="stylesheet" href="<?= url('assets/css/footer.css') ?>">
+    <link rel="stylesheet" href="<?= url('assets/css/styles.css') ?>">
     <?php if ($page->template() == 'home'): ?>
         <link rel="stylesheet" href="<?= url('assets/css/home.css') ?>">
     <?php endif ?>
