@@ -1,0 +1,19 @@
+:root {
+  --bg-1: #000000;
+  --bg-2: #232325;
+  --bg-3: #2A2A2D;
+
+  --text-1: #F0EEEA;
+  --text-2: #C4C3C0;
+  --text-3: #8D8C89;
+
+  --accent-1: #60E1CB;
+  --accent-2: #C6F3E3;
+}
+
+/* Font-face */
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Italic.ttf'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Light.ttf'); font-weight: 300; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf'); font-weight: 600; }

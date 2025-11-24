@@ -1,0 +1,63 @@
+.eco-design {
+    background-color: var(--bg-1);
+    padding: 4rem 2rem;
+}
+
+.eco-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eco-section1 ,.eco-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.eco-text {
+    flex: 1;
+}
+
+.eco-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-1);
+    margin-bottom: 1rem;
+}
+
+.eco-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-3);
+}
+
+.eco-description strong {
+    color: var(--accent-1);
+    font-weight: bold;
+}
+
+.eco-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+.eco-image img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.logo-kirby {
+    max-width: 200px;
+}
+
+.eco-image img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,57 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 0 0 2rem;
+  background-color: var(--bg-1);
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  align-items: center;
+  height: 100%;
+  column-gap: 3rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+}
+
+.highlight { color: var(--accent-1); }
+
+.hero-center {
+  position: relative;
+  height: 88%;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.slide.active { opacity: 1; }
+
+.hero-right .stats {
+  color: var(--text-2);
+  opacity: 0.9;
+}

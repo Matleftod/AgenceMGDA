@@ -1,30 +1,53 @@
 @import "tailwindcss";
 
-/* 1. Tes Polices Custom */
-@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Regular.ttf'); font-weight: 400; font-style: normal; }
-@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Italic.ttf'); font-weight: 400; font-style: italic; }
-@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Bold.ttf'); font-weight: 700; font-style: normal; }
-/* ... Ajoute les autres graisses ici ... */
+/* base */
+@import "./base/variables.css";
+@import "./base/typography.css";
+@import "./base/global.css";
+
+/* components */
+@import "./components/buttons.css";
+@import "./components/animations.css";
+
+/* sections */
+@import "./sections/hero.css";
+@import "./sections/about.css";
+@import "./sections/services.css";
+@import "./sections/portfolio.css";
+@import "./sections/eco.css";
+@import "./sections/contact.css";
+@import "./sections/testimonials.css";
+@import "./sections/case-studies.css";
+@import "./sections/footer.css";
+@import "./sections/header.css";
+
+/* responsive */
+@import "./responsive/responsive.css";
 
 
-/* 2. Configuration du Thème (Variables v4) */
+/* --- Sources à scanner par Tailwind --- */
+@source "./site/templates/**/*.php";
+@source "./site/snippets/**/*.php";
+@source "./site/components/**/*.php";
+@source "./site/sections/**/*.php";
+@source "./content/**/*";
+@source "./assets/js/**/*.js";
+
+/* --- Thème Tailwind v4 (tes couleurs + animations) --- */
 @theme {
-  /* Couleurs (directement accessibles via bg-bg-1, text-accent-1, etc.) */
   --color-bg-1: #000000;
   --color-bg-2: #232325;
   --color-bg-3: #2A2A2D;
 
-  --color-text-1: #F0EEEA; /* Blanc cassé */
-  --color-text-2: #C4C3C0; /* Gris clair */
-  --color-text-3: #8D8C89; /* Gris foncé */
+  --color-text-1: #F0EEEA;
+  --color-text-2: #C4C3C0;
+  --color-text-3: #8D8C89;
 
-  --color-accent-1: #60E1CB; /* Mint */
-  --color-accent-2: #C6F3E3; /* Light Mint */
+  --color-accent-1: #60E1CB;
+  --color-accent-2: #C6F3E3;
 
-  /* Police par défaut */
   --font-sans: "Poppins", sans-serif;
 
-  /* Animations Custom */
   --animate-slide-down: slideDownBounce 1s ease-out forwards;
   --animate-fade-in: fadeIn 1s ease-out forwards;
 
@@ -41,15 +64,14 @@
   }
 }
 
-/* 3. Composants Custom (Buttons) */
-/* En v4, on utilise @layer components comme avant, mais avec la syntaxe nesting native propre */
+/* --- Boutons custom --- */
 @layer components {
   .btn-primary {
     @apply relative overflow-hidden bg-accent-1 text-text-1 px-6 py-3 rounded-full font-bold border-2 border-transparent transition-colors z-10 inline-block cursor-pointer;
     
     &::before {
       content: "";
-      @apply absolute inset-0 bg-accent-1 -z-10 transition-all duration-300 ease-in-out translate-x-[-100%];
+      @apply absolute inset-0 bg-accent-1 -z-10 duration-300 ease-in-out translate-x-[-100%];
     }
     &:hover::before {
       @apply translate-x-0;
@@ -61,7 +83,7 @@
 
     &::before {
       content: "";
-      @apply absolute inset-0 bg-accent-1 -z-10 transition-all duration-300 ease-in-out translate-x-[-100%];
+      @apply absolute inset-0 bg-accent-1 -z-10 duration-300 ease-in-out translate-x-[-100%];
     }
     &:hover {
       @apply text-text-1;

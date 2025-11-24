@@ -1,0 +1,149 @@
+.services {
+    position: relative;
+    padding: 7rem 3rem;
+    background-color: var(--bg-1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/images/GrandCerlceG.png);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: 109% 79%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.services-title {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.service-title-div {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-title img{
+    max-width: 175px;
+}
+
+.services-image {
+    align-content: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-3);
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-intro {
+    font-size: 1rem;
+    color: var(--text-2);
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: var(--bg-1);
+    border-radius: 10px;
+    padding: 90px 30px 30px 30px;
+    width: calc(33.333% - 30px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: start;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.service-icon-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-1);
+    border-radius: 50%;
+    opacity: 0.25;
+    left: -15px;
+    top: -15px;
+    z-index: 0;
+}
+
+.service-icon {
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-3);
+    margin: 0 0 10px;
+}
+
+.service-description {
+    font-size: 0.9rem;
+    color: var(--text-2);
+    margin-bottom: 20px;
+}
+
+.service-link {
+    font-size: 0.9rem;
+    color: var(--accent-1);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+.service-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: var(--bg-1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
