@@ -9,7 +9,14 @@
     </div>
 
     <div class="hero-right">
-      <p class="stats">+ 35 projets accompagnés<br>+ 12 artisans / créateurs</p>
+      <p class="stats" id="hero-tip">
+        Un site professionnel rassure immédiatement vos futurs clients
+      </p>
+
+      <p class="hero-metric" id="hero-metric">
+        + 82 % des visiteurs jugent une entreprise sur son site web
+      </p>
+
       <div class="hero-buttons">
         <a href="#services" class="btn-secondary"><span>Nos services</span></a>
       </div>

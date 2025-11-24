@@ -17,6 +17,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(showSlide, 4000);
 
+  const tips = [
+    "Un site professionnel rassure immédiatement vos futurs clients",
+    "Une page simple et efficace vous démarque de vos concurrents sans effort",
+    "Vos clients vous trouvent plus facilement grâce à un site clair et moderne"
+  ];
+
+  const metrics = [
+    "+ 82 % des visiteurs jugent une entreprise sur son site web",
+    "+ 68 % des clients contactent l’entreprise avec le site le plus clair",
+    "+ 74 % des recherches locales aboutissent à une visite dans la journée"
+  ];
+
+  let index2 = 0;
+
+  function rotateTips() {
+    const tipElement = document.getElementById("hero-tip");
+    const metricElement = document.getElementById("hero-metric");
+
+    // fade-out
+    tipElement.style.opacity = 0;
+    metricElement.style.opacity = 0;
+
+    setTimeout(() => {
+      // change text
+      tipElement.textContent = tips[index2];
+      metricElement.textContent = metrics[index2];
+
+      // fade-in
+      tipElement.style.opacity = 1;
+      metricElement.style.opacity = 1;
+
+      index2 = (index2 + 1) % tips.length;
+    }, 400);
+  }
+
+  setInterval(rotateTips, 4000);
+
   const vids = document.querySelectorAll('.portfolio-video');
 
   const io = new IntersectionObserver((entries) => {
