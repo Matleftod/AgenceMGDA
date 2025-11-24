@@ -622,6 +622,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: right;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
