@@ -1,57 +1,121 @@
+/* Section hero globale */
 .hero {
   position: relative;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   height: 100vh;
-  padding: 0 0 0 2rem;
+  padding: 0 0 0 3rem;
   background-color: var(--bg-1);
   overflow: hidden;
 }
 
+/* Grille 3 colonnes : gauche / texte infos / slider */
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-columns: 25% 15% 60%; /* un peu plus pour le slider */
   align-items: center;
   height: 100%;
-  column-gap: 3rem;
+  column-gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.hero-content h1 {
+/* Colonne gauche : titre + bouton */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.hero-left h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: var(--text-3);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
-.highlight { color: var(--accent-1); }
+.highlight {
+  color: var(--accent-1);
+  font-style: italic;
+}
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Colonne centrale : texte complémentaire + bouton, centré verticalement */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: center;          /* centre la colonne par rapport à la hauteur */
+  justify-self: center;
+  z-index: 2;
+}
+
+.hero-right .stats {
+  font-size: 1rem;
+  color: var(--text-2);
+  opacity: 0.9;
+}
+
+/* Colonne droite : slider collé à droite */
 .hero-center {
   position: relative;
-  height: 88%;
+  height: 100%;
   display: flex;
+  justify-content: flex-end;   /* colle le slider au bord droit */
   overflow: hidden;
 }
 
 .hero-slider {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
+  max-width: 900px;            /* tu peux ajuster cette valeur */
 }
 
+/* Images du slider */
 .slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
 
-.slide.active { opacity: 1; }
+.slide.active {
+  opacity: 1;
+}
 
-.hero-right .stats {
-  color: var(--text-2);
-  opacity: 0.9;
+/* Responsive */
+@media (max-width: 992px) {
+  .hero {
+    padding: 2rem 1.5rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .hero-center {
+    height: 60vh;
+  }
+
+  .hero-slider {
+    max-width: 100%;
+  }
+
+  .hero-right {
+    align-items: flex-start;
+  }
 }
