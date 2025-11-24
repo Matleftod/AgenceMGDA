@@ -556,18 +556,19 @@ html {
   align-items: stretch;
   justify-content: space-between;
   height: 100vh;
-  padding: 0 0 0 3rem;
+  padding: 0 0 0 15rem;
   background-color: var(--bg-1);
   overflow: hidden;
 }
 .hero-container {
   display: grid;
-  grid-template-columns: 25% 15% 60%;
+  grid-template-columns: 40% 60%;
   align-items: center;
   height: 100%;
   column-gap: 1rem;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 .hero-left {
   display: flex;
@@ -591,17 +592,26 @@ html {
   gap: 1rem;
 }
 .hero-right {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  z-index: 20;
+  background: rgba(20, 20, 20, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem 2.2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  align-self: center;
-  justify-self: center;
-  z-index: 2;
+  gap: 1.4rem;
+  width: 260px;
 }
 .hero-right .stats {
-  font-size: 1rem;
-  color: var(--text-2);
-  opacity: 0.9;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text-1);
+  opacity: 0.95;
 }
 .hero-center {
   position: relative;
@@ -646,7 +656,18 @@ html {
     max-width: 100%;
   }
   .hero-right {
-    align-items: flex-start;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    backdrop-filter: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 1.5rem;
   }
 }
 .about {
