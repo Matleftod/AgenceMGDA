@@ -297,9 +297,6 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
-  .mb-16 {
-    margin-bottom: calc(var(--spacing) * 16);
-  }
   .block {
     display: block;
   }
@@ -353,12 +350,6 @@
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .items-center {
-    align-items: center;
-  }
-  .justify-between {
-    justify-content: space-between;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
@@ -414,9 +405,11 @@
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
+  .pl-3 {
+    padding-left: calc(var(--spacing) * 3);
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -431,9 +424,6 @@
   }
   .text-text-1 {
     color: var(--color-text-1);
-  }
-  .text-text-3 {
-    color: var(--color-text-3);
   }
   .lowercase {
     text-transform: lowercase;
@@ -1591,6 +1581,9 @@ html {
     margin: 1rem 0;
   }
 }
+#realisations {
+  padding: 2rem 0;
+}
 #realisations h2 {
   margin-top: 0;
 }
@@ -1619,6 +1612,15 @@ html {
 }
 .real-card:nth-child(3) {
   animation-delay: .2s;
+}
+.real-header {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @keyframes realFadeUp {
   to {
