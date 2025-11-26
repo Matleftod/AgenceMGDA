@@ -6,7 +6,7 @@
     </h2>
 
     <!-- GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
 
       <?php 
       $projects = [
@@ -21,19 +21,20 @@
                   hover:shadow-2xl transition-all duration-300">
 
         <!-- HEADER -->
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold text-text-1 mb-3">
+        <div class="flex items-center justify-between mb-6">
+
+          <h3 class="text-xl font-semibold text-text-1">
             <?= $proj['name'] ?>
           </h3>
 
           <div class="flex gap-1 text-accent-1">
             <?php for ($i = 0; $i < 5; $i++): ?>
-              <svg viewBox="0 0 20 20" class="w-5 h-5 star">
+              <svg viewBox="0 0 20 20" class="w-5 h-5 star fill-current text-accent-1">
                 <polygon points="10 1.5 12.8 7.4 19.3 7.8 14.2 12.1 15.7 18.5 10 15.2 4.3 18.5 5.8 12.1 .7 7.8 7.2 7.4"/>
-              </polygon>
               </svg>
             <?php endfor ?>
           </div>
+
         </div>
 
         <!-- IMAGE -->
