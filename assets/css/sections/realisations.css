@@ -1,0 +1,38 @@
+#realisations h2 {
+  margin-top: 0;
+}
+
+/* Stars glow */
+.star {
+  filter: drop-shadow(0 0 4px rgba(96, 225, 203, 0.4));
+}
+
+/* Mockup hover */
+.mockup-img {
+  transition: transform .35s ease, filter .35s ease;
+  border-radius: 12px;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.real-mockup:hover .mockup-img {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Card fade-in animation */
+.real-card {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: realFadeUp .8s ease forwards;
+}
+
+.real-card:nth-child(2) { animation-delay: .1s; }
+.real-card:nth-child(3) { animation-delay: .2s; }
+
+@keyframes realFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

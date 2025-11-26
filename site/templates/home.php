@@ -4,6 +4,8 @@
 
   <?php snippet('sections/hero') ?>
 
+  <?php snippet('sections/realisations') ?>
+
   <?php snippet('sections/about') ?>
 
   <?php snippet('sections/services') ?>
