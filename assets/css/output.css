@@ -593,7 +593,7 @@ html {
 }
 .bg-glow {
   position: absolute;
-  width: 600px;
+  width: 900px;
   height: 600px;
   pointer-events: none;
   z-index: 0;
@@ -749,10 +749,6 @@ html {
 .highlight {
   color: var(--accent-1);
   font-style: italic;
-}
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
 }
 .hero-right {
   position: absolute;

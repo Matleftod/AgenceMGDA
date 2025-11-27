@@ -43,11 +43,6 @@
   font-style: italic;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
 /* Bulle informative flottante */
 .hero-right {
   position: absolute;

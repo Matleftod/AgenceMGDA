@@ -4,7 +4,7 @@
     <div class="hero-left animate-slide-down">
       <h1>Votre succès digital<br> à la <span class="highlight">française</span></h1>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-primary"><span>C'est parti !</span></a>
+        <a href="#contact" class="btn-secondary"><span>C'est parti !</span></a>
       </div>
     </div>
 
@@ -16,10 +16,6 @@
       <p class="hero-metric" id="hero-metric">
         + 82 % des visiteurs jugent une entreprise sur son site web
       </p>
-
-      <div class="hero-buttons">
-        <a href="#services" class="btn-secondary"><span>Nos services</span></a>
-      </div>
     </div>
 
     <div class="hero-center">

@@ -13,7 +13,7 @@ html {
 
 .bg-glow {
   position: absolute;
-  width: 600px;
+  width: 900px;
   height: 600px;
   pointer-events: none;
   z-index: 0;
