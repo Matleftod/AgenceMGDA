@@ -31,7 +31,7 @@
 }
 
 .hero-left h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: var(--text-3);
   margin-bottom: 0.5rem;
@@ -43,11 +43,26 @@
   font-style: italic;
 }
 
+.hero-buttons {
+  font-size: 1.5rem;
+}
+
+/* Sous-titre sous le H1 */
+.hero-subtitle {
+  font-size: 1.45rem;
+  color: var(--text-2);
+  line-height: 1.45;
+  max-width: 480px;
+  margin-top: -0.5rem;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
 /* Bulle informative flottante */
 .hero-right {
   position: absolute;
-  top: 50%;
-  left: 35%;
+  top: 25%;
+  left: 40%;
   transform: translateY(-50%);
   z-index: 20;
   background: rgba(20, 20, 20, 0.1);
@@ -66,26 +81,12 @@
 
 /* Texte principal (tip) */
 #hero-tip {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-1);
   line-height: 1.45;
   opacity: 0;
   transition: opacity 0.4s ease;
-}
-
-/* Chiffres / métriques */
-.hero-metric {
-  font-size: 0.95rem;
-  color: var(--accent-1);
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-/* Bouton sous la bulle */
-.hero-right .hero-buttons {
-  margin-top: 0.5rem;
 }
 
 /* Colonne droite : slider collé à droite */

@@ -1,51 +1,98 @@
-.btn-primary {
+/* ========================================= */
+/*           BOUTONS – SYSTÈME GLOBAL        */
+/* ========================================= */
+
+.btn-primary,
+.btn-secondary {
   position: relative;
   overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Le texte reste toujours au-dessus */
+.btn-primary span,
+.btn-secondary span {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================= */
+/*              BOUTON PRIMARY               */
+/* ========================================= */
+
+.btn-primary {
   background-color: var(--accent-1);
   color: var(--text-1);
-  padding: 0.8rem 1.5rem;
-  border-radius: 20px;
-  font-weight: bold;
   border: 2px solid transparent;
-  transition: color 0.3s;
-  z-index: 1;
 }
 
 .btn-primary::before {
   content: "";
   position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background-color: var(--accent-1);
-  z-index: 0;
-  transition: all 0.3s ease-in-out;
+  top: 0;
+  left: -100%; /* hors du cadre */
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-1);
+  z-index: 1;
+  transition: all 0.35s ease-in-out; /* entrée + sortie smooth */
 }
 
-.btn-primary:hover::before { left: 0; }
-.btn-primary:hover { color: var(--text-1); }
+.btn-primary:hover::before {
+  left: 0;
+}
+
+.btn-primary:hover {
+  color: var(--accent-1);
+}
+
+/* ========================================= */
+/*             BOUTON SECONDARY              */
+/* ========================================= */
 
 .btn-secondary {
-  position: relative;
-  overflow: hidden;
   background-color: transparent;
   color: var(--accent-1);
-  padding: 0.8rem 1.5rem;
-  border-radius: 20px;
   border: 2px solid var(--accent-1);
-  font-weight: bold;
-  z-index: 1;
-  transition: color 0.3s;
 }
 
 .btn-secondary::before {
   content: "";
   position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background-color: var(--accent-1);
-  z-index: 0;
-  transition: all 0.3s;
+  opacity: 0.9;
+  z-index: 1;
+  transition: all 0.35s ease-in-out;
 }
 
-.btn-secondary:hover::before { left: 0; }
-.btn-secondary:hover { color: var(--text-1); }
+.btn-secondary:hover::before {
+  left: 0;
+}
+
+.btn-secondary:hover {
+  color: var(--text-1);
+}
+
+/* ========================================= */
+/*           FOCUS ACCESSIBLE (A11Y)         */
+/* ========================================= */
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--accent-1);
+  outline-offset: 3px;
+}
