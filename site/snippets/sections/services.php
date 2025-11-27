@@ -7,7 +7,6 @@
           <p>Que vous ayez besoin d’un site vitrine, d’une plateforme de réservation ou d’une stratégie de visibilité, on a tout ce qu’il faut pour booster votre présence en ligne.</p>
         </div>
         <div class="services-image">
-          <img src="<?= url('assets/images/undraw_startup_life_re_8ow9.svg') ?>" alt="Illustration">
         </div>
       </div>
       <div class="services-list">

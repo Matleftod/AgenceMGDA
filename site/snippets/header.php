@@ -21,14 +21,10 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <title><?= $site->title() ?> | <?= $page->title() ?></title>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="<?= url('assets/css/main.css') ?>">
     
     <!-- Section-specific CSS -->
     <link rel="stylesheet" href="<?= url('assets/css/output.css') ?>">
     <?php if ($page->template() == 'home'): ?>
-        <link rel="stylesheet" href="<?= url('assets/css/home.css') ?>">
     <?php endif ?>
 </head>
 <body>

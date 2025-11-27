@@ -20,7 +20,6 @@
         </p>
     </div>
     <div class="contact-image">
-        <img src="<?= url('assets/images/undraw_phone_call_re_hx6a.svg') ?>" alt="Illustration">
     </div>
   </div>
 </section>
