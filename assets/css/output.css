@@ -64,8 +64,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-3xl: 1.875rem;
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-tight: 1.25;
@@ -84,7 +82,6 @@
     --color-bg-1: #000000;
     --color-bg-2: #232325;
     --color-text-1: #F0EEEA;
-    --color-text-3: #8D8C89;
     --color-accent-1: #60E1CB;
     --animate-slide-down: slideDownBounce 1s ease-out forwards;
   }
@@ -351,8 +348,14 @@
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .items-center {
+    align-items: center;
+  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
@@ -395,6 +398,9 @@
   }
   .fill-current {
     fill: currentcolor;
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);
@@ -439,6 +445,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-90 {
+    opacity: 90%;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -733,20 +742,22 @@ html {
   flex-direction: column;
   gap: 1.1rem;
   width: 300px;
+  min-height: 165px;
+  justify-content: space-between;
 }
 #hero-tip {
   font-size: 1.15rem;
   font-weight: 500;
   color: var(--text-1);
   line-height: 1.45;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.4s ease;
 }
 .hero-metric {
   font-size: 0.95rem;
   color: var(--accent-1);
   font-weight: 600;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.4s ease;
 }
 .hero-right .hero-buttons {

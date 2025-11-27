@@ -21,15 +21,26 @@
             <h3 class="text-xl font-semibold text-text-1 pl-3">
                 <?= $proj['name'] ?>
             </h3>
+            <div class="flex items-center gap-2 pr-3">
 
-            <div class="flex gap-1 text-accent-1 pr-3">
-                <?php for ($i = 0; $i < 5; $i++): ?>
-                <svg viewBox="0 0 20 20" class="w-5 h-5 star fill-current text-accent-1">
-                    <polygon points="10 1.5 12.8 7.4 19.3 7.8 14.2 12.1 15.7 18.5 10 15.2 4.3 18.5 5.8 12.1 .7 7.8 7.2 7.4"/>
-                </svg>
-                <?php endfor ?>
+                <!-- Google Logo -->
+                <img 
+                    src="<?= url('assets/images/Google_Favicon.webp') ?>" 
+                    alt="Google avis"
+                    class="w-5 h-5 object-contain opacity-90"
+                >
+
+                <!-- Stars -->
+                <div class="flex gap-1 text-accent-1">
+                    <?php for ($i = 0; $i < 5; $i++): ?>
+                        <svg viewBox="0 0 20 20" class="w-5 h-5 star fill-current text-accent-1">
+                            <polygon points="10 1.5 12.8 7.4 19.3 7.8 14.2 12.1 15.7 18.5 10 15.2 4.3 18.5 5.8 12.1 .7 7.8 7.2 7.4"/>
+                        </svg>
+                    <?php endfor ?>
+                </div>
             </div>
         </div>
+
 
         <!-- IMAGE -->
         <div class="real-mockup relative rounded-xl overflow-hidden">
