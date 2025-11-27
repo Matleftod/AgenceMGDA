@@ -1,8 +1,10 @@
 <?php snippet('header') ?>
 
-<main class="home">
+<main class="home relative">
 
   <?php snippet('sections/hero') ?>
+
+  <div class="bg-glow"></div>
 
   <?php snippet('sections/realisations') ?>
 

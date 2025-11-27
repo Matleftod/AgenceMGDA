@@ -591,6 +591,34 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--accent-1) transparent;
 }
+.bg-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient( circle at 40% 40%, rgba(80, 227, 194, 0.55),  rgba(122, 245, 224, 0.40),  rgba(10, 115, 115, 0.25),  rgba(0, 0, 0, 0) 70% );
+  filter: blur(140px);
+  opacity: 0.8;
+  transition: transform .6s ease;
+  will-change: transform;
+}
+.bg-glow::before {
+  animation: floatGlow 10s ease-in-out infinite alternate;
+}
+@keyframes floatGlow {
+  0% {
+    transform: translate(-20px, -10px) scale(1);
+  }
+  100% {
+    transform: translate(30px, 20px) scale(1.2);
+  }
+}
 .btn-primary {
   position: relative;
   overflow: hidden;
