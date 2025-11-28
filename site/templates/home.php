@@ -10,11 +10,11 @@
 
   <?php snippet('sections/about') ?>
 
+  <?php snippet('sections/eco-design') ?>
+
   <?php snippet('sections/services') ?>
 
   <?php snippet('sections/portfolio') ?>
-
-  <?php snippet('sections/eco-design') ?>
 
   <?php snippet('sections/contact') ?>
 
