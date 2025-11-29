@@ -71,6 +71,14 @@
         <img src="<?= url('assets/images/logo_of_kirby_cms.png') ?>" class="accordion-img" alt="Logo Kirby">
       </div>
     </div>
+    <img src="<?= url('assets/images/plante/plante.png') ?>" alt="Logo Kirby">
+    Trux a dire :
+    agence de bègles
+    Kirby
+    Certif nsi
+    client PME
+    Site avec back
 
+    AJOUTER UNE NOTE ECO INDEX
   </div>
 </section>
