@@ -1,17 +1,24 @@
 export function initAboutEco() {
-    const wrappers = document.querySelectorAll('.feuille-wrapper');
 
-    wrappers.forEach(wrapper => {
-        const img  = wrapper.querySelector('.feuille-img');
-        const path = wrapper.querySelector('.hitbox-path');
-        if (!img || !path) return;
+    const leaves = document.querySelectorAll('.feuille-wrapper');
+
+    leaves.forEach(wrapper => {
+
+        const path  = wrapper.querySelector('.hitbox-path');
+        const img   = wrapper.querySelector('.feuille-img');
+
+        if (!path || !img) return;
 
         path.addEventListener('mouseenter', () => {
-        img.classList.add('is-hovered');
+
+            wrapper.classList.add('is-hovered');
+            img.classList.add('is-hovered');
         });
 
         path.addEventListener('mouseleave', () => {
-        img.classList.remove('is-hovered');
+            wrapper.classList.remove('is-hovered');
+            img.classList.remove('is-hovered');
         });
     });
+
 }

@@ -17,6 +17,8 @@
   margin-bottom: 2.5rem;
 }
 
+/* ===== PLANTE ===== */
+
 .plante-wrapper {
   position: relative;
   width: 800px;
@@ -24,24 +26,41 @@
   margin: 0 auto;
 }
 
-.plante-wrapper img {
+.plante-wrapper > img {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
 }
 
-/* GLOW */
-.plante-glow {
-  z-index: 1;
-  pointer-events: none;
+/* GLOW & POT */
+.plante-glow { z-index: 1; pointer-events: none; }
+.plante-pot  { z-index: 2; pointer-events: none; }
+
+/*****************
+  FEUILLE 1
+******************/
+
+.feuille-hitbox {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;  /* c'est le path qui capte */
 }
 
-/* POT */
-.plante-pot {
-  z-index: 2;
+/* Le PATH capte vraiment la forme */
+.hitbox-path {
+  pointer-events: visiblePainted;
+  cursor: pointer;
 }
 
+
+/* === Animation biomécanique === */
+
+/*****************
+  ANIMATION PLANTE
+  (Feuille 1)
+******************/
 .feuille-wrapper {
   position: absolute;
   left: 50%;
@@ -49,35 +68,36 @@
   width: 800px;
   height: 1013px;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 5;
 }
 
-/* Image de la feuille */
+/* ne touche plus au transform ici */
+.feuille-wrapper.is-hovered {
+  transform: translateX(-50%);
+}
+
 .feuille-img {
   position: absolute;
   inset: 0;
   width: 800px;
   height: 1013px;
-  user-select: none;
-  pointer-events: none; /* elle ne capte JAMAIS la souris */
-  transform-origin: bottom center;
-  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
-}
-
-/* SVG = juste un conteneur, ne capte pas la souris */
-.feuille-hitbox {
-  position: absolute;
-  inset: 0;
+  display: block;
   pointer-events: none;
+  transform: none;
+  transform-origin: 50% 60%; /* à ajuster, mais déjà vers le bas de la tige */
+  transition: transform .45s cubic-bezier(.25,1.5,.45,1);
 }
 
-/* Le path, lui, capte la souris avec sa forme exacte */
-.hitbox-path {
-  pointer-events: visiblePainted; /* la zone cliquable = forme de la feuille */
-  cursor: pointer;
-}
-
-/* Classe appliquée par JS quand on survole */
 .feuille-img.is-hovered {
-  transform: rotate(6deg) translateY(12px);
+  transform: rotate(9deg) translateY(14px) skewX(4deg);
+}
+
+/******* FEUILLES 2–5 VISUELLES ********/
+.feuille {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none; /* ne bloquent pas la hitbox */
 }

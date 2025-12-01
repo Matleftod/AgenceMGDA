@@ -875,7 +875,7 @@ html {
   height: 1013px;
   margin: 0 auto;
 }
-.plante-wrapper img {
+.plante-wrapper > img {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -887,6 +887,17 @@ html {
 }
 .plante-pot {
   z-index: 2;
+  pointer-events: none;
+}
+.feuille-hitbox {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+.hitbox-path {
+  pointer-events: visiblePainted;
+  cursor: pointer;
 }
 .feuille-wrapper {
   position: absolute;
@@ -895,29 +906,32 @@ html {
   width: 800px;
   height: 1013px;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 5;
+}
+.feuille-wrapper.is-hovered {
+  transform: translateX(-50%);
 }
 .feuille-img {
   position: absolute;
   inset: 0;
   width: 800px;
   height: 1013px;
-  user-select: none;
+  display: block;
   pointer-events: none;
-  transform-origin: bottom center;
-  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
-}
-.feuille-hitbox {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-.hitbox-path {
-  pointer-events: visiblePainted;
-  cursor: pointer;
+  transform: none;
+  transform-origin: 50% 60%;
+  transition: transform .45s cubic-bezier(.25,1.5,.45,1);
 }
 .feuille-img.is-hovered {
-  transform: rotate(6deg) translateY(12px);
+  transform: rotate(9deg) translateY(14px) skewX(4deg);
+}
+.feuille {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none;
 }
 .services {
   position: relative;
