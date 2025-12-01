@@ -21,21 +21,17 @@
       <div class="feuille-wrapper f1-wrapper">
 
         <!-- HITBOX SVG -->
-        <svg class="feuille-hitbox f1-hitbox"
-             width="800" height="1013"
-             viewBox="0 0 800 1013">
-          <path class="hitbox-path"
-            d="M520 50
-              C 560 120, 590 200, 580 300
-              C 570 420, 500 510, 430 560
-              C 380 600, 350 660, 355 710
-              C 360 760, 380 820, 400 900
-              C 380 880, 330 740, 325 680
-              C 320 620, 350 550, 390 500
-              C 450 430, 510 350, 520 260
-              C 530 180, 510 110, 480 70
-              Z"
-            fill="rgba(255,255,255,0.001)" />
+        <svg 
+            class="feuille-hitbox f1-hitbox"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 2974 3482"
+            preserveAspectRatio="xMidYMid meet"
+            >
+            <path 
+                class="hitbox-path"
+                d="M1512,1566l13-175,42-228,46-149,307-76,177-196,81-252,16-197-5-243L1934,182,1767,295,1607,490l-90,255,81,252-59,158-28,109-36,206Z"
+                fill="rgba(255,255,255,0.001)"
+            />
         </svg>
         <img src="<?= url('assets/images/plante/feuille1.png') ?>"
                 class="feuille-img f1-img"
