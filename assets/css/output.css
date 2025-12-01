@@ -872,7 +872,7 @@ html {
 .plante-wrapper {
   position: relative;
   width: 800px;
-  height: 1013px;
+  height: 936px;
   margin: 0 auto;
 }
 .plante-wrapper > img {
@@ -904,7 +904,7 @@ html {
   left: 50%;
   bottom: 0;
   width: 800px;
-  height: 1013px;
+  Height: 936px;
   transform: translateX(-50%);
   z-index: 5;
 }
@@ -915,7 +915,7 @@ html {
   position: absolute;
   inset: 0;
   width: 800px;
-  height: 1013px;
+  Height: 936px;
   display: block;
   pointer-events: none;
   transform: none;
