@@ -19,9 +19,9 @@
 
 .plante-wrapper {
   position: relative;
-  width: 800px;     /* tu peux ajuster */
-  height: 1013px;    /* idem */
-  margin: 0 auto 4rem;
+  width: 800px;
+  height: 1013px;
+  margin: 0 auto;
 }
 
 .plante-wrapper img {
@@ -29,7 +29,6 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  user-select: none;
 }
 
 /* GLOW */
@@ -43,10 +42,42 @@
   z-index: 2;
 }
 
-/* FEUILLES (interactive) */
-.feuille {
+.feuille-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 800px;
+  height: 1013px;
+  transform: translateX(-50%);
   z-index: 3;
-  transition: transform .25s ease, filter .25s ease;
+}
+
+/* Image de la feuille */
+.feuille-img {
+  position: absolute;
+  inset: 0;
+  width: 800px;
+  height: 1013px;
+  user-select: none;
+  pointer-events: none; /* elle ne capte JAMAIS la souris */
+  transform-origin: bottom center;
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+}
+
+/* SVG = juste un conteneur, ne capte pas la souris */
+.feuille-hitbox {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Le path, lui, capte la souris avec sa forme exacte */
+.hitbox-path {
+  pointer-events: visiblePainted; /* la zone cliquable = forme de la feuille */
   cursor: pointer;
-  pointer-events: auto;
+}
+
+/* Classe appliquée par JS quand on survole */
+.feuille-img.is-hovered {
+  transform: rotate(6deg) translateY(12px);
 }

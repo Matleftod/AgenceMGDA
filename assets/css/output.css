@@ -873,14 +873,13 @@ html {
   position: relative;
   width: 800px;
   height: 1013px;
-  margin: 0 auto 4rem;
+  margin: 0 auto;
 }
 .plante-wrapper img {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  user-select: none;
 }
 .plante-glow {
   z-index: 1;
@@ -889,11 +888,36 @@ html {
 .plante-pot {
   z-index: 2;
 }
-.feuille {
+.feuille-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 800px;
+  height: 1013px;
+  transform: translateX(-50%);
   z-index: 3;
-  transition: transform .25s ease, filter .25s ease;
+}
+.feuille-img {
+  position: absolute;
+  inset: 0;
+  width: 800px;
+  height: 1013px;
+  user-select: none;
+  pointer-events: none;
+  transform-origin: bottom center;
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+}
+.feuille-hitbox {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hitbox-path {
+  pointer-events: visiblePainted;
   cursor: pointer;
-  pointer-events: auto;
+}
+.feuille-img.is-hovered {
+  transform: rotate(6deg) translateY(12px);
 }
 .services {
   position: relative;
