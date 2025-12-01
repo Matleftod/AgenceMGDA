@@ -17,70 +17,36 @@
   margin-bottom: 2.5rem;
 }
 
-/* ACCORDION */
-.accordion {
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 14px;
-  background: rgba(255,255,255,0.02);
-  margin-bottom: 1rem;
-  overflow: hidden;
-  backdrop-filter: blur(4px);
+.plante-wrapper {
+  position: relative;
+  width: 800px;     /* tu peux ajuster */
+  height: 1013px;    /* idem */
+  margin: 0 auto 4rem;
 }
 
-/* HEADER */
-.accordion-header {
-  width: 100%;
-  padding: 1.2rem 1.5rem;
-  background: transparent;
-  color: var(--text-1);
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: left;
-  border: none;
+.plante-wrapper img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+/* GLOW */
+.plante-glow {
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* POT */
+.plante-pot {
+  z-index: 2;
+}
+
+/* FEUILLES (interactive) */
+.feuille {
+  z-index: 3;
+  transition: transform .25s ease, filter .25s ease;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordion-header:hover {
-  background: rgba(255,255,255,0.04);
-}
-
-.chevron {
-  width: 18px;
-  height: 18px;
-  fill: var(--text-2);
-  transition: transform 0.3s;
-}
-
-/* CONTENT */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 1.5rem;
-  transition: max-height 0.45s ease, padding 0.35s ease;
-  color: var(--text-2);
-  line-height: 1.65;
-}
-
-.accordion-content p {
-  margin: 1rem 0;
-}
-
-.accordion-img {
-  display: block;
-  margin: 1.5rem auto 2rem;
-  max-width: 120px;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
-}
-
-/* ACTIVE STATE (via JS) */
-.accordion.open .accordion-content {
-  max-height: 600px; /* assez pour tout ton contenu */
-  padding: 1.2rem 1.5rem 2rem;
-}
-
-.accordion.open .chevron {
-  transform: rotate(180deg);
+  pointer-events: auto;
 }
