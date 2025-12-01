@@ -35,71 +35,101 @@
 
 /* GLOW & POT */
 .plante-glow { z-index: 1; pointer-events: none; }
-.plante-pot  { z-index: 2; pointer-events: none; }
+.plante-pot  { z-index: 10; pointer-events: none; }
 
 /*****************
-  FEUILLE 1
+  HITBOX (toutes feuilles)
 ******************/
-
 .feuille-hitbox {
   position: absolute;
   inset: 0;
   z-index: 6;
   width: 100%;
   height: 100%;
-  pointer-events: none;  /* c'est le path qui capte */
+  pointer-events: none; /* seul le path capte */
 }
 
-/* Le PATH capte vraiment la forme */
 .hitbox-path {
   pointer-events: visiblePainted;
   cursor: pointer;
 }
 
-
-/* === Animation biomécanique === */
-
 /*****************
-  ANIMATION PLANTE
-  (Feuille 1)
+  WRAPPERS (f1–f5)
 ******************/
 .feuille-wrapper {
   position: absolute;
   left: 50%;
   bottom: 0;
   width: 800px;
-  Height : 936px;
+  height: 936px;
   transform: translateX(-50%);
   z-index: 5;
+  pointer-events: none; /* seule la hitbox capte */
 }
 
-/* ne touche plus au transform ici */
 .feuille-wrapper.is-hovered {
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* aucun transform ici */
 }
 
+/*****************
+  IMAGES (f1–f5)
+******************/
 .feuille-img {
   position: absolute;
   inset: 0;
   width: 800px;
-  Height : 936px;
+  height: 936px;
   display: block;
   pointer-events: none;
   transform: none;
-  transform-origin: 50% 60%; /* à ajuster, mais déjà vers le bas de la tige */
-  transition: transform .45s cubic-bezier(.25,1.5,.45,1);
+  transition: transform .45s cubic-bezier(.25, 1.5, .45, 1);
 }
 
-.feuille-img.is-hovered {
+/*****************
+  PIVOT PAR FEUILLE
+  => Ajuste le transform-origin pour un réalisme maximal
+******************/
+
+/* Feuille 1 */
+.f1-img,
+.f2-img,
+.f3-img,
+.f4-img {
+  transform-origin: 50% 60%;
+}
+
+.f5-img {
+  transform-origin: 55% 58%;
+}
+
+/*****************
+  ANIMATION A (feuilles 1, 3, 5)
+******************/
+
+.feuille-img.animA.is-hovered {
   transform: rotate(9deg) translateY(14px) skewX(4deg);
 }
 
-/******* FEUILLES 2–5 VISUELLES ********/
+/*****************
+  ANIMATION B (feuilles 2, 4)
+  → Effet plus léger, adapté aux feuilles basses
+******************/
+
+.feuille-img.animB.is-hovered {
+  transform: rotate(-5deg) translateY(8px) skewX(2deg);
+}
+
+/*****************
+  FEUILLES VISUELLES (pour celles non interactives si un jour tu veux)
+******************/
 .feuille {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+  width: 800px;
+  height: 936px;
   z-index: 3;
-  pointer-events: none; /* ne bloquent pas la hitbox */
+  pointer-events: none;
 }

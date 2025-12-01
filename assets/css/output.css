@@ -886,7 +886,7 @@ html {
   pointer-events: none;
 }
 .plante-pot {
-  z-index: 2;
+  z-index: 10;
   pointer-events: none;
 }
 .feuille-hitbox {
@@ -906,9 +906,10 @@ html {
   left: 50%;
   bottom: 0;
   width: 800px;
-  Height: 936px;
+  height: 936px;
   transform: translateX(-50%);
   z-index: 5;
+  pointer-events: none;
 }
 .feuille-wrapper.is-hovered {
   transform: translateX(-50%);
@@ -917,21 +918,31 @@ html {
   position: absolute;
   inset: 0;
   width: 800px;
-  Height: 936px;
+  height: 936px;
   display: block;
   pointer-events: none;
   transform: none;
-  transform-origin: 50% 60%;
-  transition: transform .45s cubic-bezier(.25,1.5,.45,1);
+  transition: transform .45s cubic-bezier(.25, 1.5, .45, 1);
 }
-.feuille-img.is-hovered {
+.f1-img, .f2-img, .f3-img, .f4-img {
+  transform-origin: 50% 60%;
+}
+.f5-img {
+  transform-origin: 55% 58%;
+}
+.feuille-img.animA.is-hovered {
   transform: rotate(9deg) translateY(14px) skewX(4deg);
+}
+.feuille-img.animB.is-hovered {
+  transform: rotate(-5deg) translateY(8px) skewX(2deg);
 }
 .feuille {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+  width: 800px;
+  height: 936px;
   z-index: 3;
   pointer-events: none;
 }
