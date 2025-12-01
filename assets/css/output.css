@@ -946,6 +946,74 @@ html {
   z-index: 3;
   pointer-events: none;
 }
+.bubble {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  pointer-events: auto;
+}
+.bubble-mini {
+  background: var(--accent-1);
+  color: #000;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  transition: transform .25s ease;
+}
+.bubble-mini:hover {
+  transform: scale(1.15);
+}
+.bubble-full {
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  min-width: 220px;
+  max-width: 300px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 1rem;
+  color: var(--text-1);
+  font-size: 0.95rem;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: left center;
+  transform: scale(0.85) translateX(-10px);
+  transition: opacity .25s ease, transform .3s cubic-bezier(.25, 1.4, .45, 1);
+}
+.bubble.open .bubble-full {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateX(0);
+}
+.bubble-f1 {
+  top: 7%;
+  left: 83%;
+}
+.bubble-f2 {
+  top: 45%;
+  left: 80%;
+}
+.bubble-f3 {
+  top: 55%;
+  left: 32%;
+}
+.bubble-f4 {
+  top: 70%;
+  left: 60%;
+}
+.bubble-f5 {
+  top: 30%;
+  left: 40%;
+}
 .services {
   position: relative;
   padding: 7rem 3rem;

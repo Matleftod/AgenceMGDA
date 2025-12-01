@@ -36,6 +36,13 @@
         <img src="<?= url('assets/images/plante/feuille1.png') ?>"
                 class="feuille-img f1-img animA"
                 alt="Feuille 1">
+        <!-- 🟢 Bulle associée -->
+        <div class="bubble bubble-f1">
+            <div class="bubble-mini">?</div>
+            <div class="bubble-full">
+                <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
+            </div>
+        </div>
       </div>
 
 
