@@ -38,7 +38,7 @@
                 alt="Feuille 1">
         <!-- 🟢 Bulle associée -->
         <div class="bubble bubble-f1">
-            <div class="bubble-mini b1">1</div>
+            <div class="bubble-mini animA b1">1</div>
             <div class="bubble-full">
                 <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
             </div>
@@ -67,7 +67,7 @@
             class="feuille-img f2-img animB"
             alt="Feuille 2">
         <div class="bubble bubble-f2">
-            <div class="bubble-mini b2">2</div>
+            <div class="bubble-mini animB b2">2</div>
             <div class="bubble-full">
                 <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
             </div>
@@ -93,7 +93,7 @@
             class="feuille-img f3-img animA"
             alt="Feuille 3">
         <div class="bubble bubble-f3">
-            <div class="bubble-mini b3">3</div>
+            <div class="bubble-mini animA b3">3</div>
             <div class="bubble-full">
                 <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
             </div>
@@ -119,7 +119,7 @@
             class="feuille-img f4-img animB"
             alt="Feuille 4">
         <div class="bubble bubble-f4">
-            <div class="bubble-mini b4">4</div>
+            <div class="bubble-mini animB b4">4</div>
             <div class="bubble-full">
                 <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
             </div>
@@ -145,7 +145,7 @@
             class="feuille-img f5-img animA"
             alt="Feuille 5">
         <div class="bubble bubble-f5">
-            <div class="bubble-mini b5">5</div>
+            <div class="bubble-mini animA b5">5</div>
             <div class="bubble-full">
                 <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
             </div>

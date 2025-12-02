@@ -971,8 +971,11 @@ html {
   box-shadow: 0 3px 6px rgba(0,0,0,0.25);
   transition: transform .25s cubic-bezier(.25,1.4,.45,1);
 }
-.bubble-mini:hover {
+.bubble-mini.animA.minihover {
   transform: scale(1.18) rotate(-4deg);
+}
+.bubble-mini.animB.minihover {
+  transform: scale(1.18) rotate(4deg);
 }
 .bubble-mini::after {
   content: "";
@@ -983,44 +986,44 @@ html {
   transition: all .25s ease;
 }
 .bubble-mini.b1::after {
-  bottom: -16px;
-  left: 15%;
-  transform: rotate(13deg);
+  bottom: -9px;
+  left: -11%;
+  transform: rotate(40deg);
   border-left: 10px solid transparent;
   border-right: 7px solid transparent;
   border-top: 20px solid #fff;
 }
 .bubble-mini.b2::after {
-  bottom: -7px;
-  left: 35%;
-  transform: rotate(25deg);
-  border-left: 5px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 7px solid #fff;
+  bottom: -10px;
+  left: 75%;
+  transform: rotate(-38deg);
+  border-left: 10px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 20px solid #fff;
 }
 .bubble-mini.b3::after {
-  bottom: -6px;
-  left: 60%;
-  transform: rotate(-12deg);
-  border-left: 5px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 7px solid #fff;
+  bottom: -11px;
+  left: -8%;
+  transform: rotate(38deg);
+  border-left: 10px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 20px solid #fff;
 }
 .bubble-mini.b4::after {
-  bottom: -7px;
-  left: 40%;
-  transform: rotate(20deg);
-  border-left: 5px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 7px solid #fff;
+  bottom: -12px;
+  left: 63%;
+  transform: rotate(-33deg);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #fff;
 }
 .bubble-mini.b5::after {
-  bottom: -6px;
-  left: 50%;
-  transform: rotate(0deg);
+  bottom: -12px;
+  left: -2%;
+  transform: rotate(30deg);
   border-left: 5px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 7px solid #fff;
+  border-right: 11px solid transparent;
+  border-top: 20px solid #fff;
 }
 .bubble-full {
   position: absolute;

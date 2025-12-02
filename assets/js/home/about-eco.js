@@ -23,12 +23,14 @@ export function initAboutEco() {
       wrapper.classList.add('is-hovered');
       img.classList.add('is-hovered');
       if (bubble) bubble.classList.add('open');
+      if (mini) mini.classList.add('minihover');
     };
 
     const deactivate = () => {
       wrapper.classList.remove('is-hovered');
       img.classList.remove('is-hovered');
       if (bubble) bubble.classList.remove('open');
+        if (mini) mini.classList.remove('minihover');
     };
 
     /* -----------------------------------------------------
