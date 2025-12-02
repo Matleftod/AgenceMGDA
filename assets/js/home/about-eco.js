@@ -4,55 +4,65 @@ function isMobile() {
 
 export function initAboutEco() {
 
-    const leaves = document.querySelectorAll('.feuille-wrapper');
+  const leaves = document.querySelectorAll('.feuille-wrapper');
 
-    leaves.forEach(wrapper => {
+  leaves.forEach(wrapper => {
 
-        const path  = wrapper.querySelector('.hitbox-path');
-        const img   = wrapper.querySelector('.feuille-img');
+    const path   = wrapper.querySelector('.hitbox-path');      // hitbox SVG
+    const img    = wrapper.querySelector('.feuille-img');      // image feuille
+    const bubble = wrapper.querySelector('.bubble');           // bulle
+    const mini   = bubble ? bubble.querySelector('.bubble-mini') : null;
 
-        if (!path || !img) return;
+    if (!path || !img) return;
 
-        path.addEventListener('mouseenter', () => {
+    /* -----------------------------------------------------
+       💡 FONCTIONS CENTRALISÉES POUR TOUT ACTION
+    ----------------------------------------------------- */
 
-            wrapper.classList.add('is-hovered');
-            img.classList.add('is-hovered');
-        });
+    const activate = () => {
+      wrapper.classList.add('is-hovered');
+      img.classList.add('is-hovered');
+      if (bubble) bubble.classList.add('open');
+    };
 
-        path.addEventListener('mouseleave', () => {
-            wrapper.classList.remove('is-hovered');
-            img.classList.remove('is-hovered');
-        });
-    });
+    const deactivate = () => {
+      wrapper.classList.remove('is-hovered');
+      img.classList.remove('is-hovered');
+      if (bubble) bubble.classList.remove('open');
+    };
 
-    document.querySelectorAll('.feuille-wrapper').forEach(wrapper => {
+    /* -----------------------------------------------------
+       🖱️ DESKTOP — HOVER SUR FEUILLE OU MINI-BULLE
+    ----------------------------------------------------- */
+    if (!isMobile()) {
 
-        const bubble = wrapper.querySelector('.bubble');
-        if (!bubble) return;
+      // Hover sur la feuille (hitbox)
+      path.addEventListener('mouseenter', activate);
+      path.addEventListener('mouseleave', deactivate);
 
-        const mini = bubble.querySelector('.bubble-mini');
+      // Hover sur le wrapper complet (au cas où tu ajoutes plus tard)
+      wrapper.addEventListener('mouseenter', activate);
+      wrapper.addEventListener('mouseleave', deactivate);
 
-        // Desktop : hover sur feuille OU mini-bulle
-        if (!isMobile()) {
+      // Hover sur mini bulle
+      if (mini) {
+        mini.addEventListener('mouseenter', activate);
+        mini.addEventListener('mouseleave', deactivate);
+      }
+    }
 
-        wrapper.addEventListener('mouseenter', () => {
-            bubble.classList.add('open');
-        });
+    /* -----------------------------------------------------
+       📱 MOBILE + DESKTOP — CLICK POUR OUVRIR/FERMER
+    ----------------------------------------------------- */
+    if (mini) {
+      mini.addEventListener('click', e => {
+        e.stopPropagation(); // évite les weird bugs
+        const isOpen = bubble.classList.contains('open');
 
-        wrapper.addEventListener('mouseleave', () => {
-            bubble.classList.remove('open');
-        });
+        if (!isOpen) activate();
+        else deactivate();
+      });
+    }
 
-        mini.addEventListener('mouseenter', () => {
-            bubble.classList.add('open');
-        });
-        }
-
-        // Mobile + Desktop : click pour ouvrir
-        mini.addEventListener('click', () => {
-        bubble.classList.toggle('open');
-        });
-
-    });
-
+  });
 }
