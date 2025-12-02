@@ -41,7 +41,7 @@
             <div class="bubble-body animA b1">
                 <span class="bubble-short">1</span>
                 <p class="bubble-text">
-                    Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.
+                    Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables. Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables. Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.
                 </p>
             </div>
         </div>

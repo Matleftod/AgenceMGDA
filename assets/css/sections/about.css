@@ -188,10 +188,16 @@
 
 /* Texte court affiché dans la mini-bulle */
 .bubble-short {
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   font-size: 0.9rem;
   font-weight: 700;
   color: #000;
   pointer-events: none;
+  white-space: nowrap; /* toujours sur une ligne */
 }
 
 /* Texte long (fermé par défaut) */
@@ -209,7 +215,7 @@
   transition:
     opacity 0s ease,
     max-height .35s ease,
-    visibility 0s linear .35s; /* retard pour éviter flash */
+    visibility 0s linear .35s;
 }
 
 /* --- MODE OUVERT --- */
@@ -228,10 +234,6 @@
   transform: rotate(12deg);
 }
 
-.bubble.open .bubble-short {
-  display: none;
-}
-
 .bubble.open .bubble-text {
   visibility: visible;
   opacity: 1;
@@ -242,6 +244,9 @@
     visibility 0s;
 }
 
+.bubble.open .bubble-short {
+  display: none;
+}
 
 .bubble-f1 { top: -6%; left: 88%; }
 .bubble-f2 { top: 4%; left: 3%; }

@@ -980,10 +980,15 @@ html {
   transition: left .35s ease, transform .35s ease;
 }
 .bubble-short {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 0.9rem;
   font-weight: 700;
   color: #000;
   pointer-events: none;
+  white-space: nowrap;
 }
 .bubble-text {
   opacity: 0;
@@ -1008,14 +1013,14 @@ html {
   left: 12%;
   transform: rotate(12deg);
 }
-.bubble.open .bubble-short {
-  display: none;
-}
 .bubble.open .bubble-text {
   visibility: visible;
   opacity: 1;
   max-height: 500px;
   transition: opacity .25s ease .1s, max-height .35s ease .05s, visibility 0s;
+}
+.bubble.open .bubble-short {
+  display: none;
 }
 .bubble-f1 {
   top: -6%;
