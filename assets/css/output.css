@@ -948,113 +948,70 @@ html {
 }
 .bubble {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 20;
   pointer-events: auto;
 }
-.bubble-mini {
+.bubble-body {
   position: relative;
   width: 80px;
   height: 55px;
+  max-height: 128px;
+  border-radius: 18px;
   background: #fff;
   border: 2px solid #000;
-  border-radius: 30%;
-  color: #000;
-  font-size: 0.85rem;
-  font-weight: 700;
+  box-shadow: 0 3px 6px rgba(0,0,0,.25);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-  transition: transform .25s cubic-bezier(.25,1.4,.45,1);
+  transition: transform .35s cubic-bezier(.25,1.4,.45,1), width .35s cubic-bezier(.25,1.4,.45,1), height .35s cubic-bezier(.25,1.4,.45,1), border-radius .35s ease;
 }
-.bubble-mini.animA.minihover {
-  transform: scale(1.18) rotate(-2deg);
-}
-.bubble-mini.animB.minihover {
-  transform: scale(1.18) rotate(2deg);
-}
-.bubble-mini::after {
+.bubble-body::after {
   content: "";
   position: absolute;
+  bottom: -12px;
+  left: 30%;
   width: 0;
   height: 0;
+  border-left: 5px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 20px solid #fff;
   filter: drop-shadow(-1px 0px 0 #000);
-  transition: all .25s ease;
+  transition: left .35s ease, transform .35s ease;
 }
-.bubble-mini.b1::after {
-  bottom: -12px;
-  left: -2%;
-  transform: rotate(30deg);
-  border-left: 5px solid transparent;
-  border-right: 11px solid transparent;
-  border-top: 20px solid #fff;
-}
-.bubble-mini.b2::after {
-  bottom: -10px;
-  left: 75%;
-  transform: rotate(-38deg);
-  border-left: 10px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 20px solid #fff;
-}
-.bubble-mini.b3::after {
-  bottom: -12px;
-  left: -2%;
-  transform: rotate(30deg);
-  border-left: 5px solid transparent;
-  border-right: 11px solid transparent;
-  border-top: 20px solid #fff;
-}
-.bubble-mini.b4::after {
-  bottom: -10px;
-  left: 75%;
-  transform: rotate(-38deg);
-  border-left: 10px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 20px solid #fff;
-}
-.bubble-mini.b5::after {
-  bottom: -12px;
-  left: -2%;
-  transform: rotate(30deg);
-  border-left: 5px solid transparent;
-  border-right: 11px solid transparent;
-  border-top: 20px solid #fff;
-}
-.bubble-full {
-  position: absolute;
-  top: -15px;
-  left: 40px;
-  min-width: 220px;
-  max-width: 300px;
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(6px);
-  border-radius: 14px;
-  padding: 1rem;
-  color: var(--text-1);
-  font-size: 0.95rem;
-  opacity: 0;
+.bubble-short {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000;
   pointer-events: none;
-  transform-origin: left center;
-  transform: scale(0.85) translateX(-10px);
-  transition: opacity .25s ease, transform .3s cubic-bezier(.25, 1.4, .45, 1);
 }
-.bfd {
-  top: 0px;
-  left: 105px;
+.bubble-text {
+  opacity: 0;
+  max-width: 240px;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  color: #000;
+  display: none;
+  transition: opacity .25s ease;
 }
-.bfg {
-  top: 0px;
-  left: -105px;
+.bubble.open .bubble-body {
+  width: 260px;
+  height: auto;
+  border-radius: 18px;
+  padding: 0.8rem 1rem;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.bubble.open .bubble-full {
+.bubble.open .bubble-body::after {
+  left: 12%;
+  transform: rotate(12deg);
+}
+.bubble.open .bubble-short {
+  display: none;
+}
+.bubble.open .bubble-text {
+  display: block;
   opacity: 1;
-  pointer-events: auto;
-  transform: scale(1) translateX(0);
 }
 .bubble-f1 {
   top: -6%;
