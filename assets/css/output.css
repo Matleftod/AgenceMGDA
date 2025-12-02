@@ -956,11 +956,11 @@ html {
 }
 .bubble-mini {
   position: relative;
-  width: 55px;
+  width: 80px;
   height: 55px;
   background: #fff;
   border: 2px solid #000;
-  border-radius: 50%;
+  border-radius: 30%;
   color: #000;
   font-size: 0.85rem;
   font-weight: 700;
@@ -972,10 +972,10 @@ html {
   transition: transform .25s cubic-bezier(.25,1.4,.45,1);
 }
 .bubble-mini.animA.minihover {
-  transform: scale(1.18) rotate(-4deg);
+  transform: scale(1.18) rotate(-2deg);
 }
 .bubble-mini.animB.minihover {
-  transform: scale(1.18) rotate(4deg);
+  transform: scale(1.18) rotate(2deg);
 }
 .bubble-mini::after {
   content: "";
@@ -986,11 +986,11 @@ html {
   transition: all .25s ease;
 }
 .bubble-mini.b1::after {
-  bottom: -9px;
-  left: -11%;
-  transform: rotate(40deg);
-  border-left: 10px solid transparent;
-  border-right: 7px solid transparent;
+  bottom: -12px;
+  left: -2%;
+  transform: rotate(30deg);
+  border-left: 5px solid transparent;
+  border-right: 11px solid transparent;
   border-top: 20px solid #fff;
 }
 .bubble-mini.b2::after {
@@ -1002,19 +1002,19 @@ html {
   border-top: 20px solid #fff;
 }
 .bubble-mini.b3::after {
-  bottom: -11px;
-  left: -8%;
-  transform: rotate(38deg);
-  border-left: 10px solid transparent;
-  border-right: 7px solid transparent;
+  bottom: -12px;
+  left: -2%;
+  transform: rotate(30deg);
+  border-left: 5px solid transparent;
+  border-right: 11px solid transparent;
   border-top: 20px solid #fff;
 }
 .bubble-mini.b4::after {
-  bottom: -12px;
-  left: 63%;
-  transform: rotate(-33deg);
+  bottom: -10px;
+  left: 75%;
+  transform: rotate(-38deg);
   border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  border-right: 7px solid transparent;
   border-top: 20px solid #fff;
 }
 .bubble-mini.b5::after {
@@ -1043,30 +1043,38 @@ html {
   transform: scale(0.85) translateX(-10px);
   transition: opacity .25s ease, transform .3s cubic-bezier(.25, 1.4, .45, 1);
 }
+.bfd {
+  top: 0px;
+  left: 105px;
+}
+.bfg {
+  top: 0px;
+  left: -105px;
+}
 .bubble.open .bubble-full {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1) translateX(0);
 }
 .bubble-f1 {
-  top: -2%;
-  left: 81%;
+  top: -6%;
+  left: 88%;
 }
 .bubble-f2 {
-  top: 9%;
-  left: 9%;
+  top: 4%;
+  left: 3%;
 }
 .bubble-f3 {
-  top: 26%;
-  left: 97%;
+  top: 24%;
+  left: 102%;
 }
 .bubble-f4 {
-  top: 38%;
-  left: 9%;
+  top: 35%;
+  left: 0%;
 }
 .bubble-f5 {
-  top: 53%;
-  left: 91%;
+  top: 52%;
+  left: 98%;
 }
 .services {
   position: relative;
