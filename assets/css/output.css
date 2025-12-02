@@ -955,21 +955,37 @@ html {
   pointer-events: auto;
 }
 .bubble-mini {
-  background: var(--accent-1);
-  color: #000;
-  font-weight: 700;
-  width: 28px;
-  height: 28px;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: #fff;
+  border: 2px solid #000;
   border-radius: 50%;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.2);
-  transition: transform .25s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  transition: transform .25s cubic-bezier(.25,1.4,.45,1);
 }
 .bubble-mini:hover {
-  transform: scale(1.15);
+  transform: scale(1.18) rotate(-4deg);
+}
+.bubble-mini::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 32%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 7px solid #fff;
+  transform: rotate(18deg);
+  filter: drop-shadow(-1px 0px 0 #000);
 }
 .bubble-full {
   position: absolute;

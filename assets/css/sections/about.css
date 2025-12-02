@@ -134,34 +134,70 @@
   pointer-events: none;
 }
 
-/* Wrapper général */
+/* ============================
+   WRAPPER DE LA BULLE
+============================ */
 .bubble {
   position: absolute;
   left: 50%;
-  top: 50%; /* ajusté selon la feuille */
+  top: 50%; 
   transform: translate(-50%, -50%);
   z-index: 20;
   pointer-events: auto;
 }
 
-/* Mini bulle (petite pastille BD) */
+/* ============================
+   MINI BULLE (bouton)
+============================ */
 .bubble-mini {
-  background: var(--accent-1);
-  color: #000;
-  font-weight: 700;
-  width: 28px;
-  height: 28px;
+  position: relative;
+  width: 55px;
+  height: 55px;
+
+  background: #fff;
+  border: 2px solid #000;
   border-radius: 50%;
+
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 700;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.2);
-  transition: transform .25s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+
+  transition: transform .25s cubic-bezier(.25,1.4,.45,1);
 }
 
+/* Hover animation */
 .bubble-mini:hover {
-  transform: scale(1.15);
+  transform: scale(1.18) rotate(-4deg);
+}
+
+/* ✨ Petite queue BD inclinée */
+.bubble-mini::after {
+  content: "";
+  position: absolute;
+
+  bottom: -7px;            /* pousse la queue sous la bulle */
+  left: 32%;               /* queue décalée à gauche */
+
+  width: 0;
+  height: 0;
+
+  /* Petit triangle blanc */
+  border-left: 5px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 7px solid #fff;
+
+  /* inclinaison cartoon */
+  transform: rotate(18deg);
+
+  /* contour noir BD */
+  filter: drop-shadow(-1px 0px 0 #000);
 }
 
 /* Bulle grande (masquée par défaut) */
