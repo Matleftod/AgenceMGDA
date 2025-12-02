@@ -21,8 +21,8 @@
 
 .plante-wrapper {
   position: relative;
-  width: 800px;
-  height : 936px;
+  width: 600px;
+  height : 702px;
   margin: 10rem auto 0 auto;
 }
 
@@ -61,8 +61,8 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 800px;
-  height: 936px;
+  width: 600px;
+  height: 702px;
   transform: translateX(-50%);
   z-index: 5;
   pointer-events: none; /* seule la hitbox capte */
@@ -78,8 +78,8 @@
 .feuille-img {
   position: absolute;
   inset: 0;
-  width: 800px;
-  height: 936px;
+  width: 600px;
+  height: 702px;
   display: block;
   pointer-events: none;
   transform: none;
@@ -128,8 +128,8 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 800px;
-  height: 936px;
+  width: 600px;
+  height: 702px;
   z-index: 3;
   pointer-events: none;
 }
