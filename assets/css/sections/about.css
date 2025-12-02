@@ -23,7 +23,7 @@
   position: relative;
   width: 800px;
   height : 936px;
-  margin: 0 auto;
+  margin: 10rem auto 0 auto;
 }
 
 .plante-wrapper > img {
@@ -178,26 +178,57 @@
 }
 
 /* ✨ Petite queue BD inclinée */
+/* BASE COMMUNE */
 .bubble-mini::after {
   content: "";
   position: absolute;
 
-  bottom: -7px;            /* pousse la queue sous la bulle */
-  left: 32%;               /* queue décalée à gauche */
-
   width: 0;
   height: 0;
 
-  /* Petit triangle blanc */
+  filter: drop-shadow(-1px 0px 0 #000);
+  transition: all .25s ease;
+}
+
+.bubble-mini.b1::after {
+  bottom: -16px;
+  left: 15%;
+  transform: rotate(13deg);
+  border-left: 10px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 20px solid #fff;
+}
+.bubble-mini.b2::after {
+  bottom: -7px;
+  left: 35%;
+  transform: rotate(25deg);
   border-left: 5px solid transparent;
   border-right: 3px solid transparent;
   border-top: 7px solid #fff;
-
-  /* inclinaison cartoon */
-  transform: rotate(18deg);
-
-  /* contour noir BD */
-  filter: drop-shadow(-1px 0px 0 #000);
+}
+.bubble-mini.b3::after {
+  bottom: -6px;
+  left: 60%;
+  transform: rotate(-12deg);
+  border-left: 5px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 7px solid #fff;
+}
+.bubble-mini.b4::after {
+  bottom: -7px;
+  left: 40%;
+  transform: rotate(20deg);
+  border-left: 5px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 7px solid #fff;
+}
+.bubble-mini.b5::after {
+  bottom: -6px;
+  left: 50%;
+  transform: rotate(0deg);
+  border-left: 5px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 7px solid #fff;
 }
 
 /* Bulle grande (masquée par défaut) */
@@ -227,8 +258,8 @@
   transform: scale(1) translateX(0);
 }
 
-.bubble-f1 { top: 7%; left: 83%; }
-.bubble-f2 { top: 45%; left: 80%; }
-.bubble-f3 { top: 55%; left: 32%; }
-.bubble-f4 { top: 70%; left: 60%; }
-.bubble-f5 { top: 30%; left: 40%; }
+.bubble-f1 { top: -2%; left: 81%; }
+.bubble-f2 { top: 9%; left: 9%; }
+.bubble-f3 { top: 26%; left: 97%; }
+.bubble-f4 { top: 38%; left: 9%; }
+.bubble-f5 { top: 53%; left: 91%; }
