@@ -18,13 +18,17 @@
 }
 
 /*******************************
-  GRID 40 / 60
+  GRID 50 / 50
 *******************************/
 .about-eco-grid {
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
+.about-right {
+  display: flex;
+  align-items: center;
+}
 .about-left {
   display: flex;
   justify-content: center;
@@ -133,7 +137,7 @@
   background: var(--bg-2, #151515);
   border: 1px solid var(--border-1, #2a2a2a);
   border-radius: 14px;
-  padding: 1.2rem 1.4rem;
+  padding: 0rem 1.4rem;
   cursor: pointer;
   transition: background .25s ease, border-color .25s ease;
   overflow: hidden;
