@@ -79,19 +79,19 @@
 
             <div class="eco-entry" data-leaf="1">
                 <div class="eco-header">
-                <span class="eco-icon">🌱</span>
+                <span class="eco-icon">📍</span>
                 <h3>Agence Web à Bègles</h3>
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Installée à Bègles, notre agence conçoit des sites modernes, légers et pensés pour durer.
-Nous travaillons localement, avec une approche humaine, proche des besoins réels des entreprises.</p>
+                <p>Agence web installée à Bègles, nous concevons des sites à la fois esthétiques, performants et responsables.
+Notre priorité : offrir des solutions durables, bien pensées, et adaptées aux besoins de chaque entreprise.</p>
                 </div>
             </div>
 
             <div class="eco-entry" data-leaf="2">
                 <div class="eco-header">
-                <span class="eco-icon">⚡</span>
+                <span class="eco-icon">🚀</span>
                 <h3>Kirby CMS</h3>
                 <span class="eco-chevron">❯</span>
                 </div>
@@ -103,7 +103,7 @@ Résultat : un site plus rapide, plus sécurisé, plus écologique et incroyable
 
             <div class="eco-entry" data-leaf="3">
                 <div class="eco-header">
-                <span class="eco-icon">🛠️</span>
+                <span class="eco-icon">🌱</span>
                 <h3>Certification INR</h3>
                 <span class="eco-chevron">❯</span>
                 </div>
@@ -115,25 +115,25 @@ Chaque projet est pensé pour réduire son impact, sans sacrifier les performanc
 
             <div class="eco-entry" data-leaf="4">
                 <div class="eco-header">
-                <span class="eco-icon">🔒</span>
-                <h3>Accompagnement des PME</h3>
+                <span class="eco-icon">🤝</span>
+                <h3>Accompagnement à taille humaine</h3>
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>SNous travaillons principalement avec des PME et des structures à taille humaine.
-Notre objectif : proposer un accompagnement simple, transparent et réellement adapté à leurs besoins.</p>
+                <p>Nous mettons un vrai point d’honneur à accompagner chaque client avec attention et clarté.
+Notre démarche est simple : écouter, comprendre, et construire un projet qui te ressemble vraiment, sans complexité inutile.</p>
                 </div>
             </div>
 
             <div class="eco-entry" data-leaf="5">
                 <div class="eco-header">
-                <span class="eco-icon">🌍</span>
-                <h3>Un back-office pensé pour toi</h3>
+                <span class="eco-icon">🛠️</span>
+                <h3>Site clé en main</h3>
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Chaque site est livré avec un back-office clair et intuitif.
-Tu peux modifier ton contenu facilement, de manière autonome, sans dépendre d’un technicien.</p>
+                <p>Chaque site est livré avec un espace d’édition très facile à utiliser.
+Tu peux mettre à jour ton contenu quand tu veux, en toute autonomie, sans passer par un développeur.</p>
                 </div>
             </div>
             </div>
