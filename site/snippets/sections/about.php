@@ -1,11 +1,6 @@
 <section id="about" class="about-eco">
 
   <div class="about-eco-container">
-
-    <h2 class="about-eco-title">
-      À propos & Éco-conception
-    </h2>
-
     <div class="about-eco-grid">
 
       <!-- COLONNE GAUCHE : PLANTE -->
@@ -85,50 +80,60 @@
             <div class="eco-entry" data-leaf="1">
                 <div class="eco-header">
                 <span class="eco-icon">🌱</span>
-                <h3>Éco-conception</h3>
+                <h3>Agence Web à Bègles</h3>
+                <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
+                <p>Installée à Bègles, notre agence conçoit des sites modernes, légers et pensés pour durer.
+Nous travaillons localement, avec une approche humaine, proche des besoins réels des entreprises.</p>
                 </div>
             </div>
 
             <div class="eco-entry" data-leaf="2">
                 <div class="eco-header">
                 <span class="eco-icon">⚡</span>
-                <h3>Performance</h3>
+                <h3>Kirby CMS</h3>
+                <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Optimisation du poids, scripts minimisés et infrastructure maîtrisée.</p>
+                <p>Nous utilisons Kirby, un CMS ultra-léger et flexible, sans base de données.
+Résultat : un site plus rapide, plus sécurisé, plus écologique et incroyablement simple à maintenir.</p>
                 </div>
             </div>
 
             <div class="eco-entry" data-leaf="3">
                 <div class="eco-header">
                 <span class="eco-icon">🛠️</span>
-                <h3>Code propre</h3>
+                <h3>Certification INR</h3>
+                <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Architecture claire, accessibilité et bonnes pratiques long terme.</p>
+                <p>L’agence est engagée dans une démarche de sobriété numérique et détient la certification INR.
+Chaque projet est pensé pour réduire son impact, sans sacrifier les performances ou l’expérience utilisateur.</p>
                 </div>
             </div>
 
             <div class="eco-entry" data-leaf="4">
                 <div class="eco-header">
                 <span class="eco-icon">🔒</span>
-                <h3>Durabilité</h3>
+                <h3>Accompagnement des PME</h3>
+                <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Sites stables, maintenables, avec un impact réduit sur le cycle de vie.</p>
+                <p>SNous travaillons principalement avec des PME et des structures à taille humaine.
+Notre objectif : proposer un accompagnement simple, transparent et réellement adapté à leurs besoins.</p>
                 </div>
             </div>
 
             <div class="eco-entry" data-leaf="5">
                 <div class="eco-header">
                 <span class="eco-icon">🌍</span>
-                <h3>Engagement réel</h3>
+                <h3>Un back-office pensé pour toi</h3>
+                <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Certif INR, optimisation continue et accompagnement personnalisé.</p>
+                <p>Chaque site est livré avec un back-office clair et intuitif.
+Tu peux modifier ton contenu facilement, de manière autonome, sans dépendre d’un technicien.</p>
                 </div>
             </div>
             </div>
