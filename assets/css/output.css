@@ -1042,6 +1042,33 @@ html {
   top: 52%;
   left: 98%;
 }
+.bubble.left .bubble-body {
+  transform-origin: right center;
+  align-items: flex-end;
+  text-align: right;
+}
+.bubble.left .bubble-body::after {
+  left: auto;
+  right: 25%;
+  transform: rotate(-30deg);
+}
+.bubble.left .bubble-text {
+  text-align: right;
+}
+.bubble.left .bubble-short {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bubble.left.open .bubble-body {
+  width: 260px;
+  height: auto;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  border-radius: 18px;
+}
+.bubble.left.open .bubble-body::after {
+  right: 12%;
+  transform: rotate(-20deg);
+}
 .services {
   position: relative;
   padding: 7rem 3rem;

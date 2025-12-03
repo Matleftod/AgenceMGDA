@@ -41,7 +41,7 @@
             <div class="bubble-body animA b1">
                 <span class="bubble-short">1</span>
                 <p class="bubble-text">
-                    Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables. Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables. Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.
+                    Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.
                 </p>
             </div>
         </div>
@@ -68,7 +68,7 @@
         <img src="<?= url('assets/images/plante/feuille2.png') ?>"
             class="feuille-img f2-img animB"
             alt="Feuille 2">
-        <div class="bubble bubble-f2">
+        <div class="bubble bubble-f2 left">
             <div class="bubble-body animB b2">
                 <span class="bubble-short">2</span>
                 <p class="bubble-text">
@@ -124,7 +124,7 @@
         <img src="<?= url('assets/images/plante/feuille4.png') ?>"
             class="feuille-img f4-img animB"
             alt="Feuille 4">
-        <div class="bubble bubble-f4">
+        <div class="bubble bubble-f4 left">
             <div class="bubble-body animB b4">
                 <span class="bubble-short">4</span>
                 <p class="bubble-text">
