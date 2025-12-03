@@ -3,54 +3,65 @@ function isMobile() {
 }
 
 export function initAboutEco() {
-  const cards = document.querySelectorAll(".eco-card");
+
+  const entries = document.querySelectorAll(".eco-entry");
   const leaves = document.querySelectorAll(".feuille-wrapper");
 
-  const clearStates = () => {
-    // retire l'animation des feuilles
+  /* ============================
+     FONCTIONS DE BASE
+  ============================ */
+
+  const clearLeafAnimations = () => {
     leaves.forEach(leaf => {
       const img = leaf.querySelector(".feuille-img");
       if (img) img.classList.remove("is-hovered");
     });
+  };
 
-    // referme toutes les cartes
-    cards.forEach(card => card.classList.remove("open"));
+  const clearEntries = () => {
+    entries.forEach(entry => entry.classList.remove("open"));
+  };
+
+  const clearAll = () => {
+    clearLeafAnimations();
+    clearEntries();
   };
 
   const setActiveByLeafId = (id) => {
-    clearStates();
+    clearAll();
 
+    // Active la feuille
     const leaf = document.querySelector(`.feuille-wrapper[data-leaf="${id}"]`);
-    const card = document.querySelector(`.eco-card[data-leaf="${id}"]`);
-
     if (leaf) {
       const img = leaf.querySelector(".feuille-img");
       if (img) img.classList.add("is-hovered");
     }
 
-    if (card) {
-      card.classList.add("open");
+    // Active l'entrée
+    const entry = document.querySelector(`.eco-entry[data-leaf="${id}"]`);
+    if (entry) {
+      entry.classList.add("open");
     }
   };
 
   /* ============================
-     DESKTOP : HOVER
+     DESKTOP : HOVER sur .eco-entry
   ============================ */
   if (!isMobile()) {
-    // Hover sur cartes
-    cards.forEach(card => {
-      const id = card.dataset.leaf;
 
-      card.addEventListener("mouseenter", () => {
+    entries.forEach(entry => {
+      const id = entry.dataset.leaf;
+
+      entry.addEventListener("mouseenter", () => {
         setActiveByLeafId(id);
       });
 
-      card.addEventListener("mouseleave", () => {
-        clearStates();
+      entry.addEventListener("mouseleave", () => {
+        clearAll();
       });
     });
 
-    // Hover sur feuilles (via hitbox)
+    /* --- Hover sur les feuilles --- */
     leaves.forEach(leaf => {
       const id = leaf.dataset.leaf;
       const path = leaf.querySelector(".hitbox-path");
@@ -61,31 +72,47 @@ export function initAboutEco() {
       });
 
       path.addEventListener("mouseleave", () => {
-        clearStates();
+        clearAll();
       });
     });
 
   } else {
+
     /* ============================
-       MOBILE : CLICK sur cartes
+       MOBILE : CLICK SUR LE HEADER
     ============================ */
-    cards.forEach(card => {
-      const id = card.dataset.leaf;
 
-      card.addEventListener("click", () => {
-        const isAlreadyOpen = card.classList.contains("open");
+    entries.forEach(entry => {
+      const id = entry.dataset.leaf;
+      const header = entry.querySelector(".eco-header");
 
-        if (isAlreadyOpen) {
-          // si déjà ouverte → on ferme tout
-          clearStates();
-        } else {
-          // sinon on active cette carte + feuille
+      header.addEventListener("click", () => {
+        const isOpen = entry.classList.contains("open");
+
+        clearAll();
+        if (!isOpen) {
           setActiveByLeafId(id);
         }
       });
     });
 
-    // (optionnel : tu peux aussi gérer le click sur les feuilles
-    // pour ouvrir la carte correspondante, si tu veux)
+    // (optionnel) CLICK touches sur feuilles → ouvre la carte correspondante
+    /*
+    leaves.forEach(leaf => {
+      const id = leaf.dataset.leaf;
+      const path = leaf.querySelector(".hitbox-path");
+
+      path.addEventListener("click", () => {
+        const entry = document.querySelector(`.eco-entry[data-leaf="${id}"]`);
+        const isOpen = entry.classList.contains("open");
+
+        clearAll();
+
+        if (!isOpen) {
+          setActiveByLeafId(id);
+        }
+      });
+    });
+    */
   }
 }

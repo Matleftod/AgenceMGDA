@@ -79,62 +79,60 @@
 
       <!-- COLONNE DROITE : CARTES -->
       <div class="about-right">
-        <div class="eco-cards">
 
-          <div class="eco-card" data-leaf="1">
-            <div class="eco-header">
-              <span class="eco-icon">🌱</span>
-              <h3>Éco-conception</h3>
-            </div>
-            <div class="eco-content">
-              <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
-            </div>
-          </div>
+          <div class="eco-cards">
 
-          <div class="eco-card" data-leaf="2">
-            <div class="eco-header">
-              <span class="eco-icon">⚡</span>
-              <h3>Performance</h3>
+            <div class="eco-entry" data-leaf="1">
+                <div class="eco-header">
+                <span class="eco-icon">🌱</span>
+                <h3>Éco-conception</h3>
+                </div>
+                <div class="eco-content">
+                <p>Chez MGDA, on conçoit des sites web légers, rapides et éco-responsables.</p>
+                </div>
             </div>
-            <div class="eco-content">
-              <p>Optimisation du poids, scripts minimisés et infrastructure maîtrisée.</p>
-            </div>
-          </div>
 
-          <div class="eco-card" data-leaf="3">
-            <div class="eco-header">
-              <span class="eco-icon">🛠️</span>
-              <h3>Code propre</h3>
+            <div class="eco-entry" data-leaf="2">
+                <div class="eco-header">
+                <span class="eco-icon">⚡</span>
+                <h3>Performance</h3>
+                </div>
+                <div class="eco-content">
+                <p>Optimisation du poids, scripts minimisés et infrastructure maîtrisée.</p>
+                </div>
             </div>
-            <div class="eco-content">
-              <p>Architecture claire, accessibilité et bonnes pratiques long terme.</p>
-            </div>
-          </div>
 
-          <div class="eco-card" data-leaf="4">
-            <div class="eco-header">
-              <span class="eco-icon">🔒</span>
-              <h3>Durabilité</h3>
+            <div class="eco-entry" data-leaf="3">
+                <div class="eco-header">
+                <span class="eco-icon">🛠️</span>
+                <h3>Code propre</h3>
+                </div>
+                <div class="eco-content">
+                <p>Architecture claire, accessibilité et bonnes pratiques long terme.</p>
+                </div>
             </div>
-            <div class="eco-content">
-              <p>Sites stables, maintenables, avec un impact réduit sur le cycle de vie.</p>
-            </div>
-          </div>
 
-          <div class="eco-card" data-leaf="5">
-            <div class="eco-header">
-              <span class="eco-icon">🌍</span>
-              <h3>Engagement réel</h3>
+            <div class="eco-entry" data-leaf="4">
+                <div class="eco-header">
+                <span class="eco-icon">🔒</span>
+                <h3>Durabilité</h3>
+                </div>
+                <div class="eco-content">
+                <p>Sites stables, maintenables, avec un impact réduit sur le cycle de vie.</p>
+                </div>
             </div>
-            <div class="eco-content">
-              <p>Certif INR, optimisation continue et accompagnement personnalisé.</p>
-            </div>
-          </div>
 
+            <div class="eco-entry" data-leaf="5">
+                <div class="eco-header">
+                <span class="eco-icon">🌍</span>
+                <h3>Engagement réel</h3>
+                </div>
+                <div class="eco-content">
+                <p>Certif INR, optimisation continue et accompagnement personnalisé.</p>
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
-
     </div>
-
   </div>
 </section>
