@@ -23,7 +23,6 @@
 .about-eco-grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 1rem;
 }
 
 .about-left {
@@ -52,20 +51,14 @@
 }
 
 /* GLOW & POT */
-.plante-glow,
-.plante-pot {
-  width: 600px;
-  height: 702px;
-  pointer-events: none;
-
-}
-
 .plante-glow {
   z-index: 1;
+  pointer-events: none;
 }
 
 .plante-pot {
   z-index: 10;
+  pointer-events: none;
 }
 
 /* HITBOX */
@@ -88,8 +81,6 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 600px;
-  height: 702px;
   transform: translateX(-50%);
   z-index: 5;
   pointer-events: none; /* seule la hitbox capte */
