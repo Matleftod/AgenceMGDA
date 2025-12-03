@@ -17,16 +17,34 @@
   margin-bottom: 2.5rem;
 }
 
-/* ===== PLANTE ===== */
+/*******************************
+  GRID 40 / 60
+*******************************/
+.about-eco-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
 
+.about-left {
+  display: flex;
+  justify-content: center;
+}
+
+/*******************************
+  PLANTE (TES RÈGLES)
+*******************************/
 .plante-wrapper {
   position: relative;
   width: 600px;
-  height : 702px;
-  margin: 10rem auto 0 auto;
+  height: 702px;
+  margin: 0 auto;
 }
 
-.plante-wrapper > img {
+.plante-layer {
+  width: 600px;
+  height: 702px;
+  object-fit: contain;
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -34,12 +52,23 @@
 }
 
 /* GLOW & POT */
-.plante-glow { z-index: 1; pointer-events: none; }
-.plante-pot  { z-index: 10; pointer-events: none; }
+.plante-glow,
+.plante-pot {
+  width: 600px;
+  height: 702px;
+  pointer-events: none;
 
-/*****************
-  HITBOX (toutes feuilles)
-******************/
+}
+
+.plante-glow {
+  z-index: 1;
+}
+
+.plante-pot {
+  z-index: 10;
+}
+
+/* HITBOX */
 .feuille-hitbox {
   position: absolute;
   inset: 0;
@@ -54,9 +83,7 @@
   cursor: pointer;
 }
 
-/*****************
-  WRAPPERS (f1–f5)
-******************/
+/* WRAPPER FEUILLES */
 .feuille-wrapper {
   position: absolute;
   left: 50%;
@@ -69,12 +96,10 @@
 }
 
 .feuille-wrapper.is-hovered {
-  transform: translateX(-50%); /* aucun transform ici */
+  transform: translateX(-50%);
 }
 
-/*****************
-  IMAGES (f1–f5)
-******************/
+/* IMAGES FEUILLES */
 .feuille-img {
   position: absolute;
   inset: 0;
@@ -86,12 +111,7 @@
   transition: transform .45s cubic-bezier(.25, 1.5, .45, 1);
 }
 
-/*****************
-  PIVOT PAR FEUILLE
-  => Ajuste le transform-origin pour un réalisme maximal
-******************/
-
-/* Feuille 1 */
+/* PIVOT PAR FEUILLE */
 .f1-img,
 .f2-img,
 .f3-img,
@@ -103,198 +123,93 @@
   transform-origin: 55% 58%;
 }
 
-/*****************
-  ANIMATION A (feuilles 1, 3, 5)
-******************/
-
+/* ANIMATION A (feuilles 1, 3, 5) */
 .feuille-img.animA.is-hovered {
   transform: rotate(9deg) translateY(14px) skewX(4deg);
 }
 
-/*****************
-  ANIMATION B (feuilles 2, 4)
-  → Effet plus léger, adapté aux feuilles basses
-******************/
-
+/* ANIMATION B (feuilles 2, 4) */
 .feuille-img.animB.is-hovered {
   transform: rotate(-5deg) translateY(8px) skewX(2deg);
 }
 
-/*****************
-  FEUILLES VISUELLES (pour celles non interactives si un jour tu veux)
-******************/
-.feuille {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 702px;
-  z-index: 3;
-  pointer-events: none;
+/*******************************
+  CARTES À DROITE (NOUVEAU)
+*******************************/
+.eco-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-/* ============================
-   WRAPPER DE LA BULLE
-============================ */
-/* Wrapping */
-.bubble {
-  position: absolute;
-  z-index: 20;
-  pointer-events: auto;
+.eco-card {
+  background: var(--bg-2, #151515);
+  border: 1px solid var(--border-1, #2a2a2a);
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  cursor: pointer;
+  transition: background .25s ease, border-color .25s ease;
+  overflow: hidden;
 }
 
-/* Le composant unique */
-.bubble-body {
-  position: relative;
+.eco-card:hover {
+  background: var(--bg-3, #1b1b1b);
+  border-color: var(--border-2, #3d3d3d);
+}
 
-  /* Mini bulle par défaut */
-  width: 80px;
-  height: 55px;
-  max-height: 128px;
-  border-radius: 18px;
-  background: #fff;
-  border: 2px solid #000;
-  box-shadow: 0 3px 6px rgba(0,0,0,.25);
-
+.eco-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-  transition:
-    transform .35s cubic-bezier(.25,1.4,.45,1),
-    width .35s cubic-bezier(.25,1.4,.45,1),
-    height .35s cubic-bezier(.25,1.4,.45,1),
-    border-radius .35s ease;
+  gap: .8rem;
 }
 
-/* Petite queue BD */
-.bubble-body::after {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 30%; /* ajusté par classe b1, b2 etc */
-  width: 0;
-  height: 0;
-
-  border-left: 5px solid transparent;
-  border-right: 11px solid transparent;
-  border-top: 20px solid #fff;
-
-  filter: drop-shadow(-1px 0px 0 #000);
-  transition: left .35s ease, transform .35s ease;
+.eco-icon {
+  font-size: 1.4rem;
+  opacity: .8;
 }
 
-/* Texte court affiché dans la mini-bulle */
-.bubble-short {
-  position: absolute;  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #000;
-  pointer-events: none;
-  white-space: nowrap; /* toujours sur une ligne */
+.eco-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-3);
 }
 
-/* Texte long (fermé par défaut) */
-.bubble-text {
+.eco-content {
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
-  max-height: 0;
-  pointer-events: none;
   overflow: hidden;
-  padding: 0 10px;
-
-  font-size: 0.9rem;
-  color: #000;
-
+  padding-top: 0;
+  color: var(--text-2);
+  line-height: 1.5;
   transition:
-    opacity 0s ease,
     max-height .35s ease,
+    opacity .25s ease,
+    padding-top .25s ease,
     visibility 0s linear .35s;
 }
 
-/* --- MODE OUVERT --- */
-
-.bubble.open .bubble-body {
-  width: 260px;
-  height: auto;
-  border-radius: 18px;
-  padding: 0.8rem 1rem;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.bubble.open .bubble-body::after {
-  left: 12%;
-  transform: rotate(12deg);
-}
-
-.bubble.open .bubble-text {
-  visibility: visible;
+.eco-card.open .eco-content {
+  max-height: 200px;
   opacity: 1;
-  max-height: 500px; /* largement suffisant */
-  transition:
-    opacity .25s ease .1s,
-    max-height .35s ease .05s,
-    visibility 0s;
+  visibility: visible;
+  padding-top: 1rem;
 }
 
-.bubble.open .bubble-short {
-  display: none;
-}
+/*******************************
+  RESPONSIVE
+*******************************/
+@media (max-width: 900px) {
+  .about-eco-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 
-.bubble-f1 { top: -6%; left: 88%; }
-.bubble-f2 { top: 4%; left: 3%; }
-.bubble-f3 { top: 24%; left: 102%; }
-.bubble-f4 { top: 35%; left: 0%; }
-.bubble-f5 { top: 52%; left: 98%; }
+  .about-left {
+    order: -1;
+  }
 
-/* ============================
-   BULLES À GAUCHE (2 et 4)
-   → Ouverture REAL vers la gauche
-============================ */
-
-.bubble.left .bubble-body {
-  transform-origin: right center;  /* Ouvre vers la GAUCHE */
-  align-items: flex-end;  
-  text-align: right;
-}
-
-/* Positionnement du triangle BD */
-.bubble.left .bubble-body::after {
-  left: auto;
-  right: 25%;        /* Ajuste selon ce que tu veux visuellement */
-  transform: rotate(-30deg);
-}
-
-/* Texte long aligné à droite */
-.bubble.left .bubble-text {
-  text-align: right;
-}
-
-/* Mini bulle centrée comme avant */
-.bubble.left .bubble-short {
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* MODE OUVERT → bulle se déploie VERS LA GAUCHE */
-.bubble.left.open .bubble-body {
-  width: 260px;
-  height: auto;
-  padding: 0.8rem 1rem 0.8rem 1rem;
-  border-radius: 18px;
-
-  
-}
-
-/* Animation de la flèche */
-.bubble.left.open .bubble-body::after {
-  right: 12%;
-  transform: rotate(-20deg);
+  .plante-wrapper {
+    transform: scale(.8);
+  }
 }

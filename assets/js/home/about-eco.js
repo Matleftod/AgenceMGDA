@@ -3,43 +3,91 @@ function isMobile() {
 }
 
 export function initAboutEco() {
+  const cards = document.querySelectorAll(".eco-card");
+  const leaves = document.querySelectorAll(".feuille-wrapper");
 
-  document.querySelectorAll('.feuille-wrapper').forEach(wrapper => {
+  const clearStates = () => {
+    // retire l'animation des feuilles
+    leaves.forEach(leaf => {
+      leaf.classList.remove("is-hovered");
+      const img = leaf.querySelector(".feuille-img");
+      if (img) img.classList.remove("is-hovered");
+    });
 
-    const path   = wrapper.querySelector('.hitbox-path');
-    const img    = wrapper.querySelector('.feuille-img');
-    const bubble = wrapper.querySelector('.bubble');
-    const body   = bubble?.querySelector('.bubble-body');
+    // referme toutes les cartes
+    cards.forEach(card => card.classList.remove("open"));
+  };
 
-    if (!path || !img || !body) return;
+  const setActiveByLeafId = (id) => {
+    clearStates();
 
-    const activate = () => {
-      wrapper.classList.add('is-hovered');
-      img.classList.add('is-hovered');
-      bubble.classList.add('open');
-      body.classList.add('minihover');
-    };
+    const leaf = document.querySelector(`.feuille-wrapper[data-leaf="${id}"]`);
+    const card = document.querySelector(`.eco-card[data-leaf="${id}"]`);
 
-    const deactivate = () => {
-      wrapper.classList.remove('is-hovered');
-      img.classList.remove('is-hovered');
-      bubble.classList.remove('open');
-      body.classList.remove('minihover');
-    };
-
-    // Desktop hover
-    if (!isMobile()) {
-      path.addEventListener('mouseenter', activate);
-      path.addEventListener('mouseleave', deactivate);
-      body.addEventListener('mouseenter', activate);
-      body.addEventListener('mouseleave', deactivate);
+    if (leaf) {
+      leaf.classList.add("is-hovered");
+      const img = leaf.querySelector(".feuille-img");
+      if (img) img.classList.add("is-hovered");
     }
 
-    // Mobile + Desktop click
-    body.addEventListener('click', e => {
-      e.stopPropagation();
-      bubble.classList.toggle('open');
-      bubble.classList.contains('open') ? activate() : deactivate();
+    if (card) {
+      card.classList.add("open");
+    }
+  };
+
+  /* ============================
+     DESKTOP : HOVER
+  ============================ */
+  if (!isMobile()) {
+    // Hover sur cartes
+    cards.forEach(card => {
+      const id = card.dataset.leaf;
+
+      card.addEventListener("mouseenter", () => {
+        setActiveByLeafId(id);
+      });
+
+      card.addEventListener("mouseleave", () => {
+        clearStates();
+      });
     });
-  });
+
+    // Hover sur feuilles (via hitbox)
+    leaves.forEach(leaf => {
+      const id = leaf.dataset.leaf;
+      const path = leaf.querySelector(".hitbox-path");
+      if (!path) return;
+
+      path.addEventListener("mouseenter", () => {
+        setActiveByLeafId(id);
+      });
+
+      path.addEventListener("mouseleave", () => {
+        clearStates();
+      });
+    });
+
+  } else {
+    /* ============================
+       MOBILE : CLICK sur cartes
+    ============================ */
+    cards.forEach(card => {
+      const id = card.dataset.leaf;
+
+      card.addEventListener("click", () => {
+        const isAlreadyOpen = card.classList.contains("open");
+
+        if (isAlreadyOpen) {
+          // si déjà ouverte → on ferme tout
+          clearStates();
+        } else {
+          // sinon on active cette carte + feuille
+          setActiveByLeafId(id);
+        }
+      });
+    });
+
+    // (optionnel : tu peux aussi gérer le click sur les feuilles
+    // pour ouvrir la carte correspondante, si tu veux)
+  }
 }
