@@ -9,7 +9,6 @@ export function initAboutEco() {
   const clearStates = () => {
     // retire l'animation des feuilles
     leaves.forEach(leaf => {
-      leaf.classList.remove("is-hovered");
       const img = leaf.querySelector(".feuille-img");
       if (img) img.classList.remove("is-hovered");
     });
@@ -25,7 +24,6 @@ export function initAboutEco() {
     const card = document.querySelector(`.eco-card[data-leaf="${id}"]`);
 
     if (leaf) {
-      leaf.classList.add("is-hovered");
       const img = leaf.querySelector(".feuille-img");
       if (img) img.classList.add("is-hovered");
     }

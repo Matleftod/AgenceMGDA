@@ -914,20 +914,17 @@ html {
 }
 .feuille-wrapper {
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  z-index: 5;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
   pointer-events: none;
-}
-.feuille-wrapper.is-hovered {
-  transform: translateX(-50%);
 }
 .feuille-img {
   position: absolute;
   inset: 0;
-  width: 600px;
-  height: 702px;
+  width: 100%;
+  height: 100%;
   display: block;
   pointer-events: none;
   transform: none;
