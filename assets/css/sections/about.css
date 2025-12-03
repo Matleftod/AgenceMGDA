@@ -56,7 +56,6 @@
 
 /* GLOW & POT */
 .plante-glow {
-  z-index: 1;
   pointer-events: none;
 }
 
@@ -131,6 +130,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: flex-start;
 }
 
 .eco-card {
@@ -139,8 +139,10 @@
   border-radius: 14px;
   padding: 0rem 1.4rem;
   cursor: pointer;
-  transition: background .25s ease, border-color .25s ease;
+  transition: background .25s ease, border-color .25s ease, width .35s ease;
   overflow: hidden;
+  width: 320px;          /* 🔥 largeur fermée idéale */
+  max-width: 100%;
 }
 
 .eco-card:hover {
@@ -162,6 +164,7 @@
 .eco-card h3 {
   font-size: 1.1rem;
   font-weight: 600;
+  margin: 1rem 0;
   color: var(--text-3);
 }
 
@@ -175,9 +178,13 @@
   line-height: 1.5;
   transition:
     max-height .35s ease,
-    opacity .25s ease,
+    opacity 0.1s ease-out,
     padding-top .25s ease,
     visibility 0s linear .35s;
+}
+
+.eco-card.open {
+  width: 100%; /* 🔥 s'étend automatiquement */
 }
 
 .eco-card.open .eco-content {
