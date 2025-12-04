@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-1);
 }
 
 /* Scrollbars */
@@ -25,8 +26,8 @@ html {
   height: 400px;
   pointer-events: none;
   z-index: 0;
-  right: 5%;
-  bottom: -20%;
+  right: -5%;
+  top: 300px;
   opacity: 50%;
 }
 

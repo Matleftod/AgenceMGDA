@@ -581,6 +581,7 @@ a {
 }
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-1);
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -610,8 +611,8 @@ html {
   height: 400px;
   pointer-events: none;
   z-index: 0;
-  right: 5%;
-  bottom: -20%;
+  right: -5%;
+  top: 300px;
   opacity: 50%;
 }
 .bg-glow::before, .bg-glow-2::before {
@@ -1024,7 +1025,7 @@ html {
 .services {
   position: relative;
   padding: 7rem 3rem;
-  background: var(--bg-1);
+  background: transparent;
   display: flex;
   justify-content: center;
   overflow: hidden;

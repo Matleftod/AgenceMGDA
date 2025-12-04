@@ -4,7 +4,7 @@
 .services {
     position: relative;
     padding: 7rem 3rem;
-    background: var(--bg-1);
+    background: transparent;
     display: flex;
     justify-content: center;
     overflow: hidden;
