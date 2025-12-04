@@ -526,6 +526,7 @@
   --bg-1: #000000;
   --bg-2: #232325;
   --bg-3: #2A2A2D;
+  --bg-4: #1b1b1b;
   --text-1: #F0EEEA;
   --text-2: #C4C3C0;
   --text-3: #8D8C89;
@@ -611,7 +612,7 @@ html {
   height: 400px;
   pointer-events: none;
   z-index: 0;
-  right: -5%;
+  right: 0;
   top: 300px;
   opacity: 50%;
 }
@@ -967,7 +968,7 @@ html {
 }
 .eco-header {
   width: 100%;
-  background: var(--bg-2);
+  background: var(--bg-4);
   border: 1px solid var(--border-1);
   border-radius: 14px;
   padding: 0.6rem 1.4rem;
@@ -978,7 +979,7 @@ html {
   transition: background .25s ease, border-color .25s ease;
 }
 .eco-header:hover {
-  background: var(--bg-3);
+  background: var(--bg-2);
   border-color: var(--border-2);
 }
 .eco-icon {

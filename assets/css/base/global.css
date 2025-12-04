@@ -26,7 +26,7 @@ html {
   height: 400px;
   pointer-events: none;
   z-index: 0;
-  right: -5%;
+  right: 0;
   top: 300px;
   opacity: 50%;
 }
