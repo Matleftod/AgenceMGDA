@@ -1036,8 +1036,9 @@ html {
   gap: 2rem;
 }
 .service-card {
-  background: var(--bg-2);
-  border: 1px solid var(--border-1);
+  background: rgba(35, 35, 37, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   padding: 2rem;
   position: relative;
@@ -1046,14 +1047,14 @@ html {
   overflow: hidden;
 }
 .service-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0px 0px 60px rgba(0, 255, 180, 0.15);
+  border-color: rgba(96, 225, 203, 0.4);
+  box-shadow: 0px 0px 60px rgba(96, 225, 203, 0.15);
 }
 .service-tag {
   display: inline-block;
   padding: 0.35rem 0.75rem;
-  background: var(--accent-dark, rgba(0,255,180,0.15));
-  color: var(--accent);
+  background: rgba(96, 225, 203, 0.12);
+  color: var(--accent-1);
   font-size: 0.8rem;
   font-weight: 600;
   border-radius: 20px;
@@ -1065,16 +1066,24 @@ html {
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
-.service-icon {
-  display: flex;
-  align-items: center;
-  color: var(--accent);
+.service-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--text-3);
+  transition: color 0.3s ease;
 }
 .service-card h3 {
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-3);
   margin: 0;
+  transition: color 0.3s ease;
+}
+.service-card.open .service-icon svg {
+  color: var(--accent-1);
+}
+.service-card.open h3 {
+  color: var(--accent-1);
 }
 .service-desc {
   color: var(--text-2);
