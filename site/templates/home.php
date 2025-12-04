@@ -12,7 +12,11 @@
 
   <?php snippet('sections/eco-design') ?>
 
+  <div class="relative">
   <?php snippet('sections/services') ?>
+
+  <div class="bg-glow-2"></div>
+  </div>
 
   <?php snippet('sections/portfolio') ?>
 

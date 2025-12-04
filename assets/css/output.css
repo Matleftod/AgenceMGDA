@@ -604,7 +604,17 @@ html {
   pointer-events: none;
   z-index: 0;
 }
-.bg-glow::before {
+.bg-glow-2 {
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 0;
+  right: 5%;
+  bottom: -20%;
+  opacity: 50%;
+}
+.bg-glow::before, .bg-glow-2::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -614,7 +624,7 @@ html {
   transition: transform .6s ease;
   will-change: transform;
 }
-.bg-glow::before {
+.bg-glow::before, .bg-glow-2::before {
   animation: floatGlow 10s ease-in-out infinite alternate;
 }
 @keyframes floatGlow {
