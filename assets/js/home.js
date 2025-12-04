@@ -4,6 +4,7 @@ import { initMockups } from "./home/mockups.js";
 import { initAnimations } from "./home/animations.js";
 import { initGlow } from "./home/glow-position.js";
 import { initAboutEco } from "./home/about-eco.js";
+import { initServices } from "./home/services.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initGlow();
@@ -12,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initPortfolio();
   initMockups();
   initAboutEco();
+  initServices();
 });
