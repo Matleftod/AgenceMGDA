@@ -117,6 +117,30 @@
     margin-bottom: 1rem;
 }
 
+.service-toggle {
+    font-size: 0.85rem;
+    color: var(--text-3);
+    margin-top: 0.3rem;
+    cursor: pointer;
+    user-select: none;
+
+    opacity: 0.8;
+    transform: translateY(0);
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.service-card:hover .service-toggle {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.service-card.open .service-toggle {
+    color: var(--accent-1);
+}
+
 /* ===============================
    EXPANDED CONTENT
 ================================= */

@@ -20,13 +20,13 @@
         <p class="service-desc">
           Ton site peut évoluer au fil du temps : nouvelles pages, modules, fonctionnalités ou redesign.
         </p>
-
         <div class="service-more">
           <p>
             Nous créons des bases techniques durables, capables de grandir avec ton activité.
             L’objectif : un site qui reste pertinent longtemps.
           </p>
         </div>
+        <div class="service-toggle">Voir plus</div>
       </div>
 
       <!-- 2 — Responsive -->
@@ -44,12 +44,12 @@
         <p class="service-desc">
           Une expérience parfaite sur mobile, tablette et ordinateur.
         </p>
-
         <div class="service-more">
           <p>
             Ton site s’adapte naturellement à tous les écrans sans compromis sur la lisibilité ou la performance.
           </p>
         </div>
+        <div class="service-toggle">Voir plus</div>
       </div>
 
       <!-- 3 — Design -->
@@ -67,12 +67,12 @@
         <p class="service-desc">
           Un site esthétique, lisible et ultra-rapide.
         </p>
-
         <div class="service-more">
           <p>
             Nous soignons chaque détail visuel et optimisons les performances : fluidité, confort, harmonie.
           </p>
         </div>
+        <div class="service-toggle">Voir plus</div>
       </div>
 
       <!-- 4 — Formation -->
@@ -88,13 +88,13 @@
         </div>
 
         <p class="service-desc">Une prise en main simple et guidée.</p>
-
         <div class="service-more">
           <p>
             Après la mise en ligne, tu apprends à modifier ton contenu,
             gérer tes pages et mettre ton site à jour facilement.
           </p>
         </div>
+        <div class="service-toggle">Voir plus</div>
       </div>
 
       <!-- 5 — Hébergement -->
@@ -110,13 +110,13 @@
         </div>
 
         <p class="service-desc">Des serveurs rapides et respectueux de l’environnement.</p>
-
         <div class="service-more">
           <p>
             Nous recommandons des solutions performantes, stables
             et alignées avec une démarche numérique responsable.
           </p>
         </div>
+        <div class="service-toggle">Voir plus</div>
       </div>
 
       <!-- 6 — Modules -->
@@ -134,13 +134,13 @@
         <p class="service-desc">
           Fonctions adaptées à tes besoins.
         </p>
-
         <div class="service-more">
           <p>
             Galerie, formulaire avancé, système personnalisé…  
             Nous développons des modules utiles et légers.
           </p>
         </div>
+        <div class="service-toggle">Voir plus</div>
       </div>
 
     </div>
