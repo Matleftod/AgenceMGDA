@@ -32,16 +32,24 @@ export function initPortfolio() {
   // Tabs
   function switchPlan(btn) {
 
-    // Effet macOS actif
+    // Reset visuel des tabs
     tabs.forEach(t => {
       t.classList.remove("active-mac-tab");
       t.setAttribute('aria-selected', 'false');
     });
 
+    // Reset des wrappers
+    tabWraps.forEach(w => w.classList.remove("active-mac-tab-bg"));
+
+    // Activer le bouton cliqué
     btn.classList.add("active-mac-tab");
     btn.setAttribute('aria-selected', 'true');
 
-    // Vidéos + captions
+    // Activer son wrapper
+    const wrap = btn.closest(".mac-tab-wrap");
+    if (wrap) wrap.classList.add("active-mac-tab-bg");
+
+    // Mettre à jour la vidéo + badge
     const mp4 = btn.dataset.mp4;
     const poster = btn.dataset.poster;
     const plan = btn.dataset.plan || btn.textContent.trim();
@@ -66,6 +74,7 @@ export function initPortfolio() {
     }, 120);
   }
 
+  // Écouteurs
   tabs.forEach(btn => {
     btn.addEventListener('click', () => switchPlan(btn));
     btn.addEventListener('keydown', (e) => {

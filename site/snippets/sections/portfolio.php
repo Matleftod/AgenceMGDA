@@ -16,7 +16,7 @@
 
         <!-- Onglets = tes trois plans -->
         <div class="flex items-center space-x-4 overflow-x-auto">
-          <div class="mac-tab-wrap active-mac-tab">
+          <div class="mac-tab-wrap active-mac-tab-bg">
             <button
               class="mac-tab active-mac-tab tab-essentiel px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
               data-plan="Essentiel"
