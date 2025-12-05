@@ -2,6 +2,7 @@ export function initPortfolio() {
 
   const vids = document.querySelectorAll('.portfolio-video');
   const tabs = document.querySelectorAll('.mac-tab');
+  const tabWraps = document.querySelectorAll('.mac-tab-wrap');
   const video = document.getElementById('portfolioVideo');
   const source = document.getElementById('portfolioSource');
   const badge  = document.querySelector('.portfolio-caption .badge');

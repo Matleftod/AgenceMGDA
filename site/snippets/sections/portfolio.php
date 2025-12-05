@@ -18,7 +18,7 @@
         <div class="flex items-center space-x-4 overflow-x-auto">
           <div class="mac-tab-wrap active-mac-tab">
             <button
-              class="mac-tab tab-essentiel px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
+              class="mac-tab active-mac-tab tab-essentiel px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
               data-plan="Essentiel"
               data-mp4="<?= url('assets/videos/Maquette1mini.mp4') ?>"
               data-poster="<?= url('assets/images/PosterMaq1.png') ?>"
@@ -27,7 +27,7 @@
               <span class="tab-label">Essentiel</span>
             </button>
           </div>
-          <div class="mac-tab-wrap active-mac-tab">
+          <div class="mac-tab-wrap">
             <button
               class="mac-tab tab-standard px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
               data-plan="Standard"
@@ -38,7 +38,7 @@
               <span class="tab-label">Standard</span>
             </button>
           </div>
-          <div class="mac-tab-wrap active-mac-tab">
+          <div class="mac-tab-wrap">
             <button
               class="mac-tab tab-premium px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
               data-plan="Premium"

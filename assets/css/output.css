@@ -1338,7 +1338,7 @@ html {
   padding: 4px 6px 0;
   border-radius: 8px 8px 0 0;
 }
-.mac-tab-wrap.active-mac-tab {
+.mac-tab-wrap.active-mac-tab-bg {
   background-color: var(--bg-5);
 }
 .mac-tab.tab-essentiel {
