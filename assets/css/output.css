@@ -769,7 +769,7 @@ html {
   transition: transform .6s ease;
   will-change: transform;
 }
-.bg-glow::before, .bg-glow-2::before {
+.bg-glow::before {
   animation: floatGlow 10s ease-in-out infinite alternate;
 }
 @keyframes floatGlow {

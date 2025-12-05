@@ -53,7 +53,7 @@ html {
   will-change: transform;
 }
 
-.bg-glow::before, .bg-glow-2::before {
+.bg-glow::before {
   animation: floatGlow 10s ease-in-out infinite alternate;
 }
 
