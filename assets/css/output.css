@@ -661,6 +661,7 @@
   --bg-2: #232325;
   --bg-3: #2A2A2D;
   --bg-4: #1b1b1b;
+  --bg-5: #101010;
   --text-1: #F0EEEA;
   --text-2: #C4C3C0;
   --text-3: #8D8C89;
@@ -1313,6 +1314,12 @@ html {
   color: var(--text-2);
   margin-bottom: 2rem;
 }
+.mac-window {
+  background: var(--bg-5);
+}
+.mac-window-tab {
+  border-bottom: none !important;
+}
 .mac-tab {
   background: none;
   -webkit-background-clip: text;
@@ -1322,17 +1329,17 @@ html {
   transition: background-position .35s ease;
 }
 .mac-tab .tab-label {
-  background: inherit;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
-.active-mac-tab {
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-  border-radius: 6px;
+.mac-tab-wrap {
+  padding: 4px 6px 0;
+  border-radius: 8px 8px 0 0;
+}
+.mac-tab-wrap.active-mac-tab {
+  background-color: var(--bg-5);
 }
 .mac-tab.tab-essentiel {
   background-image: linear-gradient(90deg, #888 0 49%, #00c878 50% 100%);

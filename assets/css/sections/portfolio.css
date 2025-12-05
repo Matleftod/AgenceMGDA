@@ -25,6 +25,13 @@
     margin-bottom: 2rem;
 }
 
+.mac-window {
+  background: var(--bg-5);
+}
+.mac-window-tab {
+  border-bottom: none !important;
+}
+
 /* Les tabs macOS utilisent le même style que tes tabs principaux */
 .mac-tab {
   background: none;
@@ -36,18 +43,19 @@
 }
 
 .mac-tab .tab-label {
-  background: inherit;            /* hérite du gradient du parent */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
-.active-mac-tab {
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-  border-radius: 6px;
+.mac-tab-wrap {
+  padding: 4px 6px 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.mac-tab-wrap.active-mac-tab {
+  background-color: var(--bg-5); /* même effet que bg-white/5 */
 }
 
 /* Essentiel (vert) */
