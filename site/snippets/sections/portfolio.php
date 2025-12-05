@@ -5,20 +5,20 @@
     <div class="mac-window w-full max-w-5xl mx-auto rounded-2xl overflow-hidden backdrop-blur-md border border-white/10 shadow-xl">
 
       <!-- ──────────────── Barre macOS ──────────────── -->
-      <div class="mac-window-tab flex items-center px-4 py-2 border-b border-white/10 bg-white/5">
+      <div class="mac-window-tab flex items-center px-4 pt-1 border-b border-white/10 bg-white/5">
 
         <!-- Boutons mac -->
-        <div class="flex items-center space-x-2 mr-4">
+        <div class="wrap-mac-btn flex items-center space-x-2 mr-4">
           <span class="w-3 h-3 rounded-full bg-red-500"></span>
           <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
           <span class="w-3 h-3 rounded-full bg-green-500"></span>
         </div>
 
         <!-- Onglets = tes trois plans -->
-        <div class="flex items-center space-x-4 overflow-x-auto">
+        <div class="flex space-x-4 overflow-x-auto">
           <div class="mac-tab-wrap active-mac-tab-bg">
             <button
-              class="mac-tab active-mac-tab tab-essentiel px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
+              class="mac-tab active-mac-tab tab-essentiel px-3 pb-1.5 pt-0.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
               data-plan="Essentiel"
               data-mp4="<?= url('assets/videos/Maquette1mini.mp4') ?>"
               data-poster="<?= url('assets/images/PosterMaq1.png') ?>"

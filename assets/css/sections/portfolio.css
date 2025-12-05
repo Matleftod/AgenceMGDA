@@ -49,13 +49,23 @@
   display: inline-block;
 }
 
-.mac-tab-wrap {
-  padding: 4px 6px 0;
-  border-radius: 8px 8px 0 0;
+.wrap-mac-btn {
+  padding-bottom: 3px;
 }
 
+/* Conteneur de chaque tab (wrap) */
+.mac-tab-wrap {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Onglet actif = fond collé à la barre */
 .mac-tab-wrap.active-mac-tab-bg {
-  background-color: var(--bg-5); /* même effet que bg-white/5 */
+  background-color: var(--bg-5); /* même couleur que la barre */
+  border-radius: 8px 8px 0 0; /* arrondis haut uniquement */
 }
 
 /* Essentiel (vert) */

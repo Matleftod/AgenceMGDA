@@ -499,14 +499,20 @@
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
   }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
+  .pt-0\.5 {
+    padding-top: calc(var(--spacing) * 0.5);
+  }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
+  }
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
+  }
+  .pb-1\.5 {
+    padding-bottom: calc(var(--spacing) * 1.5);
   }
   .pl-3 {
     padding-left: calc(var(--spacing) * 3);
@@ -1334,12 +1340,19 @@ html {
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
+.wrap-mac-btn {
+  padding-bottom: 3px;
+}
 .mac-tab-wrap {
-  padding: 4px 6px 0;
-  border-radius: 8px 8px 0 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
 }
 .mac-tab-wrap.active-mac-tab-bg {
   background-color: var(--bg-5);
+  border-radius: 8px 8px 0 0;
 }
 .mac-tab.tab-essentiel {
   background-image: linear-gradient(90deg, #888 0 49%, #00c878 50% 100%);
