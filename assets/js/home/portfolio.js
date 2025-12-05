@@ -1,17 +1,7 @@
 export function initPortfolio() {
 
-  document.querySelectorAll('.mac-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.mac-tab').forEach(t => 
-        t.classList.remove('bg-white/10', 'text-white', 'border', 'border-white/20')
-      );
-
-      tab.classList.add('bg-white/10', 'text-white', 'border', 'border-white/20');
-    });
-  });
-
   const vids = document.querySelectorAll('.portfolio-video');
-  const tabs = document.querySelectorAll('.portfolio-tabs .tab');
+  const tabs = document.querySelectorAll('.mac-tab');
   const video = document.getElementById('portfolioVideo');
   const source = document.getElementById('portfolioSource');
   const badge  = document.querySelector('.portfolio-caption .badge');
@@ -21,7 +11,7 @@ export function initPortfolio() {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(({isIntersecting, target}) => {
       if (isIntersecting) target.play().catch(()=>{});
-      else target.pause();  
+      else target.pause();
     });
   }, { threshold: 0.25 });
 
@@ -40,11 +30,17 @@ export function initPortfolio() {
 
   // Tabs
   function switchPlan(btn) {
+
+    // Effet macOS actif
     tabs.forEach(t => {
-      t.classList.toggle('is-active', t === btn);
-      t.setAttribute('aria-selected', t === btn ? 'true' : 'false');
+      t.classList.remove("active-mac-tab");
+      t.setAttribute('aria-selected', 'false');
     });
 
+    btn.classList.add("active-mac-tab");
+    btn.setAttribute('aria-selected', 'true');
+
+    // Vidéos + captions
     const mp4 = btn.dataset.mp4;
     const poster = btn.dataset.poster;
     const plan = btn.dataset.plan || btn.textContent.trim();
