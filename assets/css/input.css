@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Fixe l’ordre des layers pour éviter que le reset écrase tes styles */
+@layer base, components, utilities;
+
 /* base */
 @import "./base/variables.css";
 @import "./base/typography.css";

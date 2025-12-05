@@ -1,5 +1,53 @@
 <section id="portfolio" class="portfolio">
   <div class="portfolio-container">
+    <div class="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 shadow-xl">
+
+      <!-- Header macOS -->
+      <div class="flex items-center px-4 py-2 border-b border-white/10 bg-white/5">
+
+        <!-- Boutons macOS -->
+        <div class="flex items-center space-x-2 mr-4">
+          <span class="w-3 h-3 rounded-full bg-red-500"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500"></span>
+        </div>
+
+        <!-- Tabs bien espacés -->
+        <div class="flex items-center space-x-2 overflow-x-auto">
+          <button
+            class="px-3 py-1.5 text-xs sm:text-sm rounded-md bg-white/10 text-white font-medium border border-white/20 whitespace-nowrap"
+          >
+            Cues (24)
+          </button>
+
+          <button
+            class="px-3 py-1.5 text-xs sm:text-sm rounded-md text-gray-300 hover:bg-white/10 transition whitespace-nowrap"
+          >
+            Heatbox (12)
+          </button>
+
+          <button
+            class="px-3 py-1.5 text-xs sm:text-sm rounded-md text-gray-300 hover:bg-white/10 transition whitespace-nowrap"
+          >
+            Seeds (156)
+          </button>
+
+          <button
+            class="px-3 py-1.5 text-xs sm:text-sm rounded-md text-gray-300 hover:bg-white/10 transition whitespace-nowrap"
+          >
+            AI Agents
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Contenu -->
+      <div class="p-4 sm:p-6 text-gray-200 text-sm sm:text-base">
+        Ton contenu ici...
+      </div>
+
+    </div>
+
     <h2>Nos maquettes</h2>
     <p>Quelques exemples visuels pour vous inspirer et vous donner une idée de notre style et de nos possibilités.</p>
     <div class="portfolio-switch">

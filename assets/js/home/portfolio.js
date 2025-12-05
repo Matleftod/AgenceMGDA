@@ -1,4 +1,15 @@
 export function initPortfolio() {
+
+  document.querySelectorAll('.mac-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.mac-tab').forEach(t => 
+        t.classList.remove('bg-white/10', 'text-white', 'border', 'border-white/20')
+      );
+
+      tab.classList.add('bg-white/10', 'text-white', 'border', 'border-white/20');
+    });
+  });
+
   const vids = document.querySelectorAll('.portfolio-video');
   const tabs = document.querySelectorAll('.portfolio-tabs .tab');
   const video = document.getElementById('portfolioVideo');

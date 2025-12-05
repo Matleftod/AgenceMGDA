@@ -10,7 +10,12 @@ html {
   background-color: var(--accent-1);
   border-radius: 10px;
 }
-* { scrollbar-width: thin; scrollbar-color: var(--accent-1) transparent; }
+@layer base {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-1) transparent;
+  }
+}
 
 .bg-glow {
   position: absolute;

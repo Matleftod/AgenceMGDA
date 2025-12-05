@@ -13,11 +13,11 @@
 
       foreach ($projects as $proj): 
       ?>
-      <div class="real-card bg-bg-2 border border-white/5 rounded-3xl p-8 shadow-xl 
+      <div class="real-card bg-bg-2 border border-white/5 rounded-3xl shadow-xl 
                   hover:shadow-2xl transition-all duration-300">
 
         <!-- HEADER -->
-        <div class="real-header mb-6">
+        <div class="real-header">
             <h3 class="text-xl font-semibold text-text-1 pl-3">
                 <?= $proj['name'] ?>
             </h3>
