@@ -1321,12 +1321,25 @@ html {
   cursor: pointer;
   transition: background-position .35s ease;
 }
+.mac-tab .tab-label {
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.active-mac-tab {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+}
 .mac-tab.tab-essentiel {
   background-image: linear-gradient(90deg, #888 0 49%, #00c878 50% 100%);
   background-size: 200% 100%;
   background-position: 0 0;
 }
-.mac-tab.tab-essentiel:hover, .mac-tab.tab-essentiel.is-active {
+.mac-tab.tab-essentiel:hover, .mac-tab.tab-essentiel.active-mac-tab {
   background-position: -100% 0;
 }
 .mac-tab.tab-standard {
@@ -1334,7 +1347,7 @@ html {
   background-size: 200% 100%;
   background-position: 0 0;
 }
-.mac-tab.tab-standard:hover, .mac-tab.tab-standard.is-active {
+.mac-tab.tab-standard:hover, .mac-tab.tab-standard.active-mac-tab {
   background-position: -100% 0;
 }
 .mac-tab.tab-premium {
@@ -1342,7 +1355,7 @@ html {
   background-size: 200% 100%;
   background-position: 0 0;
 }
-.mac-tab.tab-premium:hover, .mac-tab.tab-premium.is-active {
+.mac-tab.tab-premium:hover, .mac-tab.tab-premium.active-mac-tab {
   background-position: -100% 0;
 }
 .portfolio-item video.portfolio-video {
@@ -1396,7 +1409,7 @@ html {
   background-size: 200% 100%;
   background-position: 0 0;
 }
-.portfolio-tabs .tab-essentiel:hover, .portfolio-tabs .tab-essentiel:focus-visible, .portfolio-tabs .tab-essentiel.is-active {
+.portfolio-tabs .tab-essentiel:hover, .portfolio-tabs .tab-essentiel:focus-visible, .portfolio-tabs .tab-essentiel.active-mac-tab {
   background-position: -100% 0;
 }
 .portfolio-tabs .tab-standard {
@@ -1404,7 +1417,7 @@ html {
   background-size: 200% 100%;
   background-position: 0 0;
 }
-.portfolio-tabs .tab-standard:hover, .portfolio-tabs .tab-standard:focus-visible, .portfolio-tabs .tab-standard.is-active {
+.portfolio-tabs .tab-standard:hover, .portfolio-tabs .tab-standard:focus-visible, .portfolio-tabs .tab-standard.active-mac-tab {
   background-position: -100% 0;
 }
 .portfolio-tabs .tab-premium {
@@ -1412,7 +1425,7 @@ html {
   background-size: 200% 100%;
   background-position: 0 0;
 }
-.portfolio-tabs .tab-premium:hover, .portfolio-tabs .tab-premium:focus-visible, .portfolio-tabs .tab-premium.is-active {
+.portfolio-tabs .tab-premium:hover, .portfolio-tabs .tab-premium:focus-visible, .portfolio-tabs .tab-premium.active-mac-tab {
   background-position: -100% 0;
 }
 .portfolio-stage {
@@ -1448,17 +1461,17 @@ html {
 }
 .badge-essentiel {
   background: rgba(0, 200, 120, 0.15);
-  color: #057a45;
+  color: #00c878;
   border: 1px solid rgba(0, 200, 120, 0.35);
 }
 .badge-standard {
   background: rgba(0, 140, 255, 0.15);
-  color: #0056a4;
+  color: #008cff;
   border: 1px solid rgba(0, 140, 255, 0.35);
 }
 .badge-premium {
   background: rgba(255, 80, 80, 0.15);
-  color: #a11212;
+  color: #ff5050;
   border: 1px solid rgba(255, 80, 80, 0.35);
 }
 .portfolio-caption .tagline {

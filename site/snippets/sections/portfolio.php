@@ -18,36 +18,33 @@
         <div class="flex items-center space-x-4 overflow-x-auto">
 
           <button
-            class="mac-tab tab-essentiel is-active
-              px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
+            class="mac-tab tab-essentiel active-mac-tab px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
             data-plan="Essentiel"
             data-mp4="<?= url('assets/videos/Maquette1mini.mp4') ?>"
             data-poster="<?= url('assets/images/PosterMaq1.png') ?>"
             data-tagline="L’essentiel pour démarrer vite et bien."
           >
-            Essentiel
+            <span class="tab-label">Essentiel</span>
           </button>
 
           <button
-            class="mac-tab tab-standard
-              px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
+            class="mac-tab tab-standard px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
             data-plan="Standard"
             data-mp4="<?= url('assets/videos/Maquette2mini.mp4') ?>"
             data-poster="<?= url('assets/images/PosterMaq2.png') ?>"
             data-tagline="L’équilibre parfait : design + fonctionnalités."
           >
-            Standard
+            <span class="tab-label">Standard</span>
           </button>
 
           <button
-            class="mac-tab tab-premium
-              px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
+            class="mac-tab tab-premium px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
             data-plan="Premium"
             data-mp4="<?= url('assets/videos/Maquette3mini.mp4') ?>"
             data-poster="<?= url('assets/images/PosterMaq3.png') ?>"
             data-tagline="Le haut de gamme, qui reflète votre identité."
           >
-            Premium
+            <span class="tab-label">Premium</span>
           </button>
 
         </div>
