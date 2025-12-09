@@ -68,7 +68,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-tight: 1.25;
@@ -90,8 +89,6 @@
     --color-bg-1: #000000;
     --color-bg-2: #232325;
     --color-text-1: #F0EEEA;
-    --color-text-2: #C4C3C0;
-    --color-text-3: #8D8C89;
     --color-accent-1: #60E1CB;
     --animate-slide-down: slideDownBounce 1s ease-out forwards;
   }
@@ -304,11 +301,8 @@
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
   }
   .block {
     display: block;
@@ -517,10 +511,6 @@
   .pl-3 {
     padding-left: calc(var(--spacing) * 3);
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -532,10 +522,6 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -552,12 +538,6 @@
   }
   .text-text-1 {
     color: var(--color-text-1);
-  }
-  .text-text-2 {
-    color: var(--color-text-2);
-  }
-  .text-text-3 {
-    color: var(--color-text-3);
   }
   .lowercase {
     text-transform: lowercase;
@@ -1309,11 +1289,22 @@ html {
   width: 100%;
   text-align: center;
 }
-.portfolio h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+.portfolio-heading h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-1);
+}
+.portfolio-heading h2 span {
+  color: var(--accent-1);
+}
+.portfolio-heading p {
+  margin-top: 1rem;
+  font-size: 1.05rem;
   color: var(--text-3);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .portfolio > .portfolio-container > p {
   font-size: 1rem;

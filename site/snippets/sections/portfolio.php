@@ -55,10 +55,16 @@
       <!-- ──────────────── Contenu de la fenêtre ──────────────── -->
       <div class="p-6 text-gray-200 text-sm sm:text-base">
 
-        <h2 class="text-3xl font-bold mb-2 text-text-3">Nos maquettes</h2>
-        <p class="text-text-2 mb-6">
-          Quelques exemples pour vous inspirer et visualiser nos styles de site.
-        </p>
+        <div class="portfolio-heading mb-8">
+          <h2>
+            Besoin d’inspiration ?<br>
+            Découvrez nos <span>maquettes</span>.
+          </h2>
+
+          <p>
+            Quelques exemples pour visualiser différents styles et comparer nos gammes de sites.
+          </p>
+        </div>
 
         <!-- Switch vidéo -->
         <div class="portfolio-stage" id="portfolio-stage">
