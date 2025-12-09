@@ -64,7 +64,7 @@
                 d="M1570,2171l-67-21,10-37,13-41,21-54,15-20,70-94,60-42,74-47,109-47,75-17,90-7,46,3,57,11,57,18,56,30,55,43,63,66,36,45,43,68,50,98,19,54-332-28-68-6-140-25-53-16-77-43-60-50-39-52-46-75-13,1-18,16-16,20-32,51-22,47-18,50-10,44Z"
                 fill="rgba(255,255,255,0.001)" />
             </svg>
-            <img src="<?= url('assets/images/plante/feuille5.png') ?>" class="feuille-img f5-img animA plante-layer" alt="Feuille 5">
+            <img src="<?= url('assets/images/plante/feuille5.png') ?>" class="feuille-img f5-img animC plante-layer" alt="Feuille 5">
           </div>
 
         </div>

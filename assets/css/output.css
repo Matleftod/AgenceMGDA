@@ -1114,6 +1114,9 @@ html {
 .feuille-img.animB.is-hovered {
   transform: rotate(-5deg) translateY(8px) skewX(2deg);
 }
+.feuille-img.animC.is-hovered {
+  transform: rotate(8deg) translateY(4px) skewX(4deg);
+}
 .eco-cards {
   display: flex;
   flex-direction: column;
@@ -1125,8 +1128,9 @@ html {
 }
 .eco-header {
   width: 100%;
-  background: var(--bg-4);
-  border: 1px solid var(--border-1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: 14px;
   padding: 0.6rem 1.4rem;
   cursor: pointer;
