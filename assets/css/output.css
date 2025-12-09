@@ -764,7 +764,16 @@ html {
   top: 300px;
   opacity: 50%;
 }
-.bg-glow::before, .bg-glow-2::before {
+.bg-glow-3 {
+  position: absolute;
+  width: 900px;
+  height: 700px;
+  pointer-events: none;
+  z-index: 0;
+  top: 500px;
+  opacity: 70%;
+}
+.bg-glow::before, .bg-glow-2::before, .bg-glow-3::before {
   content: "";
   position: absolute;
   inset: 0;

@@ -17,7 +17,10 @@
   <?php snippet('sections/services') ?>
   </div>
 
+  <div class="relative">
+  <div class="bg-glow-3"></div>
   <?php snippet('sections/portfolio') ?>
+  </div>
 
   <?php snippet('sections/contact') ?>
 
