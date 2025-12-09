@@ -1,78 +1,90 @@
-.contact {
-    display: flex;
-    gap: 20px;
-    padding: 4rem 2rem;
-    background-color: var(--bg-1);
-    text-align: center;
-    color: var(--text-3);
+/* --- SECTION --- */
+.contact-section {
+  background: var(--bg-1);
 }
 
-.contact-image {
-    max-width: 50%;
-    align-content: center;
+/* --- TITRE --- */
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-1);
 }
 
-.contact-image img{
-    max-width: 100%;
+.contact-title h2 span {
+  color: var(--accent-1);
 }
 
-.contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
+.contact-title span {
+  color: var(--accent-1);
 }
 
-.contact-div {
-    max-width: 50%;
-    max-width: 800px;
-    margin: 0 auto;
+.contact-subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-3);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
-.contact h2 {
-    font-size: 2rem;
-    color: var(--accent-1);
-    margin-bottom: 1rem;
+/* --- GRID --- */
+.contact-grid {
+  margin-top: 3rem;
+    max-width: 700px;
+    justify-self: center;
 }
 
-.contact p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+/* --- CARD --- */
+.contact-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+.contact-card a {
+  color: var(--accent-1);
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.contact-card a:hover {
+  opacity: 0.7;
 }
 
-.contact-item img {
-    width: 24px;
-    height: 24px;
+/* --- ICON WRAPPER --- */
+.contact-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 0.5rem auto;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s ease;
+}
+.contact-card:hover .contact-icon {
+  transform: translateY(-4px);
 }
 
-.contact-item a {
-    font-size: 1.2rem;
-    color: var(--accent-1);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+/* Icons */
+.contact-icon img {
+  width: 48px;
+  height: 48px;
 }
 
-.contact-item a:hover {
-    color: var(--text-3);
-}
-
-.contact-note {
-    font-size: 0.9rem;
-    color: var(--text-2);
+/* Footer */
+.contact-footer {
+  font-size: .95rem;
+  color: var(--text-2);
 }
