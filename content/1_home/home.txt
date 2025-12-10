@@ -2,62 +2,22 @@ Title: Home
 
 ----
 
+Hero-section:
+
+- file://PXu00s66hJ6j927g
+- file://2js5kdphNodv0Z7x
+- file://6wHNKx007p3L5YRH
+- file://72lqLPi8ZdLpLncp
+- file://tniP1v7aJhUd757c
+- file://2WJOWe2azNW6df1f
+- file://u69mBhyFXYaa9RyZ
+
+----
+
 Services-section:
 
 - 
-  service:
-    - 
-      title: Un site vitrine qui vous ressemble
-      description: >
-        Présentez vos services avec un design
-        clair et moderne. Idéal pour afficher
-        vos prestations et vos valeurs, tout en
-        instaurant la confiance.
-      icon:
-        - file://HVEz5xRPoYE9Sl44
-    - 
-      title: Contact simplifié, devis rapides
-      description: >
-        Offrez à vos visiteurs un moyen simple
-        de vous contacter ou de demander un
-        devis en quelques clics. Idéal pour
-        convertir les curieux en clients.
-      icon:
-        - file://DwfwtTYtjoEWl8fe
-    - 
-      title: Galerie d’images et avis clients
-      description: >
-        Mettez en valeur vos prestations avec
-        une galerie attrayante et des
-        témoignages authentiques. Idéal pour
-        séduire vos visiteurs.
-      icon:
-        - file://vcUjUXvSp4QDEZRH
-    - 
-      title: Localisez vos services
-      description: >
-        Ajoutez une carte interactive pour
-        guider vos clients vers vos biens ou
-        services, avec des détails précis et
-        attrayants.
-      icon:
-        - file://AQrWr4UQ9l5kBU5A
-    - 
-      title: Blog intégré
-      description: >
-        Boostez votre visibilité en publiant
-        des articles captivants directement sur
-        votre site. Une solution idéale pour
-        attirer du trafic, engager vos visiteurs
-        et renforcer votre expertise dans votre
-        domaine.
-      icon:
-        - file://dbfQgZ8KNQl9LPUf
-    - 
-      title: Maintenance et support
-      description: "Proposez à vos clients des forfaits de maintenance mensuels pour garantir un site toujours à jour et fonctionnel. Une tranquillité d'esprit essentielle face aux évolutions et aux imprévus techniques."
-      icon:
-        - file://GIgl4tdovgf6Rm38
+  service: [ ]
 
 ----
 
@@ -66,10 +26,6 @@ Testimonials-section:
 ----
 
 Case-studies-section: 
-
-----
-
-Hero-section: 
 
 ----
 

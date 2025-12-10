@@ -28,15 +28,17 @@
     <!-- SLIDER -->
     <div class="hero-center">
       <div class="hero-slider">
-        <img src="assets/images/forge.jpg" class="slide active">
-        <img src="assets/images/worker.jpg" class="slide">
-        <img src="assets/images/commerc.jpg" class="slide">
-        <img src="assets/images/artist.jpg" class="slide">
-        <img src="assets/images/mecha.jpg" class="slide">
-        <img src="assets/images/soudure.jpg" class="slide">
-        <img src="assets/images/pizza.jpg" class="slide">
+        <img src="assets/images/forge.webp" class="slide active">
+        <img src="assets/images/worker.webp" class="slide">
+        <img src="assets/images/commerc.webp" class="slide">
+        <img src="assets/images/artist.webp" class="slide">
+        <img src="assets/images/mecha.webp" class="slide">
+        <img src="assets/images/soudure.webp" class="slide">
+        <img src="assets/images/pizza.webp" class="slide">
       </div>
     </div>
+
+    <?php snippet('/components/hero-slider') ?>
 
   </div>
 </section>
