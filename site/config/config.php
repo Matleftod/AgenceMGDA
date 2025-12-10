@@ -1,7 +1,7 @@
 <?php
 return [
     'thumbs' => [
-    'driver' => 'imagemagick',
+    'driver' => 'gd',
     'quality' => 75,
     'overwrite' => true
     ],

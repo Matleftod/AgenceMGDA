@@ -729,6 +729,7 @@ a {
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-1);
+  color: var(--text-1);
 }
 ::-webkit-scrollbar {
   width: 8px;

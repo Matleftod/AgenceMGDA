@@ -1,25 +1,17 @@
-<?php 
-// Récupère les noms des fichiers (strings)
-$filenames = $page->hero_section()->value();
+<?php
 
-// Convertit en tableau
-$filenames = explode(',', $filenames);
+// Récupère correctement les fichiers du champ files
+$slides = $page->hero_section()->toFiles();
 
-// Convertit chaque string en objet File Kirby
-$slides = array_map(fn($name) => $page->file(trim($name)), $filenames);
-
-// Filtre les fichiers introuvables pour éviter les erreurs
-$slides = array_filter($slides);
 ?>
 
-<?php if (!empty($slides)): ?>
+<?php if ($slides->isNotEmpty()): ?>
 <div class="hero-center">
   <div class="hero-slider">
 
     <?php foreach ($slides as $i => $img): ?>
       <picture>
 
-        <!-- WebP -->
         <source 
           srcset="<?= $img->thumb([
             'width' => 960,
@@ -28,7 +20,6 @@ $slides = array_filter($slides);
           ])->url() ?>" 
           type="image/webp">
 
-        <!-- JPG fallback -->
         <source 
           srcset="<?= $img->thumb([
             'width' => 960,
@@ -50,8 +41,8 @@ $slides = array_filter($slides);
         >
 
       </picture>
-    <?php endforeach ?>
+    <?php endforeach; ?>
 
   </div>
 </div>
-<?php endif ?>
+<?php endif; ?>
