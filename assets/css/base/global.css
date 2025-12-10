@@ -26,6 +26,12 @@ html {
   z-index: 0;
 }
 
+@media (max-width: 1024px) {
+  .bg-glow, .bg-glow-2, .bg-glow-3 {
+    display: none;
+  }
+}
+
 .bg-glow-2 {
   position: absolute;
   width: 700px;

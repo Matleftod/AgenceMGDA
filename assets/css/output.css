@@ -755,6 +755,11 @@ html {
   pointer-events: none;
   z-index: 0;
 }
+@media (max-width: 1024px) {
+  .bg-glow, .bg-glow-2, .bg-glow-3 {
+    display: none;
+  }
+}
 .bg-glow-2 {
   position: absolute;
   width: 700px;
@@ -986,7 +991,6 @@ html {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 900px;
 }
 .slide {
   position: absolute;
@@ -1989,28 +1993,43 @@ html {
 }
 @media (max-width: 1024px) {
   .hero {
-    padding: 2rem;
-    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+  .hero-center {
+    position: absolute !important;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: block !important;
+  }
+  .hero-subtitle {
+    align-self: center;
+  }
+  .hero-slider img, .slide {
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    pointer-events: none;
   }
   .hero-container {
     display: flex !important;
     flex-direction: column !important;
-    text-align: center;
-    gap: 2rem;
-  }
-  .hero-left h1, .hero-subtitle {
-    text-align: center;
-  }
-  .hero-buttons {
+    text-align: center !important;
+    position: relative;
+    z-index: 2;
     justify-content: center;
   }
-  .hero-center {
-    width: 100%;
-    height: 55vh;
-    margin-top: 1rem;
-  }
-  .hero-left {
-    align-items: center;
+  .hero-mobile-image {
+    display: none;
   }
   .hero-right {
     position: relative;
@@ -2023,18 +2042,7 @@ html {
     backdrop-filter: none;
     background: rgba(0,0,0,0.15);
     box-shadow: none;
-  }
-  .hero-slider {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .slide {
-    object-fit: cover;
-    object-position: center;
-  }
-  .hero-mobile-image {
-    display: none;
+    min-height: auto;
   }
   .about {
     padding: 3rem;
@@ -2073,42 +2081,38 @@ html {
   }
 }
 @media (max-width: 768px) {
-  .hero {
-    padding: 1.5rem 1rem;
-  }
-  .hero-left h1 {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-  .hero-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-container {
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: center;
+  .hero-center {
+    position: absolute !important;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
   .hero-slider {
-    display: none;
+    display: none !important;
   }
   .hero-mobile-image {
-    display: block;
-    margin-top: 1.5rem;
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
   .hero-mobile-image img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
+    height: 100%;
     object-fit: cover;
   }
-  .hero-right {
-    width: 100%;
-    margin-top: 1rem;
-    text-align: center;
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+  }
+  .hero-container {
+    position: relative;
+    z-index: 2;
   }
   .services-title {
     flex-direction: column;

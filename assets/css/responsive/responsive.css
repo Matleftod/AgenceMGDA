@@ -2,40 +2,57 @@
 
     /**************************************** Hero Section ********************************************/
 
-    /* Le hero passe en mode colonne */
+    /* HERO en mode background (TABLETTE) */
     .hero {
-        padding: 2rem;
-        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
     }
 
-    /* HERO: passe en colonne → slider descend */
+    /* Le slider passe en BACKGROUND */
+    .hero-center {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* derrière le texte */
+        display: block !important;
+    }
+
+    .hero-subtitle {
+        align-self: center;
+    }
+
+    /* Les slides deviennent cover pour remplir le background */
+    .hero-slider img,
+    .slide {
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    /* Overlay sombre pour lisibilité */
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+        pointer-events: none;
+    }
+
+    /* Le contenu passe au-dessus */
     .hero-container {
         display: flex !important;
         flex-direction: column !important;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    /* Centrer le texte */
-    .hero-left h1,
-    .hero-subtitle {
-        text-align: center;
-    }
-
-    /* Centrer le bouton */
-    .hero-buttons {
+        text-align: center !important;
+        position: relative;
+        z-index: 2;
         justify-content: center;
     }
 
-    /* Slider adaptatif */
-    .hero-center {
-        width: 100%;
-        height: 55vh;
-        margin-top: 1rem;
-    }
-
-    .hero-left {
-        align-items: center;
+    /* Image mobile désactivée */
+    .hero-mobile-image {
+        display: none;
     }
 
     /* Bulle repositionnée */
@@ -50,24 +67,7 @@
         backdrop-filter: none;
         background: rgba(0,0,0,0.15);
         box-shadow: none;
-    }
-
-    /* Conteneur slider */
-    .hero-slider {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* Slides moins zoomées */
-    .slide {
-        object-fit: cover;
-        object-position: center;
-    }
-
-    /* Image mobile désactivée */
-    .hero-mobile-image {
-        display: none;
+        min-height: auto;
     }
 
     /**************************************** About Section ********************************************/
@@ -128,55 +128,47 @@
 @media (max-width: 768px) {
     /**************************************** Hero Section ********************************************/
 
-    .hero {
-        padding: 1.5rem 1rem;
+    /* HERO mobile : slider en background */
+    .hero-center {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
     }
 
-    /* Texte centré */
-    .hero-left h1 {
-        font-size: 2.2rem;
-        text-align: center;
-    }
-
-    .hero-subtitle {
-        text-align: center;
-        font-size: 1.1rem;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    /* HERO mobile */
-    .hero-container {
-        display: flex !important;
-        flex-direction: column !important;
-        text-align: center;
-    }
-
-    /* On masque complètement le slider */
+    /* On masque le slider animé mais garde l'image mobile */
     .hero-slider {
-        display: none;
+        display: none !important;
     }
 
-    /* On affiche l’image mobile unique */
     .hero-mobile-image {
-        display: block;
-        margin-top: 1.5rem;
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .hero-mobile-image img {
         width: 100%;
-        height: auto;
-        border-radius: 12px;
+        height: 100%;
         object-fit: cover;
     }
 
-    /* Bulle centrée */
-    .hero-right {
-        width: 100%;
-        margin-top: 1rem;
-        text-align: center;
+    /* Overlay sombre */
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+    }
+
+    /* Le contenu passe au-dessus */
+    .hero-container {
+        position: relative;
+        z-index: 2;
     }
 
     /**************************************** Service Section ********************************************/
