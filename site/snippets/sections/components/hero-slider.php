@@ -5,16 +5,32 @@ $slides = $page->hero_section()->toFiles();
 
 ?>
 
-<?php if ($slides->isNotEmpty()): ?>
-<div class="hero-center">
-  <div class="hero-slider">
+<?php if ($slides->isNotEmpty()): 
+// Première image (utilisée en fallback mobile)
+$first = $slides->first();
+?>
 
+<div class="hero-center">
+
+  <!-- IMAGE MOBILE UNIQUEMENT -->
+  <div class="hero-mobile-image">
+    <img 
+      src="<?= $first->thumb(['width' => 700, 'quality' => 60])->url() ?>"
+      alt="<?= $first->alt() ?: 'hero' ?>"
+      width="<?= $first->width() ?>"
+      height="<?= $first->height() ?>"
+      loading="lazy"
+    >
+  </div>
+
+  <!-- SLIDER DESKTOP / TABLETTE -->
+  <div class="hero-slider">
     <?php foreach ($slides as $i => $img): ?>
       <picture>
 
         <source 
           srcset="<?= $img->thumb([
-            'width' => 960,
+            'width' => 1200,
             'format' => 'webp',
             'quality' => 60
           ])->url() ?>" 
@@ -22,7 +38,7 @@ $slides = $page->hero_section()->toFiles();
 
         <source 
           srcset="<?= $img->thumb([
-            'width' => 960,
+            'width' => 1200,
             'format' => 'jpg',
             'quality' => 65
           ])->url() ?>" 
@@ -30,7 +46,7 @@ $slides = $page->hero_section()->toFiles();
 
         <img 
           src="<?= $img->thumb([
-            'width' => 960,
+            'width' => 1200,
             'quality' => 65
           ])->url() ?>"
           class="slide <?= $i === 0 ? 'active' : '' ?>"
@@ -39,10 +55,8 @@ $slides = $page->hero_section()->toFiles();
           height="<?= $img->height() ?>"
           <?= $i === 0 ? '' : 'loading="lazy"' ?>
         >
-
       </picture>
-    <?php endforeach; ?>
-
+    <?php endforeach ?>
   </div>
 </div>
 <?php endif; ?>

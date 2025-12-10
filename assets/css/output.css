@@ -1001,32 +1001,18 @@ html {
 .slide.active {
   opacity: 1;
 }
-@media (max-width: 992px) {
+.hero-mobile-image {
+  display: none;
+}
+.hero-mobile-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+@media (max-width: 1200px) {
   .hero {
-    padding: 2rem 1.5rem;
-    height: auto;
-    min-height: 100vh;
-  }
-  .hero-container {
-    grid-template-columns: 1fr;
-    row-gap: 2.5rem;
-  }
-  .hero-center {
-    height: 60vh;
-  }
-  .hero-slider {
-    max-width: 100%;
-  }
-  .hero-right {
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: none;
-    width: 100%;
-    padding: 1.5rem;
-    backdrop-filter: none;
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: none;
+    padding: 0 0 0 5rem;
   }
 }
 .about-eco {
@@ -2001,28 +1987,54 @@ html {
     transform: translateY(0);
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .hero {
     padding: 2rem;
     height: auto;
   }
   .hero-container {
-    flex-direction: column;
-    margin-top: 5rem;
-    max-width: 700px;
+    display: flex !important;
+    flex-direction: column !important;
     text-align: center;
+    gap: 2rem;
   }
-  .hero-content {
-    max-width: 100%;
+  .hero-left h1, .hero-subtitle {
+    text-align: center;
   }
   .hero-buttons {
     justify-content: center;
   }
-  .hero-image {
-    justify-content: center;
+  .hero-center {
+    width: 100%;
+    height: 55vh;
+    margin-top: 1rem;
   }
-  .hero-image img {
-    max-width: 60%;
+  .hero-left {
+    align-items: center;
+  }
+  .hero-right {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    backdrop-filter: none;
+    background: rgba(0,0,0,0.15);
+    box-shadow: none;
+  }
+  .hero-slider {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .slide {
+    object-fit: cover;
+    object-position: center;
+  }
+  .hero-mobile-image {
+    display: none;
   }
   .about {
     padding: 3rem;
@@ -2061,6 +2073,43 @@ html {
   }
 }
 @media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+  .hero-left h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .hero-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-container {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .hero-slider {
+    display: none;
+  }
+  .hero-mobile-image {
+    display: block;
+    margin-top: 1.5rem;
+  }
+  .hero-mobile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  .hero-right {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
   .services-title {
     flex-direction: column;
   }

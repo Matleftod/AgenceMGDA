@@ -1,33 +1,73 @@
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
     /**************************************** Hero Section ********************************************/
-    
+
+    /* Le hero passe en mode colonne */
     .hero {
         padding: 2rem;
         height: auto;
     }
 
+    /* HERO: passe en colonne → slider descend */
     .hero-container {
-        flex-direction: column;
-        margin-top: 5rem;
-        max-width: 700px;
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* Centrer le texte */
+    .hero-left h1,
+    .hero-subtitle {
         text-align: center;
     }
 
-    .hero-content {
-        max-width: 100%;
-    }
-
+    /* Centrer le bouton */
     .hero-buttons {
         justify-content: center;
     }
 
-    .hero-image {
-        justify-content: center;
+    /* Slider adaptatif */
+    .hero-center {
+        width: 100%;
+        height: 55vh;
+        margin-top: 1rem;
     }
 
-    .hero-image img {
-        max-width: 60%;
+    .hero-left {
+        align-items: center;
+    }
+
+    /* Bulle repositionnée */
+    .hero-right {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem;
+        backdrop-filter: none;
+        background: rgba(0,0,0,0.15);
+        box-shadow: none;
+    }
+
+    /* Conteneur slider */
+    .hero-slider {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Slides moins zoomées */
+    .slide {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Image mobile désactivée */
+    .hero-mobile-image {
+        display: none;
     }
 
     /**************************************** About Section ********************************************/
@@ -86,6 +126,58 @@
 }
 
 @media (max-width: 768px) {
+    /**************************************** Hero Section ********************************************/
+
+    .hero {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Texte centré */
+    .hero-left h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* HERO mobile */
+    .hero-container {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    /* On masque complètement le slider */
+    .hero-slider {
+        display: none;
+    }
+
+    /* On affiche l’image mobile unique */
+    .hero-mobile-image {
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+    .hero-mobile-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    /* Bulle centrée */
+    .hero-right {
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+    }
 
     /**************************************** Service Section ********************************************/
     .services-title {

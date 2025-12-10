@@ -6,6 +6,11 @@ Hero-section:
 
 - file://6wHNKx007p3L5YRH
 - file://u69mBhyFXYaa9RyZ
+- file://2WJOWe2azNW6df1f
+- file://PXu00s66hJ6j927g
+- file://2js5kdphNodv0Z7x
+- file://72lqLPi8ZdLpLncp
+- file://tniP1v7aJhUd757c
 
 ----
 
