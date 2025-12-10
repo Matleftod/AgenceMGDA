@@ -2,10 +2,6 @@
   padding: 2rem 0;
 }
 
-#realisations h2 {
-  margin-top: 0;
-}
-
 /* Stars glow + color */
 .star {
   filter: drop-shadow(0 0 6px rgba(96, 225, 203, 0.6));
@@ -51,5 +47,11 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1075px) {
+  .real-header h3 {
+    font-size: 1rem;
   }
 }
