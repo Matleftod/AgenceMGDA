@@ -107,16 +107,6 @@
         width: calc(50% - 30px); /* 2 colonnes */
     }
 
-    /**************************************** eco Section ********************************************/
-
-    .eco-container {
-        max-width: 700px;
-    }
-
-    .eco-design {
-        padding: 3rem;
-    }
-
     /**************************************** Contact Section ********************************************/
 
     .contact-container {
@@ -181,22 +171,6 @@
 
     .service-title-div {
         max-width: 100%;
-    }
-    
-    /**************************************** Eco Section ********************************************/
-    .eco-section1 {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .eco-section2 {
-        flex-direction: column-reverse;
-        text-align: center;
-        margin-bottom: 0;
-    }
-
-    .eco-image {
-        margin-bottom: 1.5rem;
     }
 }
 

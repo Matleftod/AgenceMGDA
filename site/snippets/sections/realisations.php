@@ -2,7 +2,20 @@
   <div class="max-w-[1200px] mx-auto justify-self-center">
 
     <!-- GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
+    <div
+      class="
+        px-6 gap-12
+
+        /* Desktop → GRID */
+        lg:grid lg:grid-cols-3 lg:gap-12
+
+        /* Mobile + Tablet → SLIDER HORIZONTAL */
+        flex lg:block overflow-x-auto snap-x snap-mandatory scroll-smooth
+
+        /* spacing des cartes dans slider */
+        space-x-6 lg:space-x-0
+      "
+    >
 
       <?php 
       $projects = [
@@ -13,8 +26,14 @@
 
       foreach ($projects as $proj): 
       ?>
-      <div class="real-card bg-bg-2 border border-white/5 rounded-3xl shadow-xl 
-                  hover:shadow-2xl transition-all duration-300">
+      <div class="
+        real-card
+        bg-bg-2 border border-white/5 rounded-3xl shadow-xl hover:shadow-2xl
+        transition-all duration-300
+
+        /* SLIDER ITEM */
+        snap-center flex-shrink-0 w-[85%] md:w-[50%] lg:w-auto
+      ">
 
         <!-- HEADER -->
         <div class="real-header">
