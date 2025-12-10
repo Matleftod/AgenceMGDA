@@ -2012,20 +2012,12 @@ html {
     object-fit: cover !important;
     object-position: center !important;
   }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: rgba(0,0,0,0.4);
-    pointer-events: none;
-  }
   .hero-container {
     display: flex !important;
     flex-direction: column !important;
     text-align: center !important;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     justify-content: center;
   }
   .hero-mobile-image {
@@ -2043,6 +2035,17 @@ html {
     background: rgba(0,0,0,0.15);
     box-shadow: none;
     min-height: auto;
+  }
+  .hero-right p {
+    margin: 0;
+  }
+  .hero-center::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.45);
+    pointer-events: none;
   }
   .about {
     padding: 3rem;
