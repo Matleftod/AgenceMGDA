@@ -64,6 +64,7 @@
         <!-- IMAGE -->
         <div class="real-mockup relative rounded-xl overflow-hidden">
           <img 
+            loading="lazy"
             src="<?= url('assets/images/mockups/' . $proj['img']) ?>" 
             alt="site <?= $proj['name'] ?>" 
             class="block w-full h-auto mockup-img"
