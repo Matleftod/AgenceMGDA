@@ -19,9 +19,9 @@
 
       <?php 
       $projects = [
-        ["name" => "G. Poitevin", "img" => "mockup_poitevin.jpg"],
-        ["name" => "D. Inda", "img" => "mockup_inkspire.jpg"],
-        ["name" => "A. Rabiller", "img" => "mockup_nebula.jpg"],
+        ["name" => "G. Poitevin", "img" => "mockup_poitevin.webp"],
+        ["name" => "D. Inda", "img" => "mockup_inkspire.webp"],
+        ["name" => "A. Rabiller", "img" => "mockup_nebula.webp"],
       ];
 
       foreach ($projects as $proj): 
