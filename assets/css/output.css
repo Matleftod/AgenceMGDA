@@ -1217,18 +1217,6 @@ html {
 .eco-entry.open .eco-chevron {
   transform: rotate(90deg);
 }
-@media (max-width: 900px) {
-  .about-eco-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .about-left {
-    order: -1;
-  }
-  .plante-wrapper {
-    transform: scale(.8);
-  }
-}
 .services {
   position: relative;
   padding: 7rem 3rem;
@@ -2113,12 +2101,15 @@ html {
     flex-direction: column-reverse;
     max-width: 700px;
   }
-  .about-text {
-    text-align: center;
+  .about-eco-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
-  .about-text h2 {
-    text-align: center;
-    display: block;
+  .plante-wrapper {
+    transform: scale(.8);
+  }
+  .about-left {
+    display: none !important;
   }
   .services-container {
     max-width: 700px;

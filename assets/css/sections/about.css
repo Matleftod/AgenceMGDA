@@ -191,21 +191,3 @@
 .eco-entry.open .eco-chevron {
   transform: rotate(90deg); /* ou 180deg si tu préfères */
 }
-
-/*******************************
-  RESPONSIVE
-*******************************/
-@media (max-width: 900px) {
-  .about-eco-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .about-left {
-    order: -1;
-  }
-
-  .plante-wrapper {
-    transform: scale(.8);
-  }
-}

@@ -1,11 +1,15 @@
 function isMobile() {
-  return matchMedia("(max-width: 768px)").matches;
+  return matchMedia("(max-width: 1024px)").matches;
 }
 
 export function initAboutEco() {
 
   const entries = document.querySelectorAll(".eco-entry");
   const leaves = document.querySelectorAll(".feuille-wrapper");
+  const plantImages = document.querySelectorAll(".plante-layer");
+  const aboutSection = document.querySelector(".about-eco");
+
+  if (!aboutSection) return;
 
   /* ============================
      FONCTIONS DE BASE
@@ -44,11 +48,26 @@ export function initAboutEco() {
     }
   };
 
-  /* ============================
-     DESKTOP : HOVER sur .eco-entry
-  ============================ */
-  if (!isMobile()) {
+  /* ============================================
+     CHARGEMENT LAZY DE LA PLANTE (Important)
+  ============================================ */
 
+  const loadPlantImages = () => {
+    plantImages.forEach(img => {
+      if (img.dataset.src) {
+        img.src = img.dataset.src;     // si tu utilises data-src pour éviter preload
+      }
+      img.loading = "eager"; // force l’image à se charger maintenant
+    });
+  };
+
+  /* ============================================
+     INITIALISATION DES ÉCOUTEURS ANIMATIONS
+  ============================================ */
+
+  const initDesktopInteractions = () => {
+
+    // Hover sur les entrées
     entries.forEach(entry => {
       const id = entry.dataset.leaf;
 
@@ -61,7 +80,7 @@ export function initAboutEco() {
       });
     });
 
-    /* --- Hover sur les feuilles --- */
+    // Hover sur les feuilles hitbox
     leaves.forEach(leaf => {
       const id = leaf.dataset.leaf;
       const path = leaf.querySelector(".hitbox-path");
@@ -75,13 +94,9 @@ export function initAboutEco() {
         clearAll();
       });
     });
+  };
 
-  } else {
-
-    /* ============================
-       MOBILE : CLICK SUR LE HEADER
-    ============================ */
-
+  const initMobileInteractions = () => {
     entries.forEach(entry => {
       const id = entry.dataset.leaf;
       const header = entry.querySelector(".eco-header");
@@ -95,24 +110,30 @@ export function initAboutEco() {
         }
       });
     });
+  };
 
-    // (optionnel) CLICK touches sur feuilles → ouvre la carte correspondante
-    /*
-    leaves.forEach(leaf => {
-      const id = leaf.dataset.leaf;
-      const path = leaf.querySelector(".hitbox-path");
+  /* ============================================
+     INTERSECTION OBSERVER (Lazy init section)
+  ============================================ */
 
-      path.addEventListener("click", () => {
-        const entry = document.querySelector(`.eco-entry[data-leaf="${id}"]`);
-        const isOpen = entry.classList.contains("open");
+  const observer = new IntersectionObserver((entries) => {
 
-        clearAll();
+    if (!entries[0].isIntersecting) return;
 
-        if (!isOpen) {
-          setActiveByLeafId(id);
-        }
-      });
-    });
-    */
-  }
+    // Charge les images de plante
+    loadPlantImages();
+
+    // Active interactions selon device
+    if (!isMobile()) {
+      initDesktopInteractions();
+    } else {
+      initMobileInteractions();
+    }
+
+    // Stop observing
+    observer.disconnect();
+
+  }, { threshold: 0.2 });
+
+  observer.observe(aboutSection);
 }
