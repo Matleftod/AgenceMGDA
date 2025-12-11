@@ -104,7 +104,7 @@
               <?php foreach (range(1, 11) as $i): ?>
               <figure class="more-card">
                 <img
-                  src="<?= url("assets/images/mockups/maq{$i}.png") ?>"
+                  src="<?= url("assets/images/mockups/maq{$i}.avif") ?>"
                   alt="Maquette <?= $i ?>"
                   loading="lazy"
                   decoding="async"

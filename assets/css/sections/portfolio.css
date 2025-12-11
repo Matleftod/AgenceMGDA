@@ -324,6 +324,7 @@
   gap: 24px;
   max-width: 1000px;
   margin: 0 auto;   
+  padding-top: 10px;
   content-visibility: auto; /* boost performance */
   contain-intrinsic-size: 600px; /* évite le saut de layout avant ouverture */
 }
@@ -333,7 +334,6 @@
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,.06);
   box-shadow: 0 6px 16px rgba(0,0,0,.06);
   transition: transform .25s ease, box-shadow .25s ease;
 }
