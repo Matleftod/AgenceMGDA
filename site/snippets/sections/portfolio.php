@@ -66,10 +66,17 @@
           </p>
         </div>
 
-        <!-- Switch vidéo -->
+        <!-- Vidéo -->
         <div class="portfolio-stage" id="portfolio-stage">
-          <video id="portfolioVideo" class="portfolio-video" muted playsinline loop preload="metadata"
-                poster="<?= url('assets/images/PosterMaq1.png') ?>">
+          <video
+            id="portfolioVideo"
+            class="portfolio-video"
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="<?= url('assets/images/PosterMaq1.png') ?>"
+          >
             <source id="portfolioSource" src="<?= url('assets/videos/Maquette1mini.mp4') ?>" type="video/mp4">
           </video>
 
@@ -94,10 +101,14 @@
             <p class="more-intro">Des variations visuelles pour vous inspirer.</p>
 
             <div class="more-grid">
-              <!-- Tes images existantes -->
               <?php foreach (range(1, 11) as $i): ?>
               <figure class="more-card">
-                <img src="<?= url("assets/images/mockups/maq{$i}.png") ?>" alt="Maquette <?= $i ?>">
+                <img
+                  src="<?= url("assets/images/mockups/maq{$i}.png") ?>"
+                  alt="Maquette <?= $i ?>"
+                  loading="lazy"
+                  decoding="async"
+                >
               </figure>
               <?php endforeach; ?>
             </div>
