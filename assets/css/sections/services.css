@@ -6,7 +6,9 @@
     padding: 7rem 3rem;
     background: transparent;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -54,7 +56,7 @@
 ================================= */
 .service-card {
     background: rgba(35, 35, 37, 0.05); /* ultra léger */
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
     padding: 2rem;

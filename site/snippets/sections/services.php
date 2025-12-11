@@ -1,4 +1,5 @@
-<section id="services" class="services">
+<section id="services" class="services" aria-labelledby="services-title">
+  <h2 id="services-title" class="invisible">Nos services</h2>
   <div class="services-container">
 
     <div class="services-heading">
