@@ -52,6 +52,10 @@
 
 @media (max-width: 1075px) {
 
+  .real-header h4 {
+    font-size: var(--text-lg)
+  }
+
   .mockup-img {
     max-height: none;
   }

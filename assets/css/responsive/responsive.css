@@ -53,6 +53,7 @@
         transform: none;
         width: 100%;
         margin: 0 auto;
+        margin-top: 1rem;
         padding: 1.5rem;
         backdrop-filter: none;
         background: rgba(0,0,0,0.15);
