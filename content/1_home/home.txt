@@ -21,12 +21,4 @@ Services-section:
 
 ----
 
-Testimonials-section: 
-
-----
-
-Case-studies-section: 
-
-----
-
 Uuid: wVi2zItawJ4kDcQt

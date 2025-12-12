@@ -13,7 +13,6 @@
 }
 
 .portfolio-heading h2 {
-  font-size: 2.8rem;
   font-weight: 800;
   color: var(--text-1);
 }
@@ -24,7 +23,6 @@
 
 .portfolio-heading p {
   margin-top: 1rem;
-  font-size: 1.05rem;
   color: var(--text-3);
   line-height: 1.6;
   max-width: 600px;
@@ -33,7 +31,6 @@
 }
 
 .portfolio > .portfolio-container > p {
-    font-size: 1rem;
     color: var(--text-2);
     margin-bottom: 2rem;
 }
@@ -266,7 +263,6 @@
 .portfolio-caption .tagline {
   margin: 0;
   color: var(--text-2);
-  font-size: .95rem;
 }
 
 /* Bouton “voir d’autres maquettes” */
@@ -283,7 +279,6 @@
 /* Flèche qui pivote */
 .more-btn-icon {
   display: inline-block;
-  font-size: 1.2rem;
   transition: transform .3s ease;
 }
 .more-btn[aria-expanded="true"] .more-btn-icon {

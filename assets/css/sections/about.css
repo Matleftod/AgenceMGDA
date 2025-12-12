@@ -170,6 +170,10 @@
     visibility 0s linear .35s;
 }
 
+.eco-entry h3 {
+  font-size: var(--text-lg);
+}
+
 .eco-entry.open .eco-content {
   max-height: 400px; /* safe */
   opacity: 1;
@@ -180,7 +184,7 @@
 /* ICON CHEVRON */
 .eco-chevron {
   margin-left: auto;           /* pousse le chevron à droite */
-  font-size: 1rem;
+  font-size: var(--text-base);
   color: var(--text-3);
   transition: transform .35s ease;
   display: flex;

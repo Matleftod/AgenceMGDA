@@ -23,7 +23,6 @@
 }
 
 .services-heading h2 {
-  font-size: 2.8rem;
   font-weight: 800;
   color: var(--text-1);
 }
@@ -34,7 +33,6 @@
 
 .services-heading p {
   margin-top: 1rem;
-  font-size: 1.05rem;
   color: var(--text-3);
   line-height: 1.6;
   max-width: 600px;
@@ -83,7 +81,6 @@
     padding: 0.35rem 0.75rem;
     background: rgba(96, 225, 203, 0.12);
     color: var(--accent-1);
-    font-size: 0.8rem;
     font-weight: 600;
     border-radius: 20px;
     margin-bottom: 1rem;
@@ -108,7 +105,6 @@
 }
 
 .service-card h3 {
-    font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-3);
     margin: 0;
@@ -132,12 +128,10 @@
 ================================= */
 .service-desc {
     color: var(--text-2);
-    font-size: 0.95rem;
     margin-bottom: 1rem;
 }
 
 .service-toggle {
-    font-size: 0.85rem;
     color: var(--text-3);
     margin-top: 0.3rem;
     cursor: pointer;
@@ -170,7 +164,6 @@
     overflow: hidden;
 
     color: var(--text-2);
-    font-size: 0.95rem;
     line-height: 1.5;
 
     transition:

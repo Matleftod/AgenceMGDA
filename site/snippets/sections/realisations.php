@@ -37,9 +37,9 @@
 
         <!-- HEADER -->
         <div class="real-header">
-            <h3 class="text-xl font-semibold text-text-1 pl-3">
+            <h4 class="text-xl font-semibold text-text-1 pl-3">
                 <?= $proj['name'] ?>
-            </h3>
+            </h4>
             <div class="flex items-center gap-2 pr-3">
 
                 <!-- Google Logo -->

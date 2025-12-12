@@ -4,6 +4,14 @@ html {
   color: var(--text-1);
 }
 
+/* Appliquer la typo de base */
+body {
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  color: var(--text-1);
+  font-family: 'Inter', sans-serif;
+}
+
 /* Scrollbars */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -11,6 +19,7 @@ html {
   background-color: var(--accent-1);
   border-radius: 10px;
 }
+
 @layer base {
   html {
     scrollbar-width: thin;
