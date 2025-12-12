@@ -1248,7 +1248,7 @@ body {
 }
 .about-mobile-heading {
   display: none;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 .about-mobile-heading h2 {
@@ -1264,6 +1264,9 @@ body {
   line-height: 1.5;
 }
 @media (max-width: 1024px) {
+  .about-eco {
+    padding: 10rem 2rem 6rem 2rem;
+  }
   .about-mobile-heading {
     display: block;
   }

@@ -203,7 +203,7 @@
 /* Caché par défaut (desktop) */
 .about-mobile-heading {
   display: none;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -224,6 +224,10 @@
 
 /* Visible dès 1024px et moins */
 @media (max-width: 1024px) {
+
+  .about-eco {
+    padding: 10rem 2rem 6rem 2rem;
+  }
   .about-mobile-heading {
     display: block;
   }
