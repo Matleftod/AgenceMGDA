@@ -170,12 +170,22 @@
     }
 
     /**************************************** Service Section ********************************************/
+    .services {
+        padding: 1.5rem;
+    }
+    
     .services-title {
         flex-direction: column;
     }
 
     .service-title-div {
         max-width: 100%;
+    }
+
+    /**************************************** portfolio Section ********************************************/
+
+    .portfolio {
+        padding: 1.5rem;
     }
 }
 
