@@ -11,7 +11,7 @@ return [
     ],
     'cache' => [
         'pages' => [
-            'active' => true
+            'active' => false
         ]
     ],
 ];

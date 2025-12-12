@@ -7,7 +7,14 @@ export function initPortfolio() {
   const tagline = document.querySelector('.portfolio-caption .tagline');
 
   /* =============================
-       1) LAZY LOAD (1ère apparition)
+      STOP SI ON N’EST PAS SUR LA HOME
+  ============================= */
+  if (!video || tabs.length === 0) {
+    return; // ❗ Empêche toute erreur sur les autres pages
+  }
+
+  /* =============================
+        1) LAZY LOAD (1ère apparition)
   ============================= */
   const lazyIO = new IntersectionObserver((entries) => {
     entries.forEach(({ isIntersecting }) => {
@@ -22,15 +29,12 @@ export function initPortfolio() {
   lazyIO.observe(video);
 
   /* =============================
-       2) PLAY / PAUSE AUTO
+        2) AUTO PLAY / PAUSE
   ============================= */
   const visibilityIO = new IntersectionObserver((entries) => {
     entries.forEach(({ isIntersecting }) => {
-      if (isIntersecting) {
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-      }
+      if (isIntersecting) video.play().catch(() => {});
+      else video.pause();
     });
   }, { threshold: 0.4 });
 
@@ -38,7 +42,7 @@ export function initPortfolio() {
 
 
   /* =============================
-       3) FONCTION POUR RECRÉER LES SOURCES
+        3) RECREATE SOURCES
   ============================= */
   function updateSources({ vp9, hevc, mp4 }) {
     video.innerHTML = "";
@@ -57,7 +61,7 @@ export function initPortfolio() {
 
 
   /* =============================
-       4) SWITCH TABS (multi-format)
+        4) SWITCH TABS
   ============================= */
   function switchPlan(btn) {
 
@@ -86,9 +90,7 @@ export function initPortfolio() {
 
     setTimeout(() => {
       video.setAttribute("poster", poster);
-
       updateSources(data);
-
       video.load();
       video.play().catch(() => {});
       video.classList.remove("is-swapping");
