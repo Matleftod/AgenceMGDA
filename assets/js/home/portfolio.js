@@ -1,69 +1,98 @@
 export function initPortfolio() {
 
   const video = document.getElementById('portfolioVideo');
-  const source = document.getElementById('portfolioSource');
   const tabs = document.querySelectorAll('.mac-tab');
   const tabWraps = document.querySelectorAll('.mac-tab-wrap');
   const badge = document.querySelector('.portfolio-caption .badge');
   const tagline = document.querySelector('.portfolio-caption .tagline');
 
   /* =============================
-        VIDEO — Lazy Load
+       VIDEO — Lazy Load au scroll
   ============================= */
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(({ isIntersecting, target }) => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(({ isIntersecting }) => {
       if (isIntersecting) {
-        target.load();
-        target.play().catch(() => {});
-        observer.unobserve(target);
+        video.load();
+        video.play().catch(() => {});
+        io.disconnect();
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.25 });
 
-  observer.observe(video);
+  io.observe(video);
+
 
   /* =============================
-        SWITCH TABS
+       SWITCH VIDEO MULTI-FORMATS
   ============================= */
+  function updateSources({ vp9, hevc, mp4 }) {
+    video.innerHTML = ""; // reset
+
+    const sources = [
+      { src: vp9,  type: "video/webm" },
+      { src: hevc, type: "video/mp4; codecs=hev1" },
+      { src: mp4,  type: "video/mp4" }
+    ];
+
+    sources.forEach(data => {
+      const s = document.createElement("source");
+      s.src = data.src;
+      s.type = data.type;
+      video.appendChild(s);
+    });
+  }
+
 
   function switchPlan(btn) {
+
+    // Reset visuel des tabs
     tabs.forEach(t => {
       t.classList.remove("active-mac-tab");
-      t.setAttribute('aria-selected', 'false');
+      t.setAttribute("aria-selected", "false");
     });
 
     tabWraps.forEach(w => w.classList.remove("active-mac-tab-bg"));
 
     btn.classList.add("active-mac-tab");
-    btn.setAttribute('aria-selected', 'true');
+    btn.setAttribute("aria-selected", "true");
     btn.closest(".mac-tab-wrap").classList.add("active-mac-tab-bg");
 
-    const mp4 = btn.dataset.mp4;
+
+    // Récup données
+    const data = {
+      mp4: btn.dataset.mp4,
+      hevc: btn.dataset.hevc,
+      vp9: btn.dataset.vp9
+    };
+
     const poster = btn.dataset.poster;
     const plan = btn.dataset.plan;
     const text = btn.dataset.tagline;
 
-    video.classList.add('is-swapping');
+    video.classList.add("is-swapping");
 
     setTimeout(() => {
+
       video.setAttribute("poster", poster);
-      source.setAttribute("src", mp4);
+      updateSources(data);
+
       video.load();
       video.play().catch(() => {});
-      video.classList.remove('is-swapping');
+      video.classList.remove("is-swapping");
 
       badge.textContent = plan;
       tagline.textContent = text;
 
-      badge.className = 'badge';
+      badge.className = "badge";
       if (btn.classList.contains("tab-essentiel")) badge.classList.add("badge-essentiel");
       if (btn.classList.contains("tab-standard"))  badge.classList.add("badge-standard");
       if (btn.classList.contains("tab-premium"))   badge.classList.add("badge-premium");
+
     }, 120);
   }
 
   tabs.forEach(btn => {
-    btn.addEventListener('click', () => switchPlan(btn));
+    btn.addEventListener("click", () => switchPlan(btn));
   });
+
 }
