@@ -1,5 +1,5 @@
 <section id="realisations" class="py-24 bg-bg-1 text-text-1">
-  <div class="max-w-[1200px] mx-auto justify-self-center">
+  <div class="realisations-container max-w-[1200px] mx-auto justify-self-center">
 
     <!-- GRID -->
     <div

@@ -8,10 +8,10 @@
         <span class="highlight">Plus léger. Plus vert.</span>
       </h1>
 
-      <p class="hero-subtitle">
+      <h4 class="hero-subtitle">
         Un site écologique, rapide et clé en main.<br>
         Mettez votre entreprise en valeur… sans alourdir la planète.
-      </p>
+      </h4>
 
       <div class="hero-buttons">
         <a href="#contact" class="btn-secondary"><span>C'est parti !</span></a>

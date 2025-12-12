@@ -739,7 +739,7 @@
   --text-xl: clamp(1.3rem, 1.5vw, 1.55rem);
   --title-sm: clamp(1.4rem, 2vw, 1.8rem);
   --title-md: clamp(1.6rem, 2.2vw, 2.2rem);
-  --title-lg: clamp(2rem, 3vw, 3rem);
+  --title-lg: clamp(2.2rem, 3.5vw, 3.2rem);
   --title-xl: clamp(2.6rem, 4vw, 4rem);
   --display: clamp(2.8rem, 5vw, 5.2rem);
   --lh-tight: 1.15;
@@ -793,7 +793,7 @@ h3 {
   font-size: var(--title-md);
 }
 h4 {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
 }
 p {
   margin-top: 0.5rem;
@@ -1245,6 +1245,28 @@ body {
 }
 .eco-entry.open .eco-chevron {
   transform: rotate(90deg);
+}
+.about-mobile-heading {
+  display: none;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.about-mobile-heading h2 {
+  font-weight: 800;
+  color: var(--text-1);
+  margin-bottom: 0.5rem;
+}
+.about-mobile-heading h2 span {
+  color: var(--accent-1);
+}
+.about-mobile-heading h4 {
+  color: var(--text-3);
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .about-mobile-heading {
+    display: block;
+  }
 }
 .services {
   position: relative;
@@ -1929,6 +1951,10 @@ body {
 }
 #realisations {
   padding: 2rem 0;
+}
+.realisations-container {
+  display: flex;
+  width: 100%;
 }
 .star {
   filter: drop-shadow(0 0 6px rgba(96, 225, 203, 0.6));

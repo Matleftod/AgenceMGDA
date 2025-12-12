@@ -1,6 +1,11 @@
 <section id="about" class="about-eco">
 
   <div class="about-eco-container">
+    <!-- TITRE MOBILE -->
+    <div class="about-mobile-heading">
+      <h2>À propos de <span>Nous</span></h2>
+      <h4>Une approche responsable, locale et humaine.</h4>
+    </div>
     <div class="about-eco-grid">
 
       <!-- COLONNE GAUCHE : PLANTE -->

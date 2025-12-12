@@ -69,7 +69,7 @@
             Besoin d’inspiration ?<br>
             Découvrez nos <span>maquettes</span>.
           </h2>
-          <p>Quelques exemples pour visualiser différents styles et comparer nos gammes de sites.</p>
+          <h4>Quelques exemples pour visualiser différents styles et comparer nos gammes de sites.</h4>
         </div>
 
         <!-- VIDEO MULTI-FORMATS -->

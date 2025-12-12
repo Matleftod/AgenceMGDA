@@ -195,3 +195,36 @@
 .eco-entry.open .eco-chevron {
   transform: rotate(90deg); /* ou 180deg si tu préfères */
 }
+
+/* -----------------------------------------
+   TITRE MOBILE / TABLET ONLY
+----------------------------------------- */
+
+/* Caché par défaut (desktop) */
+.about-mobile-heading {
+  display: none;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-mobile-heading h2 {
+  font-weight: 800;
+  color: var(--text-1);
+  margin-bottom: 0.5rem;
+}
+
+.about-mobile-heading h2 span {
+  color: var(--accent-1);
+}
+
+.about-mobile-heading h4 {
+  color: var(--text-3);
+  line-height: 1.5;
+}
+
+/* Visible dès 1024px et moins */
+@media (max-width: 1024px) {
+  .about-mobile-heading {
+    display: block;
+  }
+}

@@ -2,6 +2,11 @@
   padding: 2rem 0;
 }
 
+.realisations-container {
+  display: flex;
+  width: 100%;
+}
+
 /* Stars glow + color */
 .star {
   filter: drop-shadow(0 0 6px rgba(96, 225, 203, 0.6));

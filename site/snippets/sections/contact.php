@@ -5,9 +5,9 @@
     <h2 class="contact-title">
       Besoin de nous <span>contacter ?</span>
     </h2>
-    <p class="contact-subtitle">
+    <h4 class="contact-subtitle">
       Une question ou une envie de lancer ton projet ? Tu peux nous contacter facilement.
-    </p>
+    </h4>
 
     <p class="contact-footer mt-10">
       Disponible du lundi au vendredi · 9h – 18h

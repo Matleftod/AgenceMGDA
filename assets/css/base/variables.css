@@ -21,7 +21,7 @@
   /* — Titres — */
   --title-sm: clamp(1.4rem, 2vw, 1.8rem);
   --title-md: clamp(1.6rem, 2.2vw, 2.2rem);
-  --title-lg: clamp(2rem, 3vw, 3rem);
+  --title-lg: clamp(2.2rem, 3.5vw, 3.2rem);
   --title-xl: clamp(2.6rem, 4vw, 4rem);
 
   /* Pour ton hero */
