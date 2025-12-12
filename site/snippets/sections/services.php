@@ -6,9 +6,9 @@
       <h2>
         Ce Que Nous <span>Créons</span>
       </h2>
-      <p>
+      <h4>
         Des solutions digitales durables, performantes et conçues avec soin.
-      </p>
+      </h4>
     </div>
 
     <div class="services-grid">

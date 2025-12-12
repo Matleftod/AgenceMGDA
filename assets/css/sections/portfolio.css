@@ -53,6 +53,7 @@
 }
 
 .mac-tab .tab-label {
+  font-size: var(--text-base);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

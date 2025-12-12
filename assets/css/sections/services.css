@@ -96,6 +96,10 @@
     margin-bottom: 1rem;
 }
 
+.service-header h3 {
+    font-size: var(--text-xl);
+}
+
 /* SVG gris par défaut */
 .service-icon svg {
     width: 24px;

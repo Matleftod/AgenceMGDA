@@ -734,7 +734,7 @@
   --accent-2: #C6F3E3;
   --text-xs: clamp(0.72rem, 0.7vw, 0.82rem);
   --text-sm: clamp(0.82rem, 0.75vw, 0.92rem);
-  --text-base: clamp(0.95rem, 0.9vw, 1.05rem);
+  --text-base: clamp(0.95rem, 1.1vw, 1.05rem);
   --text-lg: clamp(1.1rem, 1.2vw, 1.25rem);
   --text-xl: clamp(1.3rem, 1.5vw, 1.55rem);
   --title-sm: clamp(1.4rem, 2vw, 1.8rem);
@@ -1314,6 +1314,9 @@ body {
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
+.service-header h3 {
+  font-size: var(--text-xl);
+}
 .service-icon svg {
   width: 24px;
   height: 24px;
@@ -1418,6 +1421,7 @@ body {
   transition: background-position .35s ease;
 }
 .mac-tab .tab-label {
+  font-size: var(--text-base);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
