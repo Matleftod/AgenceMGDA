@@ -1,0 +1,42 @@
+:root {
+  --bg-1: #000000;
+  --bg-2: #232325;
+  --bg-3: #2A2A2D;
+  --bg-4: #1b1b1b;
+  --bg-5: #101010;
+
+  --text-1: #F0EEEA;
+  --text-2: #C4C3C0;
+  --text-3: #8D8C89;
+
+  --accent-1: #60E1CB;
+  --accent-2: #C6F3E3;
+
+  --text-xs: clamp(0.72rem, 0.7vw, 0.82rem);
+  --text-sm: clamp(0.82rem, 0.75vw, 0.92rem);
+  --text-base: clamp(0.95rem, 1.1vw, 1.05rem);
+  --text-lg: clamp(1.05rem, 1.2vw, 1.2rem);
+  --text-xl: clamp(1.3rem, 1.5vw, 1.55rem);
+
+  /* — Titres — */
+  --title-sm: clamp(1.4rem, 2vw, 1.8rem);
+  --title-md: clamp(1.6rem, 2.2vw, 2.2rem);
+  --title-lg: clamp(2.2rem, 3.5vw, 3.2rem);
+  --title-xl: clamp(2.6rem, 4vw, 4rem);
+
+  /* Pour ton hero */
+  --display: clamp(2.8rem, 5vw, 5.2rem);
+
+  /* Line-height global */
+  --lh-tight: 1.15;
+  --lh-normal: 1.45;
+  --lh-relaxed: 1.65;
+}
+
+
+/* Font-face */
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Italic.ttf'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-Light.ttf'); font-weight: 300; }
+@font-face { font-family: 'Poppins'; src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf'); font-weight: 600; }

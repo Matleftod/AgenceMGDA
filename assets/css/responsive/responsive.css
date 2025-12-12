@@ -1,0 +1,198 @@
+@media (max-width: 1024px) {
+
+    /**************************************** Hero Section ********************************************/
+
+    /* HERO en mode background (TABLETTE) */
+    .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    /* Le slider passe en BACKGROUND */
+    .hero-center {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* derrière le texte */
+        display: block !important;
+    }
+
+    .hero-subtitle {
+        align-self: center;
+    }
+
+    /* Les slides deviennent cover pour remplir le background */
+    .hero-slider img,
+    .slide {
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    /* Le contenu passe au-dessus */
+    .hero-container {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        position: relative;
+        z-index: 3;
+        justify-content: center;
+    }
+
+    /* Image mobile désactivée */
+    .hero-mobile-image {
+        display: none;
+    }
+
+    /* Bulle repositionnée */
+    .hero-right {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        padding: 1.5rem;
+        backdrop-filter: none;
+        background: rgba(0,0,0,0.15);
+        box-shadow: none;
+        min-height: auto;
+    }
+
+    .hero-right p {
+        margin: 0;
+    }
+
+    .hero-center::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1; /* AU-DESSUS des images mais sous le texte */
+        background: rgba(0,0,0,0.45); /* ou un gradient si tu veux */
+        pointer-events: none;
+    }
+
+    /**************************************** About Section ********************************************/
+
+    .about {
+        padding: 3rem;
+    }
+    
+    .about-container {
+        flex-direction: column-reverse;
+        max-width: 700px;
+    }
+
+    .about-eco-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .plante-wrapper {
+        transform: scale(.8);
+    }
+
+    .about-left {
+        display: none !important;
+    }
+
+    /**************************************** Service Section ********************************************/
+
+    .services-container {
+        max-width: 700px;
+    }
+
+    .services {
+        padding: 3rem;
+    }
+
+    .service-item {
+        width: calc(50% - 30px); /* 2 colonnes */
+    }
+
+    /**************************************** Contact Section ********************************************/
+
+    .contact-container {
+        max-width: 700px;
+    }
+
+    .contact-image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /**************************************** Hero Section ********************************************/
+
+    /* HERO mobile : slider en background */
+    .hero-center {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    /* On masque le slider animé mais garde l'image mobile */
+    .hero-slider {
+        display: none !important;
+    }
+
+    .hero-mobile-image {
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-mobile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Overlay sombre */
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+    }
+
+    /* Le contenu passe au-dessus */
+    .hero-container {
+        position: relative;
+        z-index: 2;
+    }
+
+    /**************************************** Service Section ********************************************/
+    .services {
+        padding: 1.5rem;
+    }
+    
+    .services-title {
+        flex-direction: column;
+    }
+
+    .service-title-div {
+        max-width: 100%;
+    }
+
+    /**************************************** portfolio Section ********************************************/
+
+    .portfolio {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+
+    /**************************************** Service Section ********************************************/
+    .service-item {
+        width: 100%; /* 1 colonne */
+    }
+}

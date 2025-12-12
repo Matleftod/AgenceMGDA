@@ -1,0 +1,396 @@
+.portfolio {
+    padding: 7rem 3rem;
+    background-color: var(--bg-1);
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio-heading h2 {
+  font-weight: 800;
+  color: var(--text-1);
+}
+
+.portfolio-heading h2 span {
+  color: var(--accent-1);
+}
+
+.portfolio-heading p {
+  margin-top: 1rem;
+  color: var(--text-3);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio > .portfolio-container > p {
+    color: var(--text-2);
+    margin-bottom: 2rem;
+}
+
+.mac-window {
+  background: var(--bg-5);
+}
+.mac-window-tab {
+  border-bottom: none !important;
+}
+
+/* Les tabs macOS utilisent le même style que tes tabs principaux */
+.mac-tab {
+  background: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: background-position .35s ease;
+}
+
+.mac-tab .tab-label {
+  font-size: var(--text-base);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.wrap-mac-btn {
+  padding-bottom: 3px;
+}
+
+/* Conteneur de chaque tab (wrap) */
+.mac-tab-wrap {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Onglet actif = fond collé à la barre */
+.mac-tab-wrap.active-mac-tab-bg {
+  background-color: var(--bg-5); /* même couleur que la barre */
+  border-radius: 8px 8px 0 0; /* arrondis haut uniquement */
+}
+
+/* Essentiel (vert) */
+.mac-tab.tab-essentiel {
+  background-image: linear-gradient(90deg, #888 0 49%, #00c878 50% 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+.mac-tab.tab-essentiel:hover,
+.mac-tab.tab-essentiel.active-mac-tab {
+  background-position: -100% 0;
+}
+
+/* Standard (bleu) */
+.mac-tab.tab-standard {
+  background-image: linear-gradient(90deg, #888 0 49%, #008cff 50% 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+.mac-tab.tab-standard:hover,
+.mac-tab.tab-standard.active-mac-tab {
+  background-position: -100% 0;
+}
+
+/* Premium (rouge) */
+.mac-tab.tab-premium {
+  background-image: linear-gradient(90deg, #888 0 49%, #ff5050 50% 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+.mac-tab.tab-premium:hover,
+.mac-tab.tab-premium.active-mac-tab {
+  background-position: -100% 0;
+}
+
+/* Vidéos du portfolio */
+.portfolio-item video.portfolio-video{
+    display:block;
+    width:100%;
+    aspect-ratio:16/10;     /* ratio homogène */
+    object-fit:fill;
+    border-radius:10px;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .portfolio-item video.portfolio-video{ animation:none !important; }
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10; /* ratio propre et homogène */
+    object-fit: cover;
+}
+
+/* --- Tabs façon "text-hover-effect" --- */
+.portfolio-switch {
+  margin-top: 2rem;
+}
+
+.portfolio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+
+/* Couleurs par forfait pour les tabs */
+.portfolio-tabs .tab {
+  position: relative;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  border: none;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  background: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position .35s ease;
+}
+
+/* Essentiel (vert) */
+.portfolio-tabs .tab-essentiel {
+  background-image: linear-gradient(90deg, #999 0 49%, #00c878 50% 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+.portfolio-tabs .tab-essentiel:hover,
+.portfolio-tabs .tab-essentiel:focus-visible,
+.portfolio-tabs .tab-essentiel.active-mac-tab {
+  background-position: -100% 0;
+}
+
+/* Standard (bleu) */
+.portfolio-tabs .tab-standard {
+  background-image: linear-gradient(90deg, #999 0 49%, #008cff 50% 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+.portfolio-tabs .tab-standard:hover,
+.portfolio-tabs .tab-standard:focus-visible,
+.portfolio-tabs .tab-standard.active-mac-tab {
+  background-position: -100% 0;
+}
+
+/* Premium (rouge) */
+.portfolio-tabs .tab-premium {
+  background-image: linear-gradient(90deg, #999 0 49%, #ff5050 50% 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+.portfolio-tabs .tab-premium:hover,
+.portfolio-tabs .tab-premium:focus-visible,
+.portfolio-tabs .tab-premium.active-mac-tab {
+  background-position: -100% 0;
+}
+
+/* --- Scène vidéo --- */
+.portfolio-stage {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.portfolio-stage .portfolio-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: fill;
+  border-radius: 14px;
+  background: #000;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease, opacity .3s ease;
+}
+
+.portfolio-stage .portfolio-video.is-swapping {
+  opacity: 0; /* petit fondu lors du switch */
+}
+
+.portfolio-caption {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Badges par forfait */
+.badge {
+  font-weight: 700;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+}
+
+/* Essentiel (vert) */
+.badge-essentiel {
+  background: rgba(0, 200, 120, 0.15);
+  color: #00c878;
+  border: 1px solid rgba(0, 200, 120, 0.35);
+}
+
+/* Standard (bleu) */
+.badge-standard {
+  background: rgba(0, 140, 255, 0.15);
+  color: #008cff;
+  border: 1px solid rgba(0, 140, 255, 0.35);
+}
+
+/* Premium (rouge) */
+.badge-premium {
+  background: rgba(255, 80, 80, 0.15);
+  color: #ff5050;
+  border: 1px solid rgba(255, 80, 80, 0.35);
+}
+
+.portfolio-caption .tagline {
+  margin: 0;
+  color: var(--text-2);
+}
+
+/* Bouton “voir d’autres maquettes” */
+.more-mockups { margin-top: 4rem; }
+
+/* Aligne correctement l’icône ▾ dans le bouton secondaire */
+.more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Flèche qui pivote */
+.more-btn-icon {
+  display: inline-block;
+  transition: transform .3s ease;
+}
+.more-btn[aria-expanded="true"] .more-btn-icon {
+  transform: rotate(180deg);
+}
+
+/* Panneau déroulant */
+.more-panel {
+  overflow: hidden;
+  transition: grid-template-rows .35s ease, opacity .25s ease, margin-top .2s ease;
+  display: grid;
+  grid-template-rows: 0fr; /* fermé */
+  opacity: 0;
+  margin-top: 0;
+}
+.more-panel[data-open="true"] {
+  grid-template-rows: 1fr; /* ouvert */
+  opacity: 1;
+  margin-top: 2rem;
+}
+.more-panel > * { min-height: 0; } /* indispensable pour la technique des rows */
+
+.more-panel[hidden] {
+  display: none !important;
+}
+
+/* Intro */
+.more-intro {
+  text-align: center;
+  color: var(--text-2);
+  margin: 0 0 2rem 0;
+}
+
+/* Grille d’images */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;   
+  padding-top: 10px;
+  content-visibility: auto; /* boost performance */
+  contain-intrinsic-size: 600px; /* évite le saut de layout avant ouverture */
+}
+
+.more-card {
+  margin: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.more-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+.more-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/********** Responsive  **********/
+
+/* Desktop par défaut :
+   - more-grid en 3 colonnes
+   - portfolio-stage gère sa largeur via sa règle de base
+*/
+
+/* ≤ 900px : tablette */
+@media (max-width: 900px) {
+  /* Section portfolio (padding + scène vidéo) */
+  .portfolio { padding: 3rem; }
+  .portfolio-stage { max-width: 700px; }
+
+  /* Grille PNG : 2 colonnes, largeur contenue */
+  .more-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;       /* évite un trop grand étalement */
+    margin: 0 auto;
+  }
+
+  /* Les images peuvent s’élargir sur 2 colonnes */
+  .more-card img { max-width: 100%; }
+}
+
+/* ≤ 590px : mobile */
+@media (max-width: 590px) {
+  /* Scène vidéo full-width */
+  .portfolio-stage { max-width: 100%; }
+
+  /* Grille PNG : 1 colonne */
+  .more-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Bouton & tabs plus compacts */
+  .portfolio-tabs { gap: 1rem; }
+  .more-btn { padding: 0.7rem 1.1rem; }
+}
+
+/* Accessibilité : réduction des animations */
+@media (prefers-reduced-motion: reduce) {
+  .more-btn,
+  .more-btn-icon,
+  .more-panel,
+  .more-card,
+  .portfolio-tabs .tab,
+  .portfolio-stage .portfolio-video {
+    transition: none !important;
+  }
+}

@@ -32,6 +32,6 @@
 
 <!-- Optional JavaScript -->
 <script src="<?= url('assets/js/header.js') ?>"></script>
-<script src="<?= url('assets/js/home.js') ?>"></script>
+<script type="module" src="/assets/js/home.js"></script>
 </body>
 </html>

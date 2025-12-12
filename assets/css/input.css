@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* Fixe l’ordre des layers pour éviter que le reset écrase tes styles */
+@layer base, components, utilities;
+
+/* base */
+@import "./base/variables.css";
+@import "./base/typography.css";
+@import "./base/global.css";
+
+/* components */
+@import "./components/buttons.css";
+@import "./components/animations.css";
+
+/* sections */
+@import "./sections/hero.css";
+@import "./sections/about.css";
+@import "./sections/services.css";
+@import "./sections/portfolio.css";
+@import "./sections/contact.css";
+@import "./sections/footer.css";
+@import "./sections/header.css";
+@import "./sections/realisations.css";
+
+/* responsive */
+@import "./responsive/responsive.css";
+
+
+/* --- Sources à scanner par Tailwind --- */
+@source "./site/templates/**/*.php";
+@source "./site/snippets/**/*.php";
+@source "./site/components/**/*.php";
+@source "./site/sections/**/*.php";
+@source "./content/**/*";
+@source "./assets/js/**/*.js";
+
+/* --- Thème Tailwind v4 (tes couleurs + animations) --- */
+@theme {
+  --color-bg-1: #000000;
+  --color-bg-2: #232325;
+  --color-bg-3: #2A2A2D;
+
+  --color-text-1: #F0EEEA;
+  --color-text-2: #C4C3C0;
+  --color-text-3: #8D8C89;
+
+  --color-accent-1: #60E1CB;
+  --color-accent-2: #C6F3E3;
+
+  --font-sans: "Poppins", sans-serif;
+
+  --animate-slide-down: slideDownBounce 1s ease-out forwards;
+  --animate-fade-in: fadeIn 1s ease-out forwards;
+
+  @keyframes slideDownBounce {
+    0% { transform: translateY(-150%); opacity: 0; }
+    60% { transform: translateY(20px); opacity: 1; }
+    80% { transform: translateY(-10px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
+
+/* --- Boutons custom --- */
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-accent-1 text-text-1 px-6 py-3 rounded-full font-bold border-2 border-transparent transition-colors z-10 inline-block cursor-pointer;
+    
+    &::before {
+      content: "";
+      @apply absolute inset-0 bg-accent-1 -z-10 duration-300 ease-in-out translate-x-[-100%];
+    }
+    &:hover::before {
+      @apply translate-x-0;
+    }
+  }
+
+  .btn-secondary {
+    @apply relative overflow-hidden bg-transparent text-accent-1 px-6 py-3 rounded-full font-bold border-2 border-accent-1 transition-colors z-10 inline-block cursor-pointer;
+
+    &::before {
+      content: "";
+      @apply absolute inset-0 bg-accent-1 -z-10 duration-300 ease-in-out translate-x-[-100%];
+    }
+    &:hover {
+      @apply text-text-1;
+    }
+    &:hover::before {
+      @apply translate-x-0;
+    }
+  }
+}

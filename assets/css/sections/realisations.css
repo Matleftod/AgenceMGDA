@@ -1,0 +1,67 @@
+#realisations {
+  padding: 2rem 0;
+}
+
+.realisations-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Stars glow + color */
+.star {
+  filter: drop-shadow(0 0 6px rgba(96, 225, 203, 0.6));
+  color: var(--accent-1);     /* au cas où */
+  fill: currentColor;         /* applique bien la couleur */
+}
+
+/* Mockup hover */
+.mockup-img {
+  transition: transform .35s ease, filter .35s ease;
+  border-radius: 12px;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.real-mockup:hover .mockup-img {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Card fade-in animation */
+.real-card {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: realFadeUp .8s ease forwards;
+}
+
+.real-card:nth-child(2) { animation-delay: .1s; }
+.real-card:nth-child(3) { animation-delay: .2s; }
+
+.real-header {
+  padding-left: 1rem;   /* espace gauche */
+  padding-right: 1rem;  /* espace droite */
+  padding-top: 0.25rem; 
+  padding-bottom: 0.25rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes realFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1075px) {
+
+  .real-header h4 {
+    font-size: var(--text-lg)
+  }
+
+  .mockup-img {
+    max-height: none;
+  }
+}

@@ -1,11 +1,17 @@
 <?php
 return [
     'thumbs' => [
-        'driver' => 'im',
-        'bin' => '/usr/local/bin/convert'
+    'driver' => 'gd',
+    'quality' => 75,
+    'overwrite' => true
     ],
-    'debug' => true,
+    'debug' => false,
     'panel' => [
         'slug' => 'admin-panel'
+    ],
+    'cache' => [
+        'pages' => [
+            'active' => true
+        ]
     ],
 ];
