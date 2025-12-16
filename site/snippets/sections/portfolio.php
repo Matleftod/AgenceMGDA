@@ -74,25 +74,32 @@
 
         <!-- VIDEO MULTI-FORMATS -->
         <div class="portfolio-stage">
-          <video
-            id="portfolioVideo"
-            class="portfolio-video"
-            muted
-            playsinline
-            loop
-            preload="none"
-            poster="<?= url('assets/images/PosterMaq1.avif') ?>"
-            decoding="async"
-          >
-            <!-- VP9 prioritaire -->
-            <source src="<?= url('assets/videos/Maquette1mini_vp9.webm') ?>" type="video/webm">
+          <div class="portfolio-video-wrapper">
 
-            <!-- HEVC pour Safari/iOS -->
-            <source src="<?= url('assets/videos/Maquette1mini_hevc.mp4') ?>" type="video/mp4; codecs=hev1">
+            <video
+              id="portfolioVideo"
+              class="portfolio-video"
+              muted
+              playsinline
+              loop
+              preload="none"
+              poster="<?= url('assets/images/PosterMaq1.avif') ?>"
+              decoding="async"
+            >
+              <source src="<?= url('assets/videos/Maquette1mini_vp9.webm') ?>" type="video/webm">
+              <source src="<?= url('assets/videos/Maquette1mini_hevc.mp4') ?>" type="video/mp4; codecs=hev1">
+              <source src="<?= url('assets/videos/Maquette1mini.mp4') ?>" type="video/mp4">
+            </video>
 
-            <!-- H.264 fallback -->
-            <source src="<?= url('assets/videos/Maquette1mini.mp4') ?>" type="video/mp4">
-          </video>
+            <!-- Bouton play -->
+            <button
+              class="video-play-btn"
+              aria-label="Lire la vidéo"
+              type="button">
+              ▶
+            </button>
+
+          </div>
 
           <div class="portfolio-caption">
             <span class="badge badge-essentiel">Essentiel</span>
