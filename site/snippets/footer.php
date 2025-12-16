@@ -31,7 +31,11 @@
 </footer>
 
 <!-- Optional JavaScript -->
-<script src="<?= url('assets/js/header.js') ?>"></script>
-<script type="module" src="/assets/js/home.js"></script>
+<script src="<?= url('assets/js/dist/global.min.js') ?>" defer></script>
+
+<?php if ($page->isHomePage()): ?>
+    <script src="<?= url('assets/js/dist/home.min.js') ?>" defer></script>
+<?php endif ?>
+
 </body>
 </html>
