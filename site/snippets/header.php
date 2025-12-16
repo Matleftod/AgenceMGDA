@@ -33,7 +33,7 @@
     <div class="head-container transparent">
         <div class="logo">
             <a href="<?= $site->url() ?>">
-                <img src="<?= url('assets/images/logoMGDA.png') ?>" alt="<?= $site->title() ?> logo">
+                <img src="<?= url('assets/images/logoMGDA.webp') ?>" alt="<?= $site->title() ?> logo">
             </a>
         </div>
         
