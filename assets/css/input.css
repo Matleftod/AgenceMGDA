@@ -21,6 +21,7 @@
 @import "./sections/footer.css";
 @import "./sections/header.css";
 @import "./sections/realisations.css";
+@import "./sections/eco-proof.css";
 
 /* responsive */
 @import "./responsive/responsive.css";

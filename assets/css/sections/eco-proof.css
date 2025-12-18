@@ -1,0 +1,84 @@
+/* ===============================
+   SECTION ECO PROOF
+================================ */
+
+.eco-proof {
+  background: var(--bg-1);
+  padding: 8rem 2rem;
+}
+
+.eco-proof-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.eco-proof-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eco-proof-header h2 {
+  font-weight: 800;
+  color: var(--text-1);
+}
+
+.eco-proof-header span {
+  color: var(--accent-1);
+}
+
+.eco-proof-header p {
+  margin-top: 1rem;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-3);
+  line-height: 1.6;
+}
+
+/* Grid */
+.eco-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card */
+.eco-proof-card {
+  background: var(--bg-5);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 2.2rem 2rem;
+  text-align: center;
+}
+
+.eco-proof-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.eco-proof-card h3 {
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 0.6rem;
+}
+
+.eco-proof-card p {
+  color: var(--text-3);
+  line-height: 1.55;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .eco-proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-proof-card {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}

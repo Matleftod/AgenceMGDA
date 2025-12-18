@@ -22,6 +22,8 @@
   <?php snippet('sections/portfolio') ?>
   </div>
 
+  <?php snippet('sections/eco-proof') ?>
+
   <?php snippet('sections/contact') ?>
 
 </main>
