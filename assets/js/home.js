@@ -5,6 +5,7 @@ import { initAnimations } from "./home/animations.js";
 import { initGlow } from "./home/glow-position.js";
 import { initAboutEco } from "./home/about-eco.js";
 import { initServices } from "./home/services.js";
+import { initEcoProofCards } from "./home/eco-proof.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initGlow();
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMockups();
   initAboutEco();
   initServices();
+  initEcoProofCards();
 });
