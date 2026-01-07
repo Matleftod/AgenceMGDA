@@ -5,7 +5,7 @@ return [
     'quality' => 75,
     'overwrite' => true
     ],
-    'debug' => false,
+    'debug' => true,
     'panel' => [
         'slug' => 'admin-panel'
     ],
