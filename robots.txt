@@ -1,6 +1,3 @@
 User-agent: *
-Disallow: /panel/
+Disallow: /admin-panel/
 Disallow: /secret-admin/
-Disallow: /cookies
-Disallow: /mentions-legales
-Disallow: /cgv

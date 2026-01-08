@@ -23,7 +23,12 @@
     <title><?= $site->title() ?> | <?= $page->title() ?></title>
     
     <!-- Section-specific CSS -->
-    <link rel="stylesheet" href="<?= url('assets/css/output.css') ?>">
+    <?php
+    $cssRel  = 'assets/css/output.css';
+    $cssPath = kirby()->root('assets') . '/css/output.css';
+    $cssV    = is_file($cssPath) ? filemtime($cssPath) : null;
+    ?>
+    <link rel="stylesheet" href="<?= url($cssRel) . ($cssV ? '?v=' . $cssV : '') ?>">
     <?php if ($page->template() == 'home'): ?>
     <?php endif ?>
 </head>

@@ -1,0 +1,7 @@
+# Kirby sensibles / générés
+site/accounts/
+site/sessions/
+site/cache/
+
+# si présent
+site/accounts/.htpasswd
