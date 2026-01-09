@@ -156,11 +156,11 @@ Résultat : un site plus rapide, plus sécurisé, plus écologique et incroyable
             <div class="eco-entry" data-leaf="3">
                 <div class="eco-header">
                 <span class="eco-icon">🌱</span>
-                <h3>Certification INR</h3>
+                <h3>Numérique responsable</h3>
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>L’agence est engagée dans une démarche de sobriété numérique et détient la certification INR.
+                <p>L’agence est engagée dans une démarche de sobriété numérique et détient un certificat de connaissance Numérique Responsable.
 Chaque projet est pensé pour réduire son impact, sans sacrifier les performances ou l’expérience utilisateur.</p>
                 </div>
             </div>
