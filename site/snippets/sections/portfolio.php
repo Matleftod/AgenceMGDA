@@ -120,7 +120,7 @@
           </button>
 
           <div id="moreMockupsPanel" class="more-panel" hidden>
-            <p class="more-intro">Des variations visuelles pour vous inspirer.</p>
+            <p class="more-intro">Des variations visuelles pour t'inspirer.</p>
 
             <div class="more-grid">
               <?php foreach (range(1, 11) as $i): ?>

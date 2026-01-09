@@ -2,6 +2,14 @@ Title: Home
 
 ----
 
+Seo-title: Agence web éco-conçue à Bègles | Agence MGDA
+
+----
+
+Seo-description: Agence MGDA : Nous créons des sites vitrines écologiques et sur-mesure, pensés pour les  entreprises à taille humaine. Des sites simples à gérer au quotidien.
+
+----
+
 Hero-section:
 
 - file://6wHNKx007p3L5YRH
