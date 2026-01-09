@@ -48,7 +48,7 @@
             <button
               class="mac-tab tab-premium px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
               data-plan="Premium"
-              data-tagline="Le haut de gamme, qui reflète votre identité."
+              data-tagline="Le haut de gamme, qui reflète ton identité."
               data-poster="<?= url('assets/images/PosterMaq3.avif') ?>"
               data-mp4="<?= url('assets/videos/Maquette3mini.mp4') ?>"
               data-hevc="<?= url('assets/videos/Maquette3mini_hevc.mp4') ?>"
