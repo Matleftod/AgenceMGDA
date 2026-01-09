@@ -9,7 +9,7 @@ body {
   font-size: var(--text-base);
   line-height: var(--lh-normal);
   color: var(--text-1);
-  font-family: 'Inter', sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 /* Scrollbars */
