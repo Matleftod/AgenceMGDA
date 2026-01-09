@@ -21,7 +21,7 @@
     <!-- Bulle informative -->
     <div class="hero-right">
       <p class="stats" id="hero-tip">
-        81 % des clients comparent en ligne avant de choisir un prestataire.
+        Ton site doit rassurer vite : clarté, preuves, contact facile.
       </p>
     </div>
 
