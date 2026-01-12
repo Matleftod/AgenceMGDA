@@ -70,9 +70,12 @@
       <section>
         <h2 class="text-2xl font-bold text-accent-1 mb-3">5. Cookies</h2>
         <p class="leading-relaxed text-text-2">
-          Le site utilise des cookies pour améliorer l’expérience utilisateur et mesurer l’audience.<br>
-          Un bandeau d’information vous permet de les accepter ou de les refuser lors de votre première visite.<br>
-          Pour plus d’informations, consultez notre 
+          Le site utilise uniquement des cookies <strong>strictement nécessaires</strong> à son fonctionnement
+          (ex. gestion de session et sécurité).<br>
+          Aucun cookie publicitaire ni traceur de suivi n’est utilisé. Le site n’emploie pas non plus d’outil de mesure d’audience
+          impliquant le dépôt de cookies.<br>
+          Dans cette configuration, <strong>aucun bandeau de consentement n’est requis</strong> (les cookies utilisés sont techniques).<br>
+          Pour plus d’informations, consulte notre
           <a href="/cookies" class="text-accent-1 underline">politique de cookies</a>.
         </p>
       </section>

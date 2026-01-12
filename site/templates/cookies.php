@@ -13,8 +13,8 @@
       <p class="text-text-3 leading-relaxed text-base sm:text-lg mb-12 text-center max-w-2xl mx-auto">
         Ce site utilise uniquement des cookies <strong class="text-text-1">strictement nécessaires</strong> 
         à son bon fonctionnement. Aucun cookie n’est utilisé à des fins publicitaires, de suivi marketing 
-        ou de profilage. <strong class="text-text-1">Aucun bandeau de consentement n’est requis</strong> 
-        dans cette configuration.
+        ou de profilage. <strong class="text-text-1">Aucun bandeau de consentement n’est affiché</strong>
+        car aucun traceur soumis au consentement n’est utilisé sur ce site.
       </p>
 
       <!-- Contenu -->
