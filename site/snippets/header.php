@@ -6,7 +6,7 @@
 
     <?php
     // -------- SEO: title / description (avec overrides par page)
-    $defaultDescription = "Agence MGDA : Nous créons des sites vitrines écologiques et sur-mesure, pensés pour les commerçants, artisans, créatifs et entreprises à taille humaine. Des sites beaux, simples à gérer au quotidien, et conçus pour valoriser pleinement ton savoir-faire.";
+    $defaultDescription = "Agence MGDA : Je crée des sites vitrines écologiques et sur-mesure, pensés pour les commerçants, artisans, créatifs et entreprises à taille humaine. Des sites beaux, simples à gérer au quotidien, et conçus pour valoriser pleinement ton savoir-faire.";
 
     $isHome = $page->isHomePage();
 
@@ -159,11 +159,11 @@
         <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="/#home">Accueil</a></li>
-                <li><a href="/#about">À propos de nous</a></li>
-                <li><a href="/#services">Nos Services</a></li>
-                <li><a href="/#portfolio">Nos Maquettes</a></li>
+                <li><a href="/#about">À propos de MGDA</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#portfolio">Maquettes</a></li>
             </ul>
-            <a href="/#contact" class="btn-primary"><span>Nous Contacter</span></a>
+            <a href="/#contact" class="btn-primary"><span>Me Contacter</span></a>
         </nav>
     </div>
 </header>

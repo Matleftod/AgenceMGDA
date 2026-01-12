@@ -8,7 +8,7 @@ $placeholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAU
   <div class="about-eco-container">
     <!-- TITRE MOBILE -->
     <div class="about-mobile-heading">
-      <h2>À propos de <span>Nous</span></h2>
+      <h2>À propos de <span>MGDA</span></h2>
       <h4>Une approche responsable, locale et humaine.</h4>
     </div>
     <div class="about-eco-grid">
@@ -136,8 +136,8 @@ $placeholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAU
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Agence web installée à Bègles, nous concevons des sites à la fois esthétiques, performants et responsables.
-Notre priorité : offrir des solutions durables, bien pensées, et adaptées aux besoins de chaque entreprise.</p>
+                <p>Agence web installée à Bègles, je conçois des sites à la fois esthétiques, performants et responsables.
+Ma priorité : offrir des solutions durables, bien pensées, et adaptées aux besoins de chaque entreprise.</p>
                 </div>
             </div>
 
@@ -148,7 +148,7 @@ Notre priorité : offrir des solutions durables, bien pensées, et adaptées aux
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Nous utilisons Kirby, un CMS ultra-léger et flexible, sans base de données.
+                <p>J’utilise Kirby, un CMS ultra-léger et flexible, sans base de données.
 Résultat : un site plus rapide, plus sécurisé, plus écologique et incroyablement simple à maintenir.</p>
                 </div>
             </div>
@@ -160,7 +160,7 @@ Résultat : un site plus rapide, plus sécurisé, plus écologique et incroyable
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>L’agence est engagée dans une démarche de sobriété numérique et détient un certificat de connaissance Numérique Responsable.
+                <p>Je m’inscris dans une démarche de sobriété numérique et détient un certificat de connaissance Numérique Responsable.
 Chaque projet est pensé pour réduire son impact, sans sacrifier les performances ou l’expérience utilisateur.</p>
                 </div>
             </div>
@@ -172,8 +172,8 @@ Chaque projet est pensé pour réduire son impact, sans sacrifier les performanc
                 <span class="eco-chevron">❯</span>
                 </div>
                 <div class="eco-content">
-                <p>Nous mettons un vrai point d’honneur à accompagner chaque client avec attention et clarté.
-Notre démarche est simple : écouter, comprendre, et construire un projet qui te ressemble vraiment, sans complexité inutile.</p>
+                <p>Je mets un vrai point d’honneur à accompagner chaque client avec attention et clarté.
+Ma démarche est simple : écouter, comprendre, et construire un projet qui te ressemble vraiment, sans complexité inutile.</p>
                 </div>
             </div>
 

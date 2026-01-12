@@ -4,7 +4,7 @@
 
     <div class="services-heading">
       <h2>
-        Ce Que Nous <span>Créons</span>
+        Ce Que Je <span>Conçois</span>
       </h2>
       <h4>
         Des solutions digitales durables, performantes et conçues avec soin.
@@ -27,7 +27,7 @@
         <p class="service-desc">Ton site peut évoluer au fil du temps.</p>
         <div class="service-more">
           <p>
-            Nous créons des bases techniques durables, capables de grandir avec ton activité.
+            Je conçois des bases techniques durables, capables de grandir avec ton activité.
             L’objectif : un site qui reste pertinent longtemps.
           </p>
         </div>
@@ -65,7 +65,7 @@
 
         <p class="service-desc">Un site esthétique, lisible et ultra-rapide.</p>
         <div class="service-more">
-          <p>Nous soignons chaque détail visuel et optimisons les performances : fluidité, confort, harmonie.</p>
+          <p>Je soigne chaque détail visuel et optimise les performances : fluidité, confort, harmonie.</p>
         </div>
         <div class="service-toggle">Voir plus</div>
       </div>
@@ -96,12 +96,12 @@
           <span class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server w-6 h-6"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg>
           </span>
-          <h3>Hébergement du site</h3>
+          <h3>Option hébergement du site</h3>
         </div>
 
-        <p class="service-desc">On s’occupe de tout.</p>
+        <p class="service-desc">Mise en place et configuration.</p>
         <div class="service-more">
-          <p>Nous prenons en charge la mise en place de l’hébergement et la configuration de ton site sur un serveur fiable et performant.</p>
+          <p>MGDA peut prendre en charge la mise en place de l’hébergement et la configuration de ton site sur un serveur fiable et performant.</p>
         </div>
         <div class="service-toggle">Voir plus</div>
       </div>
@@ -147,7 +147,7 @@
 
         <p class="service-desc">Fonctions adaptées à tes besoins.</p>
         <div class="service-more">
-          <p>Galerie, formulaire avancé, système personnalisé… Nous développons des modules utiles et légers.</p>
+          <p>Galerie, formulaire avancé, système personnalisé… Je développe des modules utiles et légers.</p>
         </div>
         <div class="service-toggle">Voir plus</div>
       </div>

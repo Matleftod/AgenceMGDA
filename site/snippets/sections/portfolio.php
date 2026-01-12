@@ -67,9 +67,9 @@
         <div class="portfolio-heading mb-8">
           <h2>
             Besoin d’inspiration ?<br>
-            Découvrez nos <span>maquettes</span>.
+            Découvrez quelques <span>maquettes</span>.
           </h2>
-          <h4>Quelques exemples pour visualiser différents styles et comparer nos gammes de sites.</h4>
+          <h4>Quelques exemples pour visualiser différents styles et comparer les gammes de sites.</h4>
         </div>
 
         <!-- VIDEO MULTI-FORMATS -->
