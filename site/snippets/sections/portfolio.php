@@ -48,7 +48,7 @@
             <button
               class="mac-tab tab-premium px-3 py-1.5 text-xs sm:text-sm rounded-md font-semibold whitespace-nowrap"
               data-plan="Premium"
-              data-tagline="Le haut de gamme, qui reflète votre identité."
+              data-tagline="Le haut de gamme, qui reflète ton identité."
               data-poster="<?= url('assets/images/PosterMaq3.avif') ?>"
               data-mp4="<?= url('assets/videos/Maquette3mini.mp4') ?>"
               data-hevc="<?= url('assets/videos/Maquette3mini_hevc.mp4') ?>"
@@ -67,32 +67,39 @@
         <div class="portfolio-heading mb-8">
           <h2>
             Besoin d’inspiration ?<br>
-            Découvrez nos <span>maquettes</span>.
+            Découvrez quelques <span>maquettes</span>.
           </h2>
-          <h4>Quelques exemples pour visualiser différents styles et comparer nos gammes de sites.</h4>
+          <h4>Quelques exemples pour visualiser différents styles et comparer les gammes de sites.</h4>
         </div>
 
         <!-- VIDEO MULTI-FORMATS -->
         <div class="portfolio-stage">
-          <video
-            id="portfolioVideo"
-            class="portfolio-video"
-            muted
-            playsinline
-            loop
-            preload="none"
-            poster="<?= url('assets/images/PosterMaq1.avif') ?>"
-            decoding="async"
-          >
-            <!-- VP9 prioritaire -->
-            <source src="<?= url('assets/videos/Maquette1mini_vp9.webm') ?>" type="video/webm">
+          <div class="portfolio-video-wrapper">
 
-            <!-- HEVC pour Safari/iOS -->
-            <source src="<?= url('assets/videos/Maquette1mini_hevc.mp4') ?>" type="video/mp4; codecs=hev1">
+            <video
+              id="portfolioVideo"
+              class="portfolio-video"
+              muted
+              playsinline
+              loop
+              preload="none"
+              poster="<?= url('assets/images/PosterMaq1.avif') ?>"
+              decoding="async"
+            >
+              <source src="<?= url('assets/videos/Maquette1mini_vp9.webm') ?>" type="video/webm">
+              <source src="<?= url('assets/videos/Maquette1mini_hevc.mp4') ?>" type="video/mp4; codecs=hev1">
+              <source src="<?= url('assets/videos/Maquette1mini.mp4') ?>" type="video/mp4">
+            </video>
 
-            <!-- H.264 fallback -->
-            <source src="<?= url('assets/videos/Maquette1mini.mp4') ?>" type="video/mp4">
-          </video>
+            <!-- Bouton play -->
+            <button
+              class="video-play-btn"
+              aria-label="Lire la vidéo"
+              type="button">
+              ▶
+            </button>
+
+          </div>
 
           <div class="portfolio-caption">
             <span class="badge badge-essentiel">Essentiel</span>
@@ -113,7 +120,7 @@
           </button>
 
           <div id="moreMockupsPanel" class="more-panel" hidden>
-            <p class="more-intro">Des variations visuelles pour vous inspirer.</p>
+            <p class="more-intro">Des variations visuelles pour t'inspirer.</p>
 
             <div class="more-grid">
               <?php foreach (range(1, 11) as $i): ?>

@@ -31,7 +31,20 @@
 </footer>
 
 <!-- Optional JavaScript -->
-<script src="<?= url('assets/js/header.js') ?>"></script>
-<script type="module" src="/assets/js/home.js"></script>
+<?php
+$globalRel  = 'assets/js/dist/global.min.js';
+$globalPath = kirby()->root('assets') . '/js/dist/global.min.js';
+$globalV    = is_file($globalPath) ? filemtime($globalPath) : null;
+
+$homeRel  = 'assets/js/dist/home.min.js';
+$homePath = kirby()->root('assets') . '/js/dist/home.min.js';
+$homeV    = is_file($homePath) ? filemtime($homePath) : null;
+?>
+<script src="<?= url($globalRel) . ($globalV ? '?v=' . $globalV : '') ?>" defer></script>
+
+<?php if ($page->isHomePage()): ?>
+  <script src="<?= url($homeRel) . ($homeV ? '?v=' . $homeV : '') ?>" defer></script>
+<?php endif ?>
+
 </body>
 </html>

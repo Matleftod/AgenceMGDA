@@ -13,8 +13,8 @@
       <p class="text-text-3 leading-relaxed text-base sm:text-lg mb-12 text-center max-w-2xl mx-auto">
         Ce site utilise uniquement des cookies <strong class="text-text-1">strictement nécessaires</strong> 
         à son bon fonctionnement. Aucun cookie n’est utilisé à des fins publicitaires, de suivi marketing 
-        ou de profilage. <strong class="text-text-1">Aucun bandeau de consentement n’est requis</strong> 
-        dans cette configuration.
+        ou de profilage. <strong class="text-text-1">Aucun bandeau de consentement n’est affiché</strong>
+        car aucun traceur soumis au consentement n’est utilisé sur ce site.
       </p>
 
       <!-- Contenu -->
@@ -47,7 +47,7 @@
         <div>
           <h2 class="text-2xl font-bold mb-4 text-accent-1">Gestion des cookies</h2>
           <p class="leading-relaxed text-text-3">
-            Vous pouvez configurer votre navigateur pour bloquer les cookies techniques, 
+            Tu peux configurer ton navigateur pour bloquer les cookies techniques, 
             mais certaines fonctionnalités essentielles du site pourraient ne plus fonctionner correctement.
           </p>
         </div>
@@ -56,7 +56,7 @@
         <div>
           <h2 class="text-2xl font-bold mb-4 text-accent-1">Contact</h2>
           <p class="leading-relaxed text-text-3">
-            Pour toute question concernant cette politique de cookies, vous pouvez nous contacter :  
+            Pour toute question concernant cette politique de cookies, tu peux nous contacter :  
             <a href="mailto:agence.mgda@gmail.com" class="text-accent-1 hover:underline">
               agence.mgda@gmail.com
             </a>.

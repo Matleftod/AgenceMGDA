@@ -4,13 +4,13 @@
     <!-- TEXTE PRINCIPAL -->
     <div class="hero-left animate-slide-down">
       <h1>
-        🌿 Votre site.<br>
+        🌿 Ton site.<br>
         <span class="highlight">Plus léger. Plus vert.</span>
       </h1>
 
       <h4 class="hero-subtitle">
         Un site écologique, rapide et clé en main.<br>
-        Mettez votre entreprise en valeur… sans alourdir la planète.
+        Mets ton activité en valeur… sans alourdir la planète.
       </h4>
 
       <div class="hero-buttons">
@@ -21,7 +21,7 @@
     <!-- Bulle informative -->
     <div class="hero-right">
       <p class="stats" id="hero-tip">
-        81 % des clients comparent en ligne avant de choisir un prestataire.
+        Ton site doit rassurer vite : clarté, preuves, contact facile.
       </p>
     </div>
 

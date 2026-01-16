@@ -1,24 +1,34 @@
 export function initMockups() {
-  const btn = document.getElementById('moreMockupsBtn');
-  const panel = document.getElementById('moreMockupsPanel');
+  const btn = document.getElementById("moreMockupsBtn");
+  const panel = document.getElementById("moreMockupsPanel");
   if (!btn || !panel) return;
 
-  const setOpen = (open) => {
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (open) {
-      panel.hidden = false;
-      requestAnimationFrame(() => panel.dataset.open = 'true');
-    } else {
-      panel.dataset.open = 'false';
-      panel.addEventListener('transitionend', function end() {
-        panel.hidden = true;
-        panel.removeEventListener('transitionend', end);
-      });
-    }
-  };
+  btn.addEventListener("click", () => {
+    const open = panel.dataset.open === "true";
 
-  btn.addEventListener('click', () => {
-    const open = btn.getAttribute('aria-expanded') === 'true';
-    setOpen(!open);
+    if (open) {
+      // ---- FERMETURE ----
+      panel.dataset.open = "false";
+
+      panel.addEventListener(
+        "transitionend",
+        function end(e) {
+          if (e.propertyName === "max-height") {
+            panel.hidden = true;
+            panel.removeEventListener("transitionend", end);
+          }
+        }
+      );
+    } else {
+      // ---- OUVERTURE ----
+      panel.hidden = false;
+
+      // Force reflow pour éviter les bugs Android
+      panel.getBoundingClientRect();
+
+      panel.dataset.open = "true";
+    }
+
+    btn.setAttribute("aria-expanded", (!open).toString());
   });
 }

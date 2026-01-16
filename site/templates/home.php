@@ -10,8 +10,6 @@
 
   <?php snippet('sections/about') ?>
 
-  <?php snippet('sections/eco-design') ?>
-
   <div class="relative">
   <div class="bg-glow-2"></div>
   <?php snippet('sections/services') ?>
@@ -21,6 +19,8 @@
   <div class="bg-glow-3"></div>
   <?php snippet('sections/portfolio') ?>
   </div>
+
+  <?php snippet('sections/eco-proof') ?>
 
   <?php snippet('sections/contact') ?>
 

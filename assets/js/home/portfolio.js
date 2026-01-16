@@ -1,80 +1,64 @@
 export function initPortfolio() {
 
   const video = document.getElementById('portfolioVideo');
+  const playBtn = document.querySelector('.video-play-btn');
   const tabs = document.querySelectorAll('.mac-tab');
   const tabWraps = document.querySelectorAll('.mac-tab-wrap');
   const badge = document.querySelector('.portfolio-caption .badge');
   const tagline = document.querySelector('.portfolio-caption .tagline');
 
+  if (!video || !playBtn || tabs.length === 0) return;
+
+  let hasUserInteracted = false;
+
   /* =============================
-      STOP SI ON N’EST PAS SUR LA HOME
+        LECTURE AU CLIC UNIQUEMENT
   ============================= */
-  if (!video || tabs.length === 0) {
-    return; // ❗ Empêche toute erreur sur les autres pages
-  }
+  playBtn.addEventListener('click', () => {
+    hasUserInteracted = true;
+
+    video.play().then(() => {
+      playBtn.style.display = 'none';
+    }).catch(() => {});
+  });
 
   /* =============================
-        1) LAZY LOAD (1ère apparition)
-  ============================= */
-  const lazyIO = new IntersectionObserver((entries) => {
-    entries.forEach(({ isIntersecting }) => {
-      if (isIntersecting) {
-        video.load();
-        video.play().catch(() => {});
-        lazyIO.disconnect(); // one-time
-      }
-    });
-  }, { threshold: 0.25 });
-
-  lazyIO.observe(video);
-
-  /* =============================
-        2) AUTO PLAY / PAUSE
-  ============================= */
-  const visibilityIO = new IntersectionObserver((entries) => {
-    entries.forEach(({ isIntersecting }) => {
-      if (isIntersecting) video.play().catch(() => {});
-      else video.pause();
-    });
-  }, { threshold: 0.4 });
-
-  visibilityIO.observe(video);
-
-
-  /* =============================
-        3) RECREATE SOURCES
+        RECREATE SOURCES
   ============================= */
   function updateSources({ vp9, hevc, mp4 }) {
-    video.innerHTML = "";
+    video.pause();
+    video.removeAttribute('src');
+    video.innerHTML = '';
 
     [
-      { src: vp9,  type: "video/webm" },
-      { src: hevc, type: "video/mp4; codecs=hev1" },
-      { src: mp4,  type: "video/mp4" }
-    ].forEach(data => {
-      const s = document.createElement("source");
-      s.src = data.src;
-      s.type = data.type;
+      { src: vp9,  type: 'video/webm' },
+      { src: hevc, type: 'video/mp4; codecs=hev1' },
+      { src: mp4,  type: 'video/mp4' }
+    ].forEach(({ src, type }) => {
+      const s = document.createElement('source');
+      s.src = src;
+      s.type = type;
       video.appendChild(s);
     });
+
+    video.load();
   }
 
-
   /* =============================
-        4) SWITCH TABS
+        SWITCH TABS (sans autoplay)
   ============================= */
   function switchPlan(btn) {
 
     tabs.forEach(t => {
-      t.classList.remove("active-mac-tab");
-      t.setAttribute("aria-selected", "false");
+      t.classList.remove('active-mac-tab');
+      t.setAttribute('aria-selected', 'false');
     });
 
-    tabWraps.forEach(w => w.classList.remove("active-mac-tab-bg"));
+    tabWraps.forEach(w => w.classList.remove('active-mac-tab-bg'));
 
-    btn.classList.add("active-mac-tab");
-    btn.setAttribute("aria-selected", "true");
-    btn.closest(".mac-tab-wrap").classList.add("active-mac-tab-bg");
+    btn.classList.add('active-mac-tab');
+    btn.setAttribute('aria-selected', 'true');
+    btn.closest('.mac-tab-wrap').classList.add('active-mac-tab-bg');
 
     const data = {
       mp4: btn.dataset.mp4,
@@ -82,32 +66,24 @@ export function initPortfolio() {
       vp9: btn.dataset.vp9
     };
 
-    const poster = btn.dataset.poster;
-    const plan = btn.dataset.plan;
-    const text = btn.dataset.tagline;
+    video.setAttribute('poster', btn.dataset.poster);
+    updateSources(data);
 
-    video.classList.add("is-swapping");
+    // reset UI
+    video.controls = false;
+    playBtn.style.display = '';
+    hasUserInteracted = false;
 
-    setTimeout(() => {
-      video.setAttribute("poster", poster);
-      updateSources(data);
-      video.load();
-      video.play().catch(() => {});
-      video.classList.remove("is-swapping");
+    badge.textContent = btn.dataset.plan;
+    tagline.textContent = btn.dataset.tagline;
 
-      badge.textContent = plan;
-      tagline.textContent = text;
-
-      badge.className = "badge";
-      if (btn.classList.contains("tab-essentiel")) badge.classList.add("badge-essentiel");
-      if (btn.classList.contains("tab-standard"))  badge.classList.add("badge-standard");
-      if (btn.classList.contains("tab-premium"))   badge.classList.add("badge-premium");
-
-    }, 120);
+    badge.className = 'badge';
+    if (btn.classList.contains('tab-essentiel')) badge.classList.add('badge-essentiel');
+    if (btn.classList.contains('tab-standard'))  badge.classList.add('badge-standard');
+    if (btn.classList.contains('tab-premium'))   badge.classList.add('badge-premium');
   }
 
   tabs.forEach(btn => {
-    btn.addEventListener("click", () => switchPlan(btn));
+    btn.addEventListener('click', () => switchPlan(btn));
   });
-
 }

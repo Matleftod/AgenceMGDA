@@ -224,6 +224,27 @@
   opacity: 0; /* petit fondu lors du switch */
 }
 
+.portfolio-video-wrapper {
+  position: relative;
+}
+
+.video-play-btn {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.35);
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #fff;
+  transition: background .25s ease, opacity .25s ease;
+}
+
+.video-play-btn:hover {
+  background: rgba(0,0,0,.45);
+}
+
 .portfolio-caption {
   display: flex;
   align-items: center;
@@ -288,18 +309,24 @@
 
 /* Panneau déroulant */
 .more-panel {
+  display: block;                  /* NE JAMAIS mettre display:grid ici */
   overflow: hidden;
-  transition: grid-template-rows .35s ease, opacity .25s ease, margin-top .2s ease;
-  display: grid;
-  grid-template-rows: 0fr; /* fermé */
+  max-height: 0;
   opacity: 0;
   margin-top: 0;
+  transition:
+    max-height .4s ease,
+    opacity .25s ease,
+    margin-top .25s ease;
 }
+
+/* Ouvert */
 .more-panel[data-open="true"] {
-  grid-template-rows: 1fr; /* ouvert */
+  max-height: 3000px;             /* suffisamment grand pour tout le contenu */
   opacity: 1;
   margin-top: 2rem;
 }
+
 .more-panel > * { min-height: 0; } /* indispensable pour la technique des rows */
 
 .more-panel[hidden] {

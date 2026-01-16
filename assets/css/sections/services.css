@@ -53,7 +53,7 @@
    CARD (glass + blur + border light)
 ================================= */
 .service-card {
-    background: rgba(35, 35, 37, 0.05); /* ultra léger */
+    background: rgba(35, 35, 37, 0.05);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
@@ -67,15 +67,11 @@
     overflow: hidden;
 }
 
-/* Hover glow */
 .service-card:hover {
     border-color: rgba(96, 225, 203, 0.4);
     box-shadow: 0px 0px 60px rgba(96, 225, 203, 0.15);
 }
 
-/* ===============================
-   TAG (plus clair, plus premium)
-================================= */
 .service-tag {
     display: inline-block;
     padding: 0.35rem 0.75rem;
@@ -86,9 +82,6 @@
     margin-bottom: 1rem;
 }
 
-/* ===============================
-   HEADER + SVG
-================================= */
 .service-header {
     display: flex;
     align-items: center;
@@ -100,7 +93,6 @@
     font-size: var(--text-xl);
 }
 
-/* SVG gris par défaut */
 .service-icon svg {
     width: 24px;
     height: 24px;
@@ -115,10 +107,6 @@
     transition: color 0.3s ease;
 }
 
-/* ===============================
-   AU CLIC (card .open)
-   SVG + titre deviennent accent
-================================= */
 .service-card.open .service-icon svg {
     color: var(--accent-1);
 }
@@ -127,9 +115,6 @@
     color: var(--accent-1);
 }
 
-/* ===============================
-   DESCRIPTION
-================================= */
 .service-desc {
     color: var(--text-2);
     margin-bottom: 1rem;
@@ -140,7 +125,6 @@
     margin-top: 0.3rem;
     cursor: pointer;
     user-select: none;
-
     opacity: 0.8;
     transform: translateY(0);
     transition:
@@ -158,18 +142,13 @@
     color: var(--accent-1);
 }
 
-/* ===============================
-   EXPANDED CONTENT
-================================= */
 .service-more {
     max-height: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
-
     color: var(--text-2);
     line-height: 1.5;
-
     transition:
         max-height 0.4s ease,
         opacity 0.25s ease,
@@ -184,4 +163,209 @@
         max-height 0.45s ease,
         opacity 0.35s ease 0.1s,
         visibility 0s;
+}
+
+/* ===============================
+   AJOUT: Forfaits + mix + process
+================================= */
+.services-packages {
+    margin-top: 4.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.packages-heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.packages-heading h3 {
+    font-weight: 800;
+    color: var(--text-1);
+    font-size: clamp(1.2rem, 1.2rem + 0.6vw, 1.7rem);
+}
+
+.packages-heading h3 span {
+    color: var(--accent-1);
+}
+
+.packages-heading p {
+    margin-top: 0.9rem;
+    color: var(--text-3);
+    line-height: 1.6;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    align-items: stretch;
+}
+
+.package-card {
+    position: relative;
+    background: rgba(35, 35, 37, 0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 2rem;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.35s ease, transform 0.25s ease;
+}
+
+.package-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: rgba(96, 225, 203, 0.28);
+}
+
+.package-card:hover {
+    border-color: rgba(96, 225, 203, 0.35);
+    box-shadow: 0 0 70px rgba(96, 225, 203, 0.10);
+    transform: translateY(-2px);
+}
+
+.package-card--featured::before {
+    background: rgba(96, 225, 203, 0.55);
+}
+
+.package-top h4 {
+    margin: 0;
+    color: var(--text-1);
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.package-subtitle {
+    margin: 0.35rem 0 0.9rem;
+    color: var(--text-3);
+    line-height: 1.45;
+}
+
+.package-price {
+    margin: 0;
+    color: var(--text-2);
+    font-weight: 600;
+}
+
+.package-price span {
+    color: var(--accent-1);
+}
+
+.package-badge {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(96, 225, 203, 0.12);
+    color: var(--accent-1);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.package-list {
+    margin: 1.4rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.65rem;
+    color: var(--text-2);
+    line-height: 1.45;
+}
+
+.package-list li {
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+.package-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-1);
+    opacity: 0.9;
+}
+
+.packages-mix {
+    margin-top: 2.2rem;
+    background: rgba(35, 35, 37, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 1.8rem 2rem;
+}
+
+.packages-mix h4 {
+    margin: 0;
+    color: var(--text-1);
+    font-weight: 800;
+}
+
+.packages-mix-text {
+    margin-top: 0.8rem;
+    color: var(--text-3);
+    line-height: 1.6;
+}
+
+.packages-mix-list {
+    margin: 1rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--text-2);
+    display: grid;
+    gap: 0.45rem;
+}
+
+.packages-process {
+    margin-top: 2.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 1.8rem 2rem;
+    background: rgba(35, 35, 37, 0.03);
+}
+
+.packages-process h4 {
+    margin: 0;
+    color: var(--text-1);
+    font-weight: 800;
+}
+
+.process-steps {
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+    color: var(--text-2);
+    display: grid;
+    gap: 0.55rem;
+    line-height: 1.55;
+}
+
+.packages-cta {
+    margin-top: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.packages-cta-note {
+    margin: 0;
+    color: var(--text-3);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-packages {
+        margin-top: 3.5rem;
+    }
 }

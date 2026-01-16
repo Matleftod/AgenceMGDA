@@ -1,5 +1,20 @@
 title: Home
+
 fields:
+  seo_title:
+    label: SEO title
+    type: text
+    help: "Titre affiché sur Google et dans l’onglet du navigateur."
+    width: 1/2
+
+  seo_description:
+    label: Meta description
+    type: textarea
+    buttons: false
+    maxlength: 160
+    help: "Résumé court pour Google (≈ 150–160 caractères)."
+    width: 1/2
+
   hero_section:
     label: Hero Section
-    type: files          
+    type: files

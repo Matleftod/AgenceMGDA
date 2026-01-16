@@ -3,10 +3,10 @@
 
     <!-- Titre -->
     <h2 class="contact-title">
-      Besoin de nous <span>contacter ?</span>
+      Besoin de me <span>contacter ?</span>
     </h2>
     <h4 class="contact-subtitle">
-      Une question ou une envie de lancer ton projet ? Tu peux nous contacter facilement.
+      Une question ou une envie de lancer ton projet ? Tu peux me contacter facilement.
     </h4>
 
     <p class="contact-footer mt-10">

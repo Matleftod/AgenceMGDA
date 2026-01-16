@@ -1,23 +1,58 @@
 # Kirby .htaccess
 
-# Enable URL rewriting
-RewriteEngine on
+RewriteEngine On
 RewriteBase /
 
-# Redirect to HTTPS
+# HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Block directory listing
 Options -Indexes
 
-# Bloquer l'accès à l'ancienne URL du panel
-RedirectMatch 403 ^/panel/
-
-# Exclure favicon.ico et robots.txt des redirections vers index.php
-RewriteCond %{REQUEST_URI} !^/favicon.ico$ [NC]
-
-# All other requests go to Kirby's index.php
+# Kirby front controller
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [L]
+
+AddType application/manifest+json .webmanifest
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  ExpiresByType application/manifest+json "access plus 1 year"
+
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType video/webm "access plus 1 month"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE \
+    text/html text/plain text/css text/javascript \
+    application/javascript application/x-javascript \
+    application/json application/manifest+json \
+    image/svg+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:js|css|png|jpe?g|webp|avif|svg|ico|woff2|webmanifest)$">
+    Header always set Cache-Control "public, max-age=31536000, immutable"
+    Header always unset Set-Cookie
+  </FilesMatch>
+</IfModule>
+
+RedirectMatch 403 ^/(site|kirby|vendor)/
+
+<FilesMatch "(^\.|composer\.(json|lock)$)">
+  Require all denied
+</FilesMatch>

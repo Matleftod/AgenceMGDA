@@ -8,10 +8,10 @@ export function initHero() {
   let tipIndex = 0;
 
   const tips = [
-    "72 % des clients choisissent l’artisan avec le site le plus clair.",
-    "1 page optimisée = 3× moins d’émissions CO₂ par visite.",
-    "65 % des clients jugent une entreprise uniquement grâce à son site.",
-    "74 % des recherches locales mènent à une visite en moins de 24h."
+    "Un site simple à maintenir reste performant plus longtemps.",
+    "Moins de poids, plus de vitesse : une expérience plus fluide sur mobile.",
+    "Un message clair = des demandes plus qualifiées.",
+    "Local : être trouvable, être crédible, être contactable."
   ];
 
   // --- SLIDER ---
