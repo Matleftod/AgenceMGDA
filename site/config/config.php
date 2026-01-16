@@ -8,10 +8,10 @@ return [
     'panel' => [
         'slug' => 'admin-panel'
     ],
-    'debug' => true,
+    'debug' => false,
     'cache' => [
         'pages' => [
-            'active' => false
+            'active' => true
         ]
     ],
 
